@@ -1,0 +1,193 @@
+""""""""""""""""""
+" Pathogen
+""""""""""""""""""
+
+execute pathogen#infect()
+" execute pathogen#helptags()
+Helptags
+
+""""""""""""""""""
+" Useful variables
+""""""""""""""""""
+
+let vimdir = '$HOME/.vim'
+if has("win32")
+	let vimdir = '$HOME/vimfiles'
+endif
+
+""""""""""""""""""
+" GVim configuration
+""""""""""""""""""
+
+:set guioptions-=m "remove menu
+:set guioptions-=T "remove toolbar
+:set guioptions-=r "remove right scroll bar
+:set guioptions-=L "remove left scroll bar
+":set visualbell
+":set t_vb= "" Disable Bell
+
+""""""""""""""""""
+" Vim configuration
+""""""""""""""""""
+
+" Syntax
+filetype plugin indent on
+syntax on
+syntax enable
+
+" Editor GUI
+" :set guifont=Consolas:h12
+:set guifont=Terminus\ 9
+:set number
+:set cursorline
+:set showcmd
+:set scrolloff=4 " Allways n lines visisble when scrolling
+
+" Indentation
+:set tabstop=4
+:set shiftwidth=4
+
+" Search
+:set wildmenu
+:set showmatch
+:set incsearch
+:set hlsearch
+:nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
+
+" Undo
+if has('persistent_undo')
+	let myundodir = expand(vimdir . '/undodir')
+	" Create dirs
+	if empty(glob(myundodir))
+		call system('mkdir ' . vimdir)
+		call system('mkdir ' . myundodir)
+	endif
+	let &undodir = myundodir
+	:set undofile
+	:set undolevels=1000 " Maximum number of changes that can be undone
+	:set undoreload=10000 " Maximum number of lines to save for undo on a buffer reload
+endif
+
+" Folding
+:set foldenable
+:set foldlevelstart=10
+:set foldnestmax=10
+:set foldmethod=indent
+
+" File settings
+:set encoding=utf8
+:set nobackup
+:set backspace=indent,eol,start
+:set fileformat=unix
+:set fileformats=unix,dos
+
+" Window Switching
+nmap <silent> <A-k> :wincmd k<CR>
+nmap <silent> <A-j> :wincmd j<CR>
+nmap <silent> <A-h> :wincmd h<CR>
+nmap <silent> <A-l> :wincmd l<CR>
+if $TERM == 'rxvt-unicode-256color' && !has('gui_running')
+	nmap <silent> <Esc>k :wincmd k<CR>
+	nmap <silent> <Esc>j :wincmd j<CR>
+	nmap <silent> <Esc>h :wincmd h<CR>
+	nmap <silent> <Esc>l :wincmd l<CR>
+endif
+
+" Remove trailing whitespace before saving buffer
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Extra files
+" GLSL
+" JFlex
+augroup filetype
+	autocmd BufNewFile,BufRead *.vert,*.frag,*.tesc,*.tese,*.geom,*.comp set filetype=c
+	autocmd BufNewFile,BufRead *.flex,*.jflex set filetype=jflex
+augroup END
+au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
+
+""""""""""""""""""
+" Plugins
+""""""""""""""""""
+" base-16
+" emmet
+" lightline
+" neocomplete
+" nerdtree
+" tagbar
+" vim2hs
+" vim-colors-solarized
+" vim-commentary
+" vim-cpp-enhanced-highlight
+" vim-indent-guides
+" vim-multiple-cursors
+" vim-surround
+" jellybeans
+
+" Base-16
+" colorscheme base16-default
+
+" Emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+" Vim Lightline
+" \ 'colorscheme': 'solarized_dark',
+let g:lightline = {
+	\ 'colorscheme': 'jellybeans',
+	\ 'active': {
+	\ 	'left': [['mode', 'paste'], ['fugitive', 'filename', 'modified']]
+	\ },
+	\ 'component' : {
+	\	'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+	\ },
+	\ 'component_visible_condition': {
+	\	'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+	\ }
+	\ }
+set laststatus=2
+
+" Neocomplete
+let g:neocomplete#enable_at_startup = 1
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Tagbar
+" nmap <C-S-space> :TagbarToggle<CR>
+" nmap <C-space> :TagbarToggle<CR>
+map <F8> :TagbarToggle<CR>
+
+" vim2hs
+"
+" Vim Colors Solarized
+set background=dark
+" colorscheme solarized
+
+" Commentary
+" Vim CPP Enhanced Highlight
+
+" Vim Indent Guides
+let g:indent_guides_enable_on_vim_startup=1
+
+" Vim Multiple Cursors
+let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
+function! Multiple_cursors_before()
+	if exists(':NeoCompleteLock')==2
+		exe 'NeoCompleteLock'
+	endif
+endfunction
+
+function! Multiple_cursors_after()
+	if exists(':NeoCompleteUnlock')==2
+		exe 'NeoCompleteUnlock'
+	endif
+endfunction
+
+" Vim Surround
+" Jellybeans
+colorscheme jellybeans

@@ -1,0 +1,112 @@
+#! /bin/bash
+
+# Example panel for LemonBoy's bar
+
+. panel-colors
+
+num_mon=$(bspc query -M | wc -l)
+
+volume="Nothing yet"
+
+# Defaults
+while read -r line ; do
+	case $line in
+		CMUS*)
+			# cmus output
+			# now_playing="%{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG} \u266B $(display "${line:4}") %{B-}%{F-}"
+			c_status=$(echo ${line:4} | cut -d ':' -f1)
+			c_artist=$(echo ${line:4} | cut -d ':' -f2)
+			c_album=$(echo ${line:4} | cut -d ':' -f3)
+			c_title=$(echo ${line:4} | cut -d ':' -f4)
+			c_year=$(echo ${line:4} | cut -d ':' -f5)
+
+			if [ -z "$c_status" ]; then
+				now_playing="%{F$COLOR_NOTIFICATION_FG} CMUS is not running. %{F-}"
+			else
+				if [ "$c_status" == "paused" ]; then
+					now_playing="%{F$COLOR_NOTIFICATION_FG} \u266B Paused %{F-}"
+				else
+					now_playing="%{F$COLOR_NOTIFICATION_FG} \u266B $(display "$c_artist - $c_title") %{F-}"
+				fi
+			fi
+			;;
+		VOL*)
+			vol_status=$(echo ${line:3} | cut -d ':' -f1)
+			vol_level=$(echo ${line:3} | cut -d ':' -f2)
+
+			if [ "$vol_status" == 'off' ]; then
+				volume="%{B$COLOR_BACKGROUND}%{F$COLOR_URGENT_FG} \u260A Muted %{F-}%{B-}"
+			else
+				volume="%{B$COLOR_BACKGROUND}%{F$COLOR_WARNING_FG} \u260A $vol_level%% %{F-}%{B-}"
+			fi
+			;;
+		S*)
+			# clock output
+			sys_infos="%{F$COLOR_STATUS_FG}%{B$COLOR_STATUS_BG} ${line:1} %{B-}%{F-}"
+			;;
+		T*)
+			# xtitle output
+			title="%{F$COLOR_TITLE_FG}%{B$COLOR_TITLE_BG} $(display "${line:1}") %{B-}%{F-}"
+			;;
+		W*)
+			# bspwm internal state
+			wm_infos=""
+			IFS=':'
+			set -- ${line:1}
+			while [ $# -gt 0 ] ; do
+				item=$1
+				name=${item:1}
+				case $item in
+					M*)
+						# active monitor
+						if [ $num_mon -gt 1 ] ; then
+							wm_infos="$wm_infos %{F$COLOR_ACTIVE_MONITOR_FG}%{B$COLOR_ACTIVE_MONITOR_BG} ${name} %{B-}%{F-}  "
+						fi
+						;;
+					m*)
+						# inactive monitor
+						if [ $num_mon -gt 1 ] ; then
+							wm_infos="$wm_infos %{F$COLOR_INACTIVE_MONITOR_FG}%{B$COLOR_INACTIVE_MONITOR_BG} ${name} %{B-}%{F-}  "
+						fi
+						;;
+					O*)
+						# focused occupied desktop
+						wm_infos="${wm_infos}%{F$COLOR_FOCUSED_OCCUPIED_FG}%{B$COLOR_FOCUSED_OCCUPIED_BG}%{U$COLOR_FOREGROUND} ${name} %{B-}%{F-}"
+						;;
+					F*)
+						# focused free desktop
+						wm_infos="${wm_infos}%{F$COLOR_FOCUSED_FREE_FG}%{B$COLOR_FOCUSED_FREE_BG}%{U$COLOR_FOREGROUND} ${name} %{B-}%{F-}"
+						;;
+					U*)
+						# focused urgent desktop
+						wm_infos="${wm_infos}%{F$COLOR_FOCUSED_URGENT_FG}%{B$COLOR_FOCUSED_URGENT_BG}%{U$COLOR_FOREGROUND} ${name} %{B-}%{F-}"
+						;;
+					o*)
+						# occupied desktop
+						wm_infos="${wm_infos}%{F$COLOR_OCCUPIED_FG}%{B$COLOR_OCCUPIED_BG} ${name} %{B-}%{F-}"
+						;;
+					f*)
+						# free desktop
+						wm_infos="${wm_infos}%{F$COLOR_FREE_FG}%{B$COLOR_FREE_BG} ${name} %{B-}%{F-}"
+						;;
+					u*)
+						# urgent desktop
+						wm_infos="${wm_infos}%{F$COLOR_URGENT_FG}%{B$COLOR_URGENT_BG} ${name} %{B-}%{F-}"
+						;;
+					L*)
+						# layout
+						wm_infos="$wm_infos  %{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG} ${name} %{B-}%{F-}"
+						;;
+				esac
+				shift
+			done
+			IFS=
+			;;
+	esac
+
+	printf \
+		"%%{l}%s%%{c}%s%%{r}%b%b%s\n" \
+		"${wm_infos}" "${title}" "$now_playing" "$volume" "${sys_infos}";
+
+
+done

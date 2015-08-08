@@ -1,0 +1,101 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+#
+# Functions
+#
+
+min() {
+	if [ $1 -lt $2 ]
+	then
+		echo $1
+	else
+		echo $2
+	fi
+}
+
+max() {
+	if [ $1 -gt $2 ]
+	then
+		echo $1
+	else
+		echo $2
+	fi
+}
+
+clamp() {
+	echo $(max $2 $(min $1 $3))
+}
+
+toHex() {
+	echo $(printf '%x' $1)
+}
+
+toInt() {
+	echo $(printf '%.0f' $1)
+}
+
+display() {
+	local len=32
+	if [ "$2" -eq "$2" ] 2>/dev/null; then
+		len=$2;
+	elif [ ! -z "$2" ]; then
+		echo 'length argument ($2) is not a number. Using default length (32)'
+	fi
+
+	printf "$1" | \
+		awk -v len=$len '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print $0; }'
+}
+
+export -f min max clamp toHex toInt display
+
+# Export
+EDITOR=vim
+XDG_CONFIG_HOME=$HOME/.config
+
+# Scripts may set PATH
+cd ~/.dotfiles/
+. bootstrap-login.sh
+cd ~/
+
+export PATH XDG_CONFIG_HOME
+
+#
+# Colorschemes
+#
+
+# Jellybeans color scheme
+# Colors taken out from the :hi screen on vim and looking at cterm{bg,fg} values
+# Hex codes taken from URL:
+# http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+COLOR_BG=#151515
+COLOR_FG=#e8e8d3
+# Black Visual Conceal
+COLOR_0=#3a3a3a
+COLOR_8=#6c6c6c
+# Red Constant SpellBad
+COLOR_1=#d75f5f
+COLOR_9=#870000
+# Green Special Question
+COLOR_2=#87af5f
+COLOR_10=#5faf5f
+# Yellow Directory Function
+COLOR_3=#d7d787
+COLOR_11=#ffd787
+# Blue PreProc PreProc
+COLOR_4=#87afd7
+COLOR_12=#87afd7
+# Magenta Identifier Identifier
+COLOR_5=#d7afff
+COLOR_13=#d7afff
+# Cyan Underlined Underlined
+COLOR_6=#5fd7ff
+COLOR_14=#5fd7ff
+# Light Grey PmenuSel StatusLineNC
+COLOR_7=#e4e4e4
+COLOR_15=#ffffff
+
+export COLOR_BG COLOR_FG COLOR_0 COLOR_1 COLOR_2 COLOR_3 COLOR_4 COLOR_5 COLOR_6 COLOR_7 COLOR_8 COLOR_9 COLOR_10 COLOR_11 COLOR_12 COLOR_13 COLOR_14 COLOR_15

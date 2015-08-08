@@ -1,0 +1,13 @@
+https://github.com/mattn/emmet-vim
+https://github.com/itchyny/lightline.vim
+https://github.com/Shougo/neocomplete.vim
+https://github.com/scrooloose/nerdtree
+https://github.com/majutsushi/tagbar
+https://github.com/dag/vim2hs
+https://github.com/altercation/vim-colors-solarized
+https://github.com/tpope/vim-commentary
+https://github.com/octol/vim-cpp-enhanced-highlight
+https://github.com/nathanaelkane/vim-indent-guides
+https://github.com/terryma/vim-multiple-cursors
+https://github.com/tpope/vim-surround
+https://github.com/nanotech/jellybeans.vim

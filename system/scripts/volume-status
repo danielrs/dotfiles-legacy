@@ -1,0 +1,55 @@
+#! /bin/bash
+
+getStatus() {
+	local amixer=$(amixer get Master | grep dB | sed 's/\(^[a-z0-9 :]\+\[\|\[\|\]\)//gi')
+	local status=$(echo $amixer | cut -d " " -f3)
+	local level=$(echo $amixer | cut -d " " -f1 | sed 's/%//g')
+
+	printf 'VOL%s:%s\n' "$status" "$level"
+}
+
+statusChanged() {
+	if [ -e "$VOLUME_FIFO" ]; then
+		getStatus > "$VOLUME_FIFO"
+	fi
+}
+
+subscribe() {
+
+	if [ -e "$VOLUME_FIFO" ]; then
+		rm "$VOLUME_FIFO"
+	fi
+	mkfifo "$VOLUME_FIFO"
+
+	# Trigger a status change
+	statusChanged &
+
+	while read line < "$VOLUME_FIFO"; do
+		if [[ "$line" == 'quit' ]]; then
+			break;
+		fi
+		printf '%s\n' "$line"
+	done
+}
+
+if [ ! -z "$1" ]; then
+	case $1 in
+		-c)
+			statusChanged
+			;;
+		--changed)
+			statusChanged
+			;;
+		-s)
+			subscribe
+			;;
+		--subscribe)
+			subscribe
+			;;
+		*)
+			printf 'Agument not recognized!\n'
+			;;
+	esac
+else
+	getStatus
+fi

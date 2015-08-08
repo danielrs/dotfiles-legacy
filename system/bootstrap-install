@@ -1,0 +1,10 @@
+#! /bin/bash
+# See: https://ngzhian.wordpress.com/2013/01/11/what-i-learned-about-fonts/
+# for information about font
+
+ln -sfrv ./bash_logout ~/.bash_logout
+ln -sfrv ./bash_profile ~/.bash_profile
+ln -sfrv ./bashrc ~/.bashrc
+ln -sfrv ./gtkrk-2.0 ~/.gtkrc-2.0
+ln -sfrv ./xinitrc ~/.xinitrc
+ln -sfrv ./Xresources ~/.Xresources

@@ -1,0 +1,8 @@
+xrdb ~/.Xresources
+compton --config ~/.config/compton.conf -b
+
+xsetroot -cursor_name left_ptr &
+feh --bg-scale ~/Pictures/Wallpapers/PC/wallpaper-2769611.jpg &
+redshift -l 7.9972821:-71.9181585 &
+sxhkd &
+exec bspwm

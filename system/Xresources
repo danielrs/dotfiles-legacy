@@ -1,0 +1,40 @@
+URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1
+! URxvt*font: -*-dejavu sans mono-medium-r-normal-*-11-*-*-*-m-*-iso10646-1
+URxvt*iso14755: false
+
+URxvt*cursorBlink: true
+URxvt*depth: 32
+URxvt*scrollBar: false
+
+URxvt*dynamicColors: on
+
+! Jellybeans color scheme
+! Colors taken out from the :hi screen on vim and looking at cterm{bg,fg} values
+! Hex codes taken from URL:
+! http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+URxvt*background: [90]#151515
+URxvt*foreground: #e8e8d3
+! Black SpecialKey Comment
+URxvt*color0: #3a3a3a
+URxvt*color8: #808080
+! Red Constant SpellBad
+URxvt*color1: #d75f5f
+URxvt*color9: #870000
+! Green Special Question
+URxvt*color2: #87af5f
+URxvt*color10: #5faf5f
+! Yellow Directory Function
+URxvt*color3: #d7d787
+URxvt*color11: #ffd787
+! Blue PreProc PreProc
+URxvt*color4: #87afd7
+URxvt*color12: #87afd7
+! Magenta Identifier Identifier
+URxvt*color5: #d7afff
+URxvt*color13: #d7afff
+! Cyan Underlined Underlined
+URxvt*color6: #5fd7ff
+URxvt*color14: #5fd7ff
+! Light Grey Todo StatusLineNC
+URxvt*color7: #bcbcbc
+URxvt*color15: #ffffff

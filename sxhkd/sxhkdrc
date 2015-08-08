@@ -1,0 +1,161 @@
+#
+# bspwm hotkeys
+#
+
+# Exit BSPWM
+super + alt + Escape
+	pkill -x panel; bspc quit
+
+# Close focused window
+super + w
+	bspc window -c
+
+# Change layout
+super + t
+	bspc desktop -l next
+
+# Balance tree
+super + b
+	bspc desktop -B
+
+# Toggle floating or fullscreen
+super + {s,f}
+	bspc window -t {floating,fullscreen}
+
+# Focus last window or desktop
+super + {Tab,grave}
+	bspc {window,desktop} -f last
+
+# Switch with last window
+super + apostrophe
+	bspc window -s last
+
+# Travel through windows
+super + {o,i}
+	bspc control --record-history off; \
+	bspc window {older,newer} -f; \
+	bspc control --record-history on
+
+# Don't know
+# super + y
+# 	bspc window -w last.manual
+
+# Switch to biggest place
+super + m
+	bspc window -s biggest
+
+# Move/Switch between windows
+super + {_,shift + }{h,j,k,l}
+	bspc window -{f,s} {left,down,up,right}
+
+# Clycle windows in desktop (like alt tab windows)
+super + {_,shift + }c
+	bspc window -f {next,prev}
+
+# Rotate windows
+super + {comma,period}
+	bspc desktop -C {backward,forward}
+
+# Flip desktop
+super + shift + {comma,period}
+	bspc desktop -F {horizontal,vertical}
+
+# Rotate desktop
+super + alt + {comma,period}
+	bspc desktop -R {90,270}
+
+# Move to prev/next desktop
+super + bracket{left,right}
+	bspc desktop -f {prev,next}
+
+# Move focused window to prev/next desktop
+super + shift + bracket{left,right}
+	bspc window -d {prev,next}
+
+# Change spliting mode
+super + ctrl + {h,j,k,l}
+	bspc window -p {left,down,up,right}
+
+# Cancel spliting mode that was set
+super + ctrl + {_,shift + }space
+	bspc {window -p cancel,desktop -c}
+
+# Maximize in steps
+super + alt + {h,j,k,l}
+	bspc window -e {left -10,down +10,up -10,right +10}
+
+# Minimize in steps
+super + alt + shift + {h,j,k,l}
+	bspc window -e {right -10,up +10,down -10,left +10}
+
+# Change split ratio
+super + ctrl + {1-9}
+	bspc window -r 0.{1-9}
+
+# Move/send window to desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} ^{1-9,10}
+
+# Focus on click
+~button1
+bspc pointer -g focus
+
+super + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+super + @button{1-3}
+	bspc pointer -u
+
+# Increase/Decrease window gap
+super + {minus,equal}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 4 ))
+
+# Reset window gap
+super + shift + {minus,equal}
+	bspc config -w focused window_gap 10
+
+#
+# WM independent hotkeys
+#
+
+super + Return
+	urxvt
+
+super + space
+	dmenu_jelly
+
+# Make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# Media keys
+#
+
+# Audio
+XF86AudioMute
+	amixer -q set Master toggle; \
+	volume-status --changed
+
+XF86AudioLowerVolume
+	amixer set Master 2%-; \
+	volume-status --changed
+
+
+XF86AudioRaiseVolume
+	amixer set Master 2%+; \
+	volume-status --changed
+
+
+{XF86AudioPlay, super + F11}
+	cmus-remote --pause
+
+{XF86AudioPrev, super + F10}
+	cmus-remote --prev
+
+{XF86AudioNext, super + F12}
+	cmus-remote --next
+
+# Other
+XF86Sleep
+	pm-suspend

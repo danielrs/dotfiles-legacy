@@ -1,0 +1,4 @@
+:set hintchars=hjklasdfgyuiopqwertnmzxcvb
+
+map <A-h> gT
+map <A-l> gt

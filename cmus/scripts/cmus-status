@@ -1,0 +1,59 @@
+#! /bin/bash
+
+FIFO=$CMUS_FIFO
+
+getStatus() {
+	local status=$(cmus-remote -Q | grep status | head -n 1 | cut -d ' ' -f2-)
+	local artist=$(cmus-remote -Q | grep artist | head -n 1 | cut -d ' ' -f3-)
+	local album=$(cmus-remote -Q | grep album | head -n 1 | cut -d ' ' -f3-)
+	local title=$(cmus-remote -Q | grep title | head -n 1 | cut -d ' ' -f3-)
+	local year=$(cmus-remote -Q | grep date | head -n 1 | cut -d ' ' -f3-)
+
+	printf 'CMUS%s:%s:%s:%s:%s\n' "$status" "$artist" "$album" "$title" "$year"
+}
+
+statusChanged() {
+	if [ -e "$FIFO" ]; then
+		getStatus > "$FIFO"
+	fi
+}
+
+subscribe() {
+
+	if [ -e "$FIFO" ]; then
+		rm "$FIFO"
+	fi
+	mkfifo "$FIFO"
+
+	# Trigger a status change
+	statusChanged &
+
+	while read line < "$FIFO"; do
+		if [[ "$line" == 'quit' ]]; then
+			break;
+		fi
+		printf '%s\n' "$line"
+	done
+}
+
+if [ ! -z "$1" ]; then
+	case $1 in
+		-c)
+			statusChanged
+			;;
+		--changed)
+			statusChanged
+			;;
+		-s)
+			subscribe
+			;;
+		--subscribe)
+			subscribe
+			;;
+		*)
+			printf 'Agument not recognized!\n'
+			;;
+	esac
+else
+	getStatus
+fi
