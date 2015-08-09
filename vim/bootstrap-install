@@ -1,6 +1,4 @@
 #! /bin/bash
-# See: https://ngzhian.wordpress.com/2013/01/11/what-i-learned-about-fonts/
-# for information about font
 
 mkdir --parents ~/.vim/{autoload,bundle,syntax}
 ln -sfrv ./vimrc ~/.vim/vimrc

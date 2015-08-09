@@ -1,6 +1,4 @@
 #! /bin/bash
-# See: https://ngzhian.wordpress.com/2013/01/11/what-i-learned-about-fonts/
-# for information about font
 
 ln -sfrv ./bash_logout ~/.bash_logout
 ln -sfrv ./bash_profile ~/.bash_profile
