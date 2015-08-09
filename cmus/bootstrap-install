@@ -1,4 +1,4 @@
 #! /bin/bash
 
 mkdir --parents ~/.config/cmus
-ln -sfrv ./autosave ~/.config/cmus/autosave
+ln -sfrv ./cmusrc ~/.config/cmus/rc

@@ -191,3 +191,8 @@ endfunction
 " Vim Surround
 " Jellybeans
 colorscheme jellybeans
+" if has('gui_running')
+" else
+" 	:highlight Normal ctermbg=NONE
+" endif
+" :hi Normal ctermbg=NONE

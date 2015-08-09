@@ -9,7 +9,6 @@ panel &
 bspc config border_width        1
 bspc config window_gap         10
 
-bspc config focused_border_color $COLOR_3
 
 bspc config split_ratio         0.52
 bspc config borderless_monocle  true
@@ -24,3 +23,16 @@ bspc rule -a feh floating=on
 # bspc rule -a mplayer2 floating=on
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
+
+#
+# Colors
+#
+
+
+bspc config focused_border_color $COLOR_3
+bspc config active_border_color $COLOR_15
+bspc config normal_border_color $COLOR_7
+bspc config presel_border_color $COLOR_4
+# locked colors
+# sticky colors
+bspc config urgent_border_color $COLOR_9

@@ -7,7 +7,6 @@
 #
 # Functions
 #
-
 min() {
 	if [ $1 -lt $2 ]
 	then
@@ -71,30 +70,32 @@ export PATH XDG_CONFIG_HOME
 # Colors taken out from the :hi screen on vim and looking at cterm{bg,fg} values
 # Hex codes taken from URL:
 # http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+# NOTE: Color values in here have more precedence than those in ~/.Xresources
+# Normal 233 188
 COLOR_BG=#151515
 COLOR_FG=#e8e8d3
-# Black Visual Conceal
+# black, darkgray - Visual 237 Conceal 242
 COLOR_0=#3a3a3a
 COLOR_8=#6c6c6c
-# Red Constant SpellBad
+# red, lightred - Constant 167 Search 217
 COLOR_1=#d75f5f
-COLOR_9=#870000
-# Green Special Question
+COLOR_9=#ffafaf
+# green, lightgreen - Special 107 Question 71
 COLOR_2=#87af5f
 COLOR_10=#5faf5f
-# Yellow Directory Function
+# yellow, lightyellow - Directory 186 Function 222
 COLOR_3=#d7d787
 COLOR_11=#ffd787
-# Blue PreProc PreProc
+# blue, lightblue - PreProc 110 Statement 103
 COLOR_4=#87afd7
-COLOR_12=#87afd7
-# Magenta Identifier Identifier
+COLOR_12#8787af
+# magenta, lightmagenta - Identifier 183 Identifier 183
 COLOR_5=#d7afff
 COLOR_13=#d7afff
-# Cyan Underlined Underlined
+# cyan, lightcyan - Underlined 81 Underlined 81
 COLOR_6=#5fd7ff
 COLOR_14=#5fd7ff
-# Light Grey PmenuSel StatusLineNC
+# gray, white - PmenuSel 254 StatusLineNC 231
 COLOR_7=#e4e4e4
 COLOR_15=#ffffff
 
