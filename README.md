@@ -56,7 +56,7 @@ $ ./bootstrap-install.sh
 After that log out and log back in.
 
 ### Current setup
-http://imgur.com/NkkXfA9
+http://imgur.com/fTHe2ds
 
 ![setup screenshot][screenshot]
 
@@ -64,4 +64,4 @@ http://imgur.com/NkkXfA9
 
 **Note**: Any of the structre is subject to change.
 
-[screenshot]: http://i.imgur.com/NkkXfA9.png
+[screenshot]: http://imgur.com/fTHe2ds.png
