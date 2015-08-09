@@ -2,35 +2,37 @@
 
 ### Before reading:
 
-We will refer to each folder in the root directory of the repository as a "dotfile"
+These are my *personal* **dotfiles**, they *may* or *may not* work for you.
+
+We will refer to each folder in the root directory of the repository as a **dotfile**
 
 ### What's included?
 
-Configuration files and scripts, check each dotfile to see what's included in each one of them.
+Configuration files and scripts, check each **dotfile** to see what's included in each one of them.
 
 ### How are the folders structured?
 
-The root folder contains the dotfiles. The root folder contains two scripts:
+The root folder contains the **dotfiles**. The root folder contains two scripts:
 
 1. **bootstrap-install.sh**
 
-	Iterates over each dotfile and executes its installation script (if any)
+	Iterates over each **dotfile** and executes its installation script (if any)
 
 2. **bootstrap-login.sh**
 
-	Executed at each login. Iterates over each dotfile and executes its login script (if any)
+	Executed at each login. Iterates over each **dotfile** and executes its login script (if any)
 
 #### dotfile
 
-Each dotfile can *optionally* contain the following files/folders:
+Each **dotfile** can *optionally* contain the following files/folders:
 
 1. **bootstrap-install**
 
-	Should install the dotfile
+	Should install the **dotfile**
 
 2. **bootstrap-login**
 
-	Executes any commands that the dotfile may need (setting environment variables, etc)
+	Executes any commands that the **dotfile** may need (setting environment variables, etc)
 
 3. **scripts/**
 
@@ -40,7 +42,7 @@ The structure of other files is not predefined.
 
 ### How to install?
 
-Clone the repository, `cd` into it, and run the install scripts:
+Clone (or download) the repository, `cd` into it, and run the install scripts:
 
 ```
 $ cd ~/
@@ -51,6 +53,13 @@ $ ./bootstrap-install.sh
 
 After that log out and log back in.
 
+### Current setup
+http://imgur.com/NkkXfA9
+
+![setup screenshot][screenshot]
+
 ---
 
 **Note**: Any of the structre is subject to change.
+
+[screenshot]: http://i.imgur.com/NkkXfA9.png
