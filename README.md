@@ -42,6 +42,8 @@ The structure of other files is not predefined.
 
 ### How to install?
 
+**Backup** *any of your files, the install script will overwrite any conflicting configuration!*
+
 Clone (or download) the repository, `cd` into it, and run the install scripts:
 
 ```
