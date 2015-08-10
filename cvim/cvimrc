@@ -1,0 +1,4 @@
+set nosmoothscroll
+set noautofocus
+map <A-h> gT
+map <A-l> gt
