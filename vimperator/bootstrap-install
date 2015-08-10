@@ -2,4 +2,8 @@
 # See: https://ngzhian.wordpress.com/2013/01/11/what-i-learned-about-fonts/
 # for information about font
 
+mkdir --parents ~/.vimperator
+rm -rf ~/.vimperator/colors
+
 ln -sfrv ./vimperatorrc ~/.vimperatorrc
+ln -sfrv ./colors ~/.vimperator/colors

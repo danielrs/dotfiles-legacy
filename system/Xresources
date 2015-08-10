@@ -1,3 +1,7 @@
+Xcursor.theme: Vanilla-DMZ-AA
+Xcursor.theme_core: true
+Xcursor.size: 0
+
 URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1
 ! URxvt*font: -*-dejavu sans mono-medium-r-normal-*-11-*-*-*-m-*-iso10646-1
 URxvt*iso14755: false
@@ -9,33 +13,30 @@ URxvt*internalBorder: 4
 
 URxvt*dynamicColors: on
 
-! Jellybeans color scheme
-! Colors taken out from the :hi screen on vim and looking at cterm{bg,fg} values
-! Hex codes taken from URL:
-! http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+! Check bash profile for colorscheme details
 URxvt*background: [90]#151515
 URxvt*foreground: #e8e8d3
-! Black Visual Conceal
+! black darkgray
 URxvt*color0: #3a3a3a
 URxvt*color8: #6c6c6c
-! Red Constant Search
+! red lightred
 URxvt*color1: #d75f5f
 URxvt*color9: #ffafaf
-! Green Special Question
+! green lightgreen
 URxvt*color2: #87af5f
-URxvt*color10: #5faf5f
-! Yellow Directory Function
+URxvt*color10: #87d75f
+! yellow lightyellow
 URxvt*color3: #d7d787
 URxvt*color11: #ffd787
-! Blue PreProc Statement
+! blue lightblue
 URxvt*color4: #87afd7
-URxvt*color12: #8787af
-! Magenta Identifier Identifier
-URxvt*color5: #d7afff
+URxvt*color12: #87afff
+! magenta lightmagenta
+URxvt*color5: #d7afd7
 URxvt*color13: #d7afff
-! Cyan Underlined Underlined
-URxvt*color6: #5fd7ff
+! cyan lightcyan
+URxvt*color6: #5fd7d7
 URxvt*color14: #5fd7ff
-! Light Grey PmenuSel StatusLineNC
+! gray white
 URxvt*color7: #e4e4e4
 URxvt*color15: #ffffff

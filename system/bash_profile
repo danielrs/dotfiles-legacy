@@ -53,14 +53,16 @@ export -f min max clamp toHex toInt display
 
 # Export
 EDITOR=vim
+XDG_CACHE_HOME=$HOME/.cache
 XDG_CONFIG_HOME=$HOME/.config
+__GL_SHADER_DISK_CACHE_PATH=$HOME/.cache/nv
 
 # Scripts may set PATH
 cd ~/.dotfiles/
 . bootstrap-login.sh
 cd ~/
 
-export PATH XDG_CONFIG_HOME
+export EDITOR XDG_CACHE_HOME XDG_CONFIG_HOME __GL_SHADER_DISK_CACHE_PATH
 
 #
 # Colorschemes
@@ -80,20 +82,20 @@ COLOR_8=#6c6c6c
 # red, lightred - Constant 167 Search 217
 COLOR_1=#d75f5f
 COLOR_9=#ffafaf
-# green, lightgreen - Special 107 Question 71
+# green, lightgreen - Special 107 Custom 113
 COLOR_2=#87af5f
-COLOR_10=#5faf5f
+COLOR_10=#87d75f
 # yellow, lightyellow - Directory 186 Function 222
 COLOR_3=#d7d787
 COLOR_11=#ffd787
-# blue, lightblue - PreProc 110 Statement 103
+# blue, lightblue - PreProc 110 Custom 111
 COLOR_4=#87afd7
-COLOR_12=#8787af
-# magenta, lightmagenta - Identifier 183 Identifier 183
-COLOR_5=#d7afff
+COLOR_12=#87afff
+# magenta, lightmagenta - Custom 182 Identifier 183
+COLOR_5=#d7afd7
 COLOR_13=#d7afff
-# cyan, lightcyan - Underlined 81 Underlined 81
-COLOR_6=#5fd7ff
+# cyan, lightcyan - Custom 80 Underlined 81
+COLOR_6=#5fd7d7
 COLOR_14=#5fd7ff
 # gray, white - PmenuSel 254 StatusLineNC 231
 COLOR_7=#e4e4e4

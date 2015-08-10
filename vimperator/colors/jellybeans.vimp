@@ -1,0 +1,43 @@
+" ==Vimperator_Color_Scheme==
+" name: jellybeans
+" author: Tyil <tyil@voidfire.com>
+
+" clear the other colors
+hi clear
+
+" start jellybeans coloring
+hi Normal               color: #eeeeee; background: #1c1c1c;
+hi CmdLine              color: #eeeeee; background: #1c1c1c; "font-size: 10pt; font-family: monospace; font-weight: normal; padding: 0px 3px;
+
+hi StatusLine           color: #eeeeee; background: #1c1c1c; "font-size: 10pt; font-family: monospace; font-weight: normal;
+
+hi CompDesc             color: #87af5f; font-size: 10pt;
+hi CompItem             color: #eeeeee; font-size: 10pt;
+hi CompItem[selected]   background: #303030;
+hi CompMsg              font-style: italic; margin-left: 16px;
+hi CompResult           width: 45%; overflow: hidden;font-size: 10pt; font-family: monospace; font-weight: normal;
+hi CompTitle            color: #eeeeee; background: #1c1c1c; font-weight: bold; font-size: 10pt;
+hi CompTitle>*          padding: 0 .5ex; border-top: 1px solid #eeeeee;
+hi Filter               color: #ffaf5f; font-weight: bold;
+
+hi FrameIndicator       background-color: #242721; opacity: 0.5; z-index: 999; position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+
+hi Bell                 border: 0 none; background-color: #242721; color: #ff0000;
+hi ErrorMsg             color: #ffffff; background: #ff0000; font-weight: bold;
+hi Hint                 color: #87dd32; background-color: #1c1c1c; font-family: monospace; font-size: 10pt;
+hi Hint::after          content: attr(number);
+hi HintActive           background: #535551; color: #6f9bca;
+hi HintElem             background-color: #393939; color: #6f9bca;
+hi HintImage            opacity: .5;
+hi InfoMsg              color: #5778c1;
+hi WarningMsg           color: #ea2828;
+hi ModeMsg              color: #5778c1;
+hi MoreMsg              color: #5778c1;
+hi NonText              color: blue; min-height: 16px; padding-left: 2px;
+hi Question             color: #afafaf; background: green; font-weight: bold;
+hi String               color: #5778c1;
+hi Tag                  color: #5778c1;
+hi Title                color: #5778c1;
+hi URL                  text-decoration: none; color: green; background: inherit;
+hi URL:hover            text-decoration: underline; cursor: pointer;
+hi LineNr               color: #afafaf; background: #242721;
