@@ -34,9 +34,9 @@ Each **dotfile** can *optionally* contain the following files/folders:
 
 	Executes any commands that the **dotfile** may need (setting environment variables, etc)
 
-3. **scripts/**
+3. **bin/**
 
-	A folder that can contain scripts that are added to environment PATH *if* present
+	A folder that can contain scripts and executables that are added to environment PATH *if* present
 
 The structure of other files is not predefined.
 
