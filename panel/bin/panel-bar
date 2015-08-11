@@ -6,8 +6,6 @@
 
 num_mon=$(bspc query -M | wc -l)
 
-volume="Nothing yet"
-
 # Defaults
 while read -r line ; do
 	case $line in
@@ -105,8 +103,8 @@ while read -r line ; do
 	esac
 
 	printf \
-		"%%{l}%s%%{c}%s%%{r}%b%b%s\n" \
-		"${wm_infos}" "${title}" "$now_playing" "$volume" "${sys_infos}";
+		'%%{l}%s%%{c}%s%%{r}%b%b%s\n' \
+		"${wm_infos}" "${title}" "${now_playing}" "${volume}" "${sys_infos}";
 
 
 done

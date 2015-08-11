@@ -1,16 +1,34 @@
+!
+! Font
+!
+
+Xft.autohint: 0
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1
+! URxvt*font: -*-dejavu sans mono-medium-r-normal-*-11-*-*-*-m-*-iso10646-1
+
+!
+! Cursor
+!
+
 Xcursor.theme: Vanilla-DMZ-AA
 Xcursor.theme_core: true
 Xcursor.size: 0
 
-URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1
-! URxvt*font: -*-dejavu sans mono-medium-r-normal-*-11-*-*-*-m-*-iso10646-1
-URxvt*iso14755: false
+!
+! URxvt
+!
 
 URxvt*cursorBlink: true
-URxvt*depth: 32
 URxvt*scrollBar: false
 URxvt*internalBorder: 4
 
+URxvt*depth: 32
 URxvt*dynamicColors: on
 
 ! Check bash profile for colorscheme details

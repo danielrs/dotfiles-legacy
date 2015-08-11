@@ -11,6 +11,7 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 mkfifo "$PANEL_FIFO"
 
 bspc config top_padding $PANEL_HEIGHT
+
 bspc control --subscribe > "$PANEL_FIFO" &
 xtitle -sf 'T%s' > "$PANEL_FIFO" &
 clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
@@ -20,6 +21,6 @@ volume-status --subscribe > "$PANEL_FIFO" &
 
 . panel-colors
 
-cat "$PANEL_FIFO" | panel-bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -F "$COLOR_FOREGROUND" -B "$COLOR_BACKGROUND" &
+cat "$PANEL_FIFO" | panel-bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -B "$COLOR_BACKGROUND" -F "$COLOR_FOREGROUND"  &
 
 wait

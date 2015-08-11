@@ -143,12 +143,12 @@ XF86AudioMute
 	volume-status --changed
 
 XF86AudioLowerVolume
-	amixer set Master 2%-; \
+	amixer set Master 2%- unmute; \
 	volume-status --changed
 
 
 XF86AudioRaiseVolume
-	amixer set Master 2%+; \
+	amixer set Master 2%+ unmute; \
 	volume-status --changed
 
 

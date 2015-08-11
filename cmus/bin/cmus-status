@@ -1,7 +1,5 @@
 #! /bin/bash
 
-FIFO=$CMUS_FIFO
-
 getStatus() {
 	local status=$(cmus-remote -Q | grep status | head -n 1 | cut -d ' ' -f2-)
 	local artist=$(cmus-remote -Q | grep artist | head -n 1 | cut -d ' ' -f3-)
@@ -13,22 +11,22 @@ getStatus() {
 }
 
 statusChanged() {
-	if [ -e "$FIFO" ]; then
-		getStatus > "$FIFO"
+	if [ -e "$CMUS_FIFO" ]; then
+		getStatus > "$CMUS_FIFO"
 	fi
 }
 
 subscribe() {
 
-	if [ -e "$FIFO" ]; then
-		rm "$FIFO"
+	if [ -e "$CMUS_FIFO" ]; then
+		rm "$CMUS_FIFO"
 	fi
-	mkfifo "$FIFO"
+	mkfifo "$CMUS_FIFO"
 
 	# Trigger a status change
 	statusChanged &
 
-	while read line < "$FIFO"; do
+	while read line < "$CMUS_FIFO"; do
 		if [[ "$line" == 'quit' ]]; then
 			break;
 		fi

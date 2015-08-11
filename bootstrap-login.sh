@@ -6,8 +6,8 @@ for d in */; do
 	# Go into directory
 	cd "$d"
 	# If the directory contains any executable add it to path
-	if [ -d scripts ]; then
-		PATH=$PATH:$cwd/$d/scripts
+	if [ -d bin ]; then
+		PATH=$PATH:$cwd/$d/bin
 	fi
 	# Run the login commands
 	if [ -x bootstrap-login ]; then

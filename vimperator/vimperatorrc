@@ -2,3 +2,6 @@
 
 map <A-h> gT
 map <A-l> gt
+
+noremap j 4j
+noremap k 4k
