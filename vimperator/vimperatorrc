@@ -1,4 +1,6 @@
-:set hintchars=hjklasdfgyuiopqwertnmzxcvb
+colorscheme jellybeans
+
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
 
 map <A-h> gT
 map <A-l> gt

@@ -1,6 +1,6 @@
 set status_display_program=cmus-status-callback
 set shuffle=true
-set repeat=false
+set repeat=true
 set resume=true
 
 # Colors

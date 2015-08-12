@@ -45,7 +45,7 @@ display() {
 		echo 'length argument ($2) is not a number. Using default length (32)'
 	fi
 
-	printf "$1" | \
+	echo $1 | \
 		awk -v len=$len '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print $0; }'
 }
 

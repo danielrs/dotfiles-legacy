@@ -1,43 +1,77 @@
-" ==Vimperator_Color_Scheme==
+" ==Viperator_Color_Scheme==
 " name: jellybeans
-" author: Tyil <tyil@voidfire.com>
+" author: ers.daniel+dev@gmail.com
 
-" clear the other colors
-hi clear
+" ==Jellybeans colors==
+"
+" NAME			HEX			TERMCOL
+" BG			#151515		233
+" FG			#e8e8d3		188
+" black			#3a3a3a		237
+" darkgray		#6c6c6c		242
+" red			#d75f5f		167
+" lightred		#ffafaf		217
+" green			#87af5f		107
+" lightgreen	#87d75f		113
+" yellow		#d7d787		186
+" lightyellow	#ffd787		222
+" blue			#87afd7		110
+" lightblue		#87afff		111
+" magenta		#d7afd7		182
+" lightmagenta	#d7afff		183
+" cyan			#5fd7d7		80
+" lightcyan		#5fd7ff		81
+" gray			#e4e4e4		254
+" white			#ffffff		231
 
-" start jellybeans coloring
-hi Normal               color: #eeeeee; background: #1c1c1c;
-hi CmdLine              color: #eeeeee; background: #1c1c1c; "font-size: 10pt; font-family: monospace; font-weight: normal; padding: 0px 3px;
+" ==Colorscheme==
 
-hi StatusLine           color: #eeeeee; background: #1c1c1c; "font-size: 10pt; font-family: monospace; font-weight: normal;
+hi Normal							font-family: Terminus, monospace; background-color: #3a3a3a; color: #e4e4e4; opacity: 0.95;
 
-hi CompDesc             color: #87af5f; font-size: 10pt;
-hi CompItem             color: #eeeeee; font-size: 10pt;
-hi CompItem[selected]   background: #303030;
-hi CompMsg              font-style: italic; margin-left: 16px;
-hi CompResult           width: 45%; overflow: hidden;font-size: 10pt; font-family: monospace; font-weight: normal;
-hi CompTitle            color: #eeeeee; background: #1c1c1c; font-weight: bold; font-size: 10pt;
-hi CompTitle>*          padding: 0 .5ex; border-top: 1px solid #eeeeee;
-hi Filter               color: #ffaf5f; font-weight: bold;
+" Hints
+hi Hint								font-family: Terminus, monospace; background-color: #e4e4e4; color: #3a3a3a; border: 1px solid #3a3a3a; border-radius: 2px; padding: 0.125em;
+hi HintActive						background-color: #3a3a3a; color: #ffafaf; text-decoration: underline;
+hi HintElem							background-color: #ffd787;
 
-hi FrameIndicator       background-color: #242721; opacity: 0.5; z-index: 999; position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+hi Bell								background-color: black; border: 0 none;
 
-hi Bell                 border: 0 none; background-color: #242721; color: #ff0000;
-hi ErrorMsg             color: #ffffff; background: #ff0000; font-weight: bold;
-hi Hint                 color: #87dd32; background-color: #1c1c1c; font-family: monospace; font-size: 10pt;
-hi Hint::after          content: attr(number);
-hi HintActive           background: #535551; color: #6f9bca;
-hi HintElem             background-color: #393939; color: #6f9bca;
-hi HintImage            opacity: .5;
-hi InfoMsg              color: #5778c1;
-hi WarningMsg           color: #ea2828;
-hi ModeMsg              color: #5778c1;
-hi MoreMsg              color: #5778c1;
-hi NonText              color: blue; min-height: 16px; padding-left: 2px;
-hi Question             color: #afafaf; background: green; font-weight: bold;
-hi String               color: #5778c1;
-hi Tag                  color: #5778c1;
-hi Title                color: #5778c1;
-hi URL                  text-decoration: none; color: green; background: inherit;
-hi URL:hover            text-decoration: underline; cursor: pointer;
-hi LineNr               color: #afafaf; background: #242721;
+" Bar
+hi CmdLine							background-color: #151515; color: #e8e8d3; transition: all 0.1s;
+hi CmdLine>*						font-family: Terminus, monospace;
+hi CmdOutput						whitespace: pre;
+hi StatusLine						font-family: Terminus, monospace; color: #e4e4e4;
+
+" Completion
+hi CompDesc							color: #87af5f;
+hi CompGroup:not(:first-of-type)	margin-top: .5em;
+hi CompIcon							width: 16px; min-width: 16px; display: inline-block; margin-right: .5ex;
+hi CompIcon>img						max-width: 16px; max-height: 16px; vertical-align: middle;
+hi CompItem>*						padding: .125em 0em; padding-right: .5em;
+hi CompItem[selected]				background-color: #e4e4e4; color: #3a3a3a;
+hi CompMsg							font-style: italic;
+hi CompResult						text-overflow: ellipsis; overflow: hidden;
+hi CompTitle						background-color: #d7d787; color: #3a3a3a;
+hi CompTitle>*						padding: .25em;
+
+hi Filter							background-color: #151515; color: #ffafaf; text-decoration: underline;
+
+" Java objects
+hi Boolean							color: #d7afd7;
+hi Function							color: #ffd787;
+hi Null								color: #d7afd7;
+
+" Messages
+hi ErrorMsg							font-family: Terminus, monospace; background-color: #d75f5f; color: #ffffff;
+hi ModeMsg							font-family: Terminus, monospace; background-color: #87af5f; color: #3a3a3a; padding: 0 .5em;
+hi MoreMsg							color: #87af5f;
+hi WarningMsg						background-color: #d7d787; color: #3a3a3a;
+hi URL								color: #5fd7d7;
+
+" Other
+hi Title							background-color: transparent; color: #d7d787; padding: 0.125em;
+hi Number							color: #ffafaf;
+hi NonText							color: #ffafaf;
+hi Question							color: #87af5f;
+
+" Prompt
+hi PromptText						text-transform: uppercase; background-color: #87afff; color: #3a3a3a;
