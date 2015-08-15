@@ -39,10 +39,10 @@ hi Bell								background-color: black; border: 0 none;
 hi CmdLine							background-color: #151515; color: #e8e8d3; transition: all 0.1s;
 hi CmdLine>*						font-family: Terminus, monospace;
 hi CmdOutput						whitespace: pre;
-hi StatusLine						font-family: Terminus, monospace; color: #e4e4e4;
+hi StatusLine						font-family: Terminus, monospace;
 
 " Completion
-hi CompDesc							color: #87af5f;
+hi CompDesc							color: #6c6c6c;
 hi CompGroup:not(:first-of-type)	margin-top: .5em;
 hi CompIcon							width: 16px; min-width: 16px; display: inline-block; margin-right: .5ex;
 hi CompIcon>img						max-width: 16px; max-height: 16px; vertical-align: middle;
@@ -62,15 +62,17 @@ hi Null								color: #d7afd7;
 
 " Messages
 hi ErrorMsg							font-family: Terminus, monospace; background-color: #d75f5f; color: #ffffff;
+hi InfoMsg							font-family: Terminus, monospace; font-weight: bold; background-color: #87afd7; color: #3a3a3a !important;
 hi ModeMsg							font-family: Terminus, monospace; background-color: #87af5f; color: #3a3a3a; padding: 0 .5em;
 hi MoreMsg							color: #87af5f;
 hi WarningMsg						background-color: #d7d787; color: #3a3a3a;
 hi URL								color: #5fd7d7;
 
 " Other
-hi Title							background-color: transparent; color: #d7d787; padding: 0.125em;
+hi ContentSeparator					border: none;
 hi Number							color: #ffafaf;
 hi NonText							color: #ffafaf;
+hi Title							background-color: transparent; color: #d7d787; padding: 0.125em;
 hi Question							color: #87af5f;
 
 " Prompt

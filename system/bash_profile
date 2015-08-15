@@ -57,48 +57,12 @@ XDG_CACHE_HOME=$HOME/.cache
 XDG_CONFIG_HOME=$HOME/.config
 __GL_SHADER_DISK_CACHE_PATH=$HOME/.cache/nv
 
-# Scripts may set PATH
+export EDITOR XDG_CACHE_HOME XDG_CONFIG_HOME __GL_SHADER_DISK_CACHE_PATH
+
+#
+# Scripts may set PATH and Environment variables
+#
 cd ~/.dotfiles/
 . bootstrap-login.sh
 cd ~/
 
-export EDITOR XDG_CACHE_HOME XDG_CONFIG_HOME __GL_SHADER_DISK_CACHE_PATH
-
-#
-# Colorschemes
-#
-
-# Jellybeans color scheme
-# Colors taken out from the :hi screen on vim and looking at cterm{bg,fg} values
-# Hex codes taken from URL:
-# http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
-# NOTE: Color values in here have more precedence than those in ~/.Xresources
-# Normal 233 188
-COLOR_BG=#151515
-COLOR_FG=#e8e8d3
-# black, darkgray - Visual 237 Conceal 242
-COLOR_0=#3a3a3a
-COLOR_8=#6c6c6c
-# red, lightred - Constant 167 Search 217
-COLOR_1=#d75f5f
-COLOR_9=#ffafaf
-# green, lightgreen - Special 107 Custom 113
-COLOR_2=#87af5f
-COLOR_10=#87d75f
-# yellow, lightyellow - Directory 186 Function 222
-COLOR_3=#d7d787
-COLOR_11=#ffd787
-# blue, lightblue - PreProc 110 Custom 111
-COLOR_4=#87afd7
-COLOR_12=#87afff
-# magenta, lightmagenta - Custom 182 Identifier 183
-COLOR_5=#d7afd7
-COLOR_13=#d7afff
-# cyan, lightcyan - Custom 80 Underlined 81
-COLOR_6=#5fd7d7
-COLOR_14=#5fd7ff
-# gray, white - PmenuSel 254 StatusLineNC 231
-COLOR_7=#e4e4e4
-COLOR_15=#ffffff
-
-export COLOR_BG COLOR_FG COLOR_0 COLOR_1 COLOR_2 COLOR_3 COLOR_4 COLOR_5 COLOR_6 COLOR_7 COLOR_8 COLOR_9 COLOR_10 COLOR_11 COLOR_12 COLOR_13 COLOR_14 COLOR_15

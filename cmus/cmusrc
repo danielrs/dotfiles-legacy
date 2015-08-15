@@ -5,20 +5,20 @@ set resume=true
 
 # Colors
 # Optimized for Jellybean urxvt theme
-set color_error=red
-set color_info=yellow
-set color_separator=yellow
+set color_error=lightred
+set color_info=lightyellow
+set color_separator=lightyellow
 set color_statusline_bg=darkgray
 set color_statusline_fg=gray
 set color_statusline_attr=white
-set color_titleline_bg=yellow
+set color_titleline_bg=lightyellow
 set color_titleline_fg=black
-set color_win_cur=blue
-set color_win_cur_sel_bg=yellow
+set color_win_cur=lightblue
+set color_win_cur_sel_bg=lightyellow
 set color_win_cur_sel_fg=black
-set color_win_dir=yellow
+set color_win_dir=lightyellow
 set color_win_inactive_cur_sel_bg=darkgray
-set color_win_inactive_cur_sel_fg=yellow
+set color_win_inactive_cur_sel_fg=lightyellow
 set color_win_inactive_sel_bg=black
 set color_win_inactive_sel_fg=gray
 set color_win_sel_bg=gray

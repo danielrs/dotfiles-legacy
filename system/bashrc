@@ -6,5 +6,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias kus='setxkbmap -layout us'
+alias kintl='setxkbmap -layout us -variant intl'
 # PS1='[\u@\h \W]\$ '
 PS1='\e[34m\u \e[1m\e[30m\W \e[0m\e[34m>\e[0m '

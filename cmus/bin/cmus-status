@@ -27,9 +27,9 @@ subscribe() {
 	statusChanged &
 
 	while read line < "$CMUS_FIFO"; do
-		if [[ "$line" == 'quit' ]]; then
-			break;
-		fi
+		# if [[ "$line" == 'quit' ]]; then
+		# 	break;
+		# fi
 		printf '%s\n' "$line"
 	done
 }

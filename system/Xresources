@@ -38,23 +38,23 @@ URxvt*foreground: #e8e8d3
 URxvt*color0: #3a3a3a
 URxvt*color8: #6c6c6c
 ! red lightred
-URxvt*color1: #d75f5f
-URxvt*color9: #ffafaf
+URxvt*color1: #ff5f5f
+URxvt*color9: #d75f5f
 ! green lightgreen
-URxvt*color2: #87af5f
-URxvt*color10: #87d75f
+URxvt*color2: #87d75f
+URxvt*color10: #87af5f
 ! yellow lightyellow
-URxvt*color3: #d7d787
-URxvt*color11: #ffd787
+URxvt*color3: #ffd787
+URxvt*color11: #d7d787
 ! blue lightblue
-URxvt*color4: #87afd7
-URxvt*color12: #87afff
+URxvt*color4: #87afff
+URxvt*color12: #87afd7
 ! magenta lightmagenta
-URxvt*color5: #d7afd7
-URxvt*color13: #d7afff
+URxvt*color5: #d7afff
+URxvt*color13: #d7afd7
 ! cyan lightcyan
-URxvt*color6: #5fd7d7
-URxvt*color14: #5fd7ff
+URxvt*color6: #5fd7ff
+URxvt*color14: #5fafff
 ! gray white
-URxvt*color7: #e4e4e4
-URxvt*color15: #ffffff
+URxvt*color7: #ffffff
+URxvt*color15: #e4e4e4

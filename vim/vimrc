@@ -124,7 +124,8 @@ au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 " jellybeans
 
 " Base-16
-" colorscheme base16-default
+" let base16colorspace=256
+" colorscheme base16-eighties
 
 " Emmet
 let g:user_emmet_install_global = 0

@@ -1,3 +1,3 @@
 #! /bin/bash
 
-cmus-status --changed
+cmus-status --changed & # Daemonize so cmus can continue

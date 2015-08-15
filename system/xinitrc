@@ -1,8 +1,5 @@
 xrdb ~/.Xresources
 
-# Pulseaudio
-pulseaudio --start
-
 # Cursor
 xsetroot -cursor_name left_ptr &
 
@@ -10,6 +7,9 @@ xsetroot -cursor_name left_ptr &
 compton --config ~/.config/compton.conf -b
 feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg &
 redshift -l 7.9972821:-71.9181585 &
+
+# Pulseaudio
+pulseaudio --start
 
 # WM
 sxhkd &
