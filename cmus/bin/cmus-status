@@ -26,11 +26,10 @@ subscribe() {
 	# Trigger a status change
 	statusChanged &
 
-	while read line < "$CMUS_FIFO"; do
-		# if [[ "$line" == 'quit' ]]; then
-		# 	break;
-		# fi
-		printf '%s\n' "$line"
+	while true; do
+		if read line < "$CMUS_FIFO"; then
+			echo $line
+		fi
 	done
 }
 
