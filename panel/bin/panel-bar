@@ -22,25 +22,30 @@ while read -r line ; do
 				now_playing="%{F$COLOR_NOTIFICATION_FG} CMUS is not running. %{F-}"
 			else
 				if [ "$c_status" == "paused" ]; then
-					now_playing="%{F$COLOR_NOTIFICATION_FG} \u266B Paused %{F-}"
+					now_playing="%{F$COLOR_NOTIFICATION_FG} \uE059 Paused %{F-}"
 				else
-					now_playing="%{F$COLOR_NOTIFICATION_FG} \u266B $(display "$c_artist - $c_title") %{F-}"
+					now_playing="%{F$COLOR_NOTIFICATION_FG} \uE05C $(display "$c_artist - $c_title") %{F-}"
 				fi
 			fi
 			;;
 		VOL*)
+			# volume output
 			vol_status=$(echo ${line:3} | cut -d ':' -f1)
 			vol_level=$(echo ${line:3} | cut -d ':' -f2)
 
 			if [ "$vol_status" == 'off' ]; then
-				volume="%{B$COLOR_BACKGROUND}%{F$COLOR_URGENT_FG} \u260A Muted %{F-}%{B-}"
+				volume="%{B$COLOR_BACKGROUND}%{F$COLOR_URGENT_FG} \uE04F Muted %{F-}%{B-}"
 			else
-				volume="%{B$COLOR_BACKGROUND}%{F$COLOR_WARNING_FG} \u260A $vol_level%% %{F-}%{B-}"
+				vol_icon='\uE04E'
+				if [[ $vol_level -ge 50 ]]; then
+					vol_icon='\uE050'
+				fi
+				volume="%{B$COLOR_BACKGROUND}%{F$COLOR_WARNING_FG} $vol_icon $vol_level%% %{F-}%{B-}"
 			fi
 			;;
 		S*)
 			# clock output
-			sys_infos="%{F$COLOR_STATUS_FG}%{B$COLOR_STATUS_BG} ${line:1} %{B-}%{F-}"
+			sys_infos="%{F$COLOR_STATUS_FG}%{B$COLOR_STATUS_BG} \uE015 ${line:1} %{B-}%{F-}"
 			;;
 		T*)
 			# xtitle output
@@ -93,7 +98,11 @@ while read -r line ; do
 						;;
 					L*)
 						# layout
-						wm_infos="$wm_infos  %{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG} ${name} %{B-}%{F-}"
+						layout_icon='\uE009'
+						if [[ $name == M* ]]; then
+							layout_icon='\uE001'
+						fi
+						wm_infos="$wm_infos  %{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG} $layout_icon %{B-}%{F-}"
 						;;
 				esac
 				shift
@@ -103,7 +112,7 @@ while read -r line ; do
 	esac
 
 	printf \
-		'%%{l}%s%%{c}%s%%{r}%b%b%s\n' \
+		'%%{l}%b%%{c}%s%%{r}%b%b%b\n' \
 		"${wm_infos}" "${title}" "${now_playing}" "${volume}" "${sys_infos}";
 
 

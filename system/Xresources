@@ -9,7 +9,10 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1
+URxvt.font: xft:Inconsolata:size=11
+! URxvt.font: xft:Dejavu Sans Mono:size=11
+! URxvt.font: xft:Envy Code R:size=12
+! URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1 */
 ! URxvt*font: -*-dejavu sans mono-medium-r-normal-*-11-*-*-*-m-*-iso10646-1
 
 !

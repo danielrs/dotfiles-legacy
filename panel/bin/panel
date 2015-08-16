@@ -21,6 +21,6 @@ volume-status --subscribe > "$PANEL_FIFO" &
 
 . panel-colors
 
-cat "$PANEL_FIFO" | panel-bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -B "$COLOR_BACKGROUND" -F "$COLOR_FOREGROUND"  &
+cat "$PANEL_FIFO" | panel-bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$PANEL_FONT_ICONS" -B "$COLOR_BACKGROUND" -F "$COLOR_FOREGROUND"  &
 
 wait
