@@ -1,3 +1,7 @@
+# Fonts
+xset +fp /usr/share/fonts/local
+xset fp rehash
+
 xrdb ~/.Xresources
 
 # Cursor
@@ -12,5 +16,5 @@ redshift -l 7.9972821:-71.9181585 &
 pulseaudio --start
 
 # WM
-sxhkd &
+sxhkd -f 100 &
 exec bspwm

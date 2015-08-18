@@ -3,15 +3,14 @@
 !
 
 Xft.autohint: 0
-Xft.antialias: true
 Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintslight
+Xft.antialias: true
 Xft.lcdfilter: lcddefault
 
 URxvt.font: xft:Inconsolata:size=11
-! URxvt.font: xft:Dejavu Sans Mono:size=11
-! URxvt.font: xft:Envy Code R:size=12
+! URxvt.font: xft:Dejavu Sans Mono:size=9
 ! URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1 */
 ! URxvt*font: -*-dejavu sans mono-medium-r-normal-*-11-*-*-*-m-*-iso10646-1
 

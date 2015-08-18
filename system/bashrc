@@ -9,4 +9,5 @@ alias ls='ls --color=auto'
 alias kus='setxkbmap -layout us'
 alias kintl='setxkbmap -layout us -variant intl'
 # PS1='[\u@\h \W]\$ '
-PS1='\e[34m\u \e[1m\e[30m\W \e[0m\e[34m>\e[0m '
+
+PS1=$'\[\e[01;34m\]\u \[\e[01;1m\]\[\e[01;30m\]\W \[\e[01;31m\]\u00bb\[\e[01;0m\] '

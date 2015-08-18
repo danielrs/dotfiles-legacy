@@ -97,11 +97,14 @@ endif
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Extra files
-" GLSL
-" JFlex
 augroup filetype
+	autocmd!
+	" GLSL
 	autocmd BufNewFile,BufRead *.vert,*.frag,*.tesc,*.tese,*.geom,*.comp set filetype=c
+	" jflex
 	autocmd BufNewFile,BufRead *.flex,*.jflex set filetype=jflex
+	" Haskell
+	autocmd Filetype haskell setlocal tabstop=2 shiftwidth=2 expandtab
 augroup END
 au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 
@@ -160,7 +163,23 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <F8> :TagbarToggle<CR>
 
 " vim2hs
-"
+let g:haskell_conceal = 0
+let g:haskell_conceal_enumeration = 0
+
+let g:haskell_quasi = 0
+let g:haskell_interpolation = 0
+let g:haskell_regex = 0
+let g:haskell_regex = 0
+let g:haskell_jmacro = 0
+let g:haskell_shqq = 0
+let g:haskell_sql = 0
+let g:haskell_json = 0
+let g:haskell_xml = 0
+
+let g:haskell_hsp = 0
+
+let g:haskell_tabular = 0
+
 " Vim Colors Solarized
 set background=dark
 " colorscheme solarized
