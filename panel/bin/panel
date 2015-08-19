@@ -19,7 +19,7 @@ clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
 cmus-status --subscribe > "$PANEL_FIFO" &
 volume-status --subscribe > "$PANEL_FIFO" &
 
-. panel-colors
+. panel-info
 
 cat "$PANEL_FIFO" | panel-bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$PANEL_FONT_ICONS" -B "$COLOR_BACKGROUND" -F "$COLOR_FOREGROUND"  &
 

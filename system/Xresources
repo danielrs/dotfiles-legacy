@@ -9,6 +9,7 @@ Xft.hintstyle: hintslight
 Xft.antialias: true
 Xft.lcdfilter: lcddefault
 
+! URxvt.font: xft:Inconsolata\\-g:style=g:pixelsize=13
 URxvt.font: xft:Inconsolata:size=11
 ! URxvt.font: xft:Dejavu Sans Mono:size=9
 ! URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1 */

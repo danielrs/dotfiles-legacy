@@ -36,8 +36,8 @@ syntax on
 syntax enable
 
 " Editor GUI
-" :set guifont=Consolas:h12
-:set guifont=Terminus\ 9
+:set guifont=Consolas:h12
+" :set guifont=Terminus\ 9
 :set number
 :set cursorline
 :set showcmd
