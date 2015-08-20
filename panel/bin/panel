@@ -5,7 +5,7 @@ if [ $(pgrep -cx panel) -gt 1 ] ; then
 	exit 1
 fi
 
-trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+trap 'echo HERE; trap - TERM; kill 0' TERM INT QUIT
 
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"

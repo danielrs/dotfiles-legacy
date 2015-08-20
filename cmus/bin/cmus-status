@@ -1,5 +1,6 @@
 #! /bin/bash
 
+FIFO=$CMUS_FIFO
 getStatus() {
 	local status=$(cmus-remote -Q | grep status | head -n 1 | cut -d ' ' -f2-)
 	local artist=$(cmus-remote -Q | grep artist | head -n 1 | cut -d ' ' -f3-)
@@ -10,47 +11,4 @@ getStatus() {
 	printf 'CMUS%s:%s:%s:%s:%s\n' "$status" "$artist" "$album" "$title" "$year"
 }
 
-statusChanged() {
-	if [ -e "$CMUS_FIFO" ]; then
-		getStatus > "$CMUS_FIFO"
-	fi
-}
-
-subscribe() {
-
-	if [ -e "$CMUS_FIFO" ]; then
-		rm "$CMUS_FIFO"
-	fi
-	mkfifo "$CMUS_FIFO"
-
-	# Trigger a status change
-	statusChanged &
-
-	while true; do
-		if read line < "$CMUS_FIFO"; then
-			echo $line
-		fi
-	done
-}
-
-if [ ! -z "$1" ]; then
-	case $1 in
-		-c)
-			statusChanged
-			;;
-		--changed)
-			statusChanged
-			;;
-		-s)
-			subscribe
-			;;
-		--subscribe)
-			subscribe
-			;;
-		*)
-			printf 'Agument not recognized!\n'
-			;;
-	esac
-else
-	getStatus
-fi
+. subscribable.sh

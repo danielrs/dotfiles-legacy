@@ -49,7 +49,11 @@ display() {
 		awk -v len=$len '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print $0; }'
 }
 
-export -f min max clamp toHex toInt display
+functionExists() {
+	echo $(declare -F $1 > /dev/null; echo $?)
+}
+
+export -f min max clamp toHex toInt display functionExists
 
 # Export
 EDITOR=vim
