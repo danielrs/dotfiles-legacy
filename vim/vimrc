@@ -7,6 +7,18 @@ execute pathogen#infect()
 Helptags
 
 """"""""""""""""""
+" Useful functions
+""""""""""""""""""
+
+function! NAltMap(key, command)
+	if $TERM == 'rxvt-unicode-256color' && !has('gui_running')
+		execute 'noremap <silent> <Esc>' . a:key . ' ' . a:command . '<CR>'
+	else
+		execute 'noremap <silent> <A-' . a:key '> ' . a:command . '<CR>'
+	endif
+endfunc
+
+""""""""""""""""""
 " Useful variables
 """"""""""""""""""
 
@@ -42,6 +54,14 @@ syntax enable
 :set cursorline
 :set showcmd
 :set scrolloff=4 " Allways n lines visisble when scrolling
+
+" Editor
+:set noesckeys " Disable Esc-key escape sequences
+:call NAltMap('n', ':set relativenumber! relativenumber?')
+" Copy all lines to clipboard
+:nnoremap <Leader>y gg"+yG
+" Paste from clipboard
+:nnoremap <Leader>p "+p
 
 " Indentation
 :set tabstop=4
@@ -82,16 +102,10 @@ endif
 :set fileformats=unix,dos
 
 " Window Switching
-nmap <silent> <A-k> :wincmd k<CR>
-nmap <silent> <A-j> :wincmd j<CR>
-nmap <silent> <A-h> :wincmd h<CR>
-nmap <silent> <A-l> :wincmd l<CR>
-if $TERM == 'rxvt-unicode-256color' && !has('gui_running')
-	nmap <silent> <Esc>k :wincmd k<CR>
-	nmap <silent> <Esc>j :wincmd j<CR>
-	nmap <silent> <Esc>h :wincmd h<CR>
-	nmap <silent> <Esc>l :wincmd l<CR>
-endif
+:call NAltMap('k', ':wincmd k')
+:call NAltMap('j', ':wincmd j')
+:call NAltMap('h', ':wincmd h')
+:call NAltMap('l', ':wincmd l')
 
 " Remove trailing whitespace before saving buffer
 autocmd BufWritePre * :%s/\s\+$//e
@@ -104,7 +118,7 @@ augroup filetype
 	" jflex
 	autocmd BufNewFile,BufRead *.flex,*.jflex set filetype=jflex
 	" Haskell
-	autocmd Filetype haskell setlocal tabstop=2 shiftwidth=2 expandtab
+	autocmd Filetype haskell setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 augroup END
 au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 

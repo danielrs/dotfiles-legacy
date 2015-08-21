@@ -26,10 +26,10 @@
 
 " ==Colorscheme==
 
-hi Normal							font-family: Terminus, monospace; background-color: #3a3a3a; color: #e4e4e4; opacity: 0.95;
+hi Normal							font-family: Inconsolata, "Dejavu Sans Mono", monospace; background-color: #3a3a3a; color: #e4e4e4; opacity: 0.95;
 
 " Hints
-hi Hint								font-family: Terminus, monospace; background-color: #e4e4e4; color: #3a3a3a; border: 1px solid #3a3a3a; border-radius: 2px; padding: 0.125em;
+hi Hint								font-family: Inconsolata, "Dejavu Sans Mono", monospace; background-color: #e4e4e4; color: #3a3a3a; border: 1px solid #3a3a3a; border-radius: 2px; padding: 0.125em;
 hi HintActive						background-color: #3a3a3a; color: #ffafaf; text-decoration: underline;
 hi HintElem							background-color: #ffd787;
 
@@ -37,9 +37,9 @@ hi Bell								background-color: black; border: 0 none;
 
 " Bar
 hi CmdLine							background-color: #151515; color: #e8e8d3; transition: all 0.1s;
-hi CmdLine>*						font-family: Terminus, monospace;
+hi CmdLine>*						font-family: Inconsolata, "Dejavu Sans Mono", monospace;
 hi CmdOutput						whitespace: pre;
-hi StatusLine						font-family: Terminus, monospace;
+hi StatusLine						font-family: Inconsolata, "Dejavu Sans Mono", monospace;
 
 " Completion
 hi CompDesc							color: #6c6c6c;
@@ -61,9 +61,9 @@ hi Function							color: #ffd787;
 hi Null								color: #d7afd7;
 
 " Messages
-hi ErrorMsg							font-family: Terminus, monospace; background-color: #d75f5f; color: #ffffff;
-hi InfoMsg							font-family: Terminus, monospace; font-weight: bold; background-color: #87afd7; color: #3a3a3a !important;
-hi ModeMsg							font-family: Terminus, monospace; background-color: #87af5f; color: #3a3a3a; padding: 0 .5em;
+hi ErrorMsg							font-family: Inconsolata, "Dejavu Sans Mono", monospace; background-color: #d75f5f; color: #ffffff;
+hi InfoMsg							font-family: Inconsolata, "Dejavu Sans Mono", monospace; font-weight: bold; background-color: #87afd7; color: #3a3a3a !important;
+hi ModeMsg							font-family: Inconsolata, "Dejavu Sans Mono", monospace; background-color: #87af5f; color: #3a3a3a; padding: 0 .5em;
 hi MoreMsg							color: #87af5f;
 hi WarningMsg						background-color: #d7d787; color: #3a3a3a;
 hi URL								color: #5fd7d7;

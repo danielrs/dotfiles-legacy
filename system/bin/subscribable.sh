@@ -21,7 +21,7 @@ statusChanged() {
 
 subscribe() {
 
-	trap "rm -f \"$FIFO\"" EXIT
+	# trap "rm -f \"$FIFO\"" EXIT
 
 	if [ -p "$FIFO" ]; then
 		rm "$FIFO"
