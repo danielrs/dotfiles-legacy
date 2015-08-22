@@ -23,9 +23,9 @@ COLOR_11=#d7d787
 # blue, lightblue - Custom 111 PreProc 110
 COLOR_4=#87afff
 COLOR_12=#87afd7
-# magenta, lightmagenta - Identifier 183 Custom 181
+# magenta, lightmagenta - Identifier 183 Custom 182
 COLOR_5=#d7afff
-COLOR_13=#d7afaf
+COLOR_13=#d7afd7
 # cyan, lightcyan - Underlined 81 Custom 80
 COLOR_6=#5fd7ff
 COLOR_14=#5fd7d7
