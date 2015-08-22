@@ -2,3 +2,4 @@
 
 mkdir --parents ~/.config/cmus
 ln -sfrv ./cmusrc ~/.config/cmus/rc
+ln -sfrv ./jellybeans.theme ~/.config/cmus/

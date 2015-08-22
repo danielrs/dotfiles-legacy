@@ -54,10 +54,10 @@ URxvt*color4: #87afff
 URxvt*color12: #87afd7
 ! magenta lightmagenta
 URxvt*color5: #d7afff
-URxvt*color13: #d7afd7
+URxvt*color13: #d7afaf
 ! cyan lightcyan
 URxvt*color6: #5fd7ff
-URxvt*color14: #5fafff
+URxvt*color14: #5fd7d7
 ! gray white
-URxvt*color7: #ffffff
+URxvt*color7: #afafaf
 URxvt*color15: #e4e4e4

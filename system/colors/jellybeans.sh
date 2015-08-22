@@ -23,15 +23,15 @@ COLOR_11=#d7d787
 # blue, lightblue - Custom 111 PreProc 110
 COLOR_4=#87afff
 COLOR_12=#87afd7
-# magenta, lightmagenta - Identifier 183 Custom 182
+# magenta, lightmagenta - Identifier 183 Custom 181
 COLOR_5=#d7afff
-COLOR_13=#d7afd7
-# cyan, lightcyan - Underlined 81 Custom 75
+COLOR_13=#d7afaf
+# cyan, lightcyan - Underlined 81 Custom 80
 COLOR_6=#5fd7ff
-COLOR_14=#5fafff
-# gray, white - PmenuSel 254 StatusLineNC 231
-COLOR_7=#e4e4e4
-COLOR_15=#ffffff
+COLOR_14=#5fd7d7
+# gray, white - TabLine 145 PmenuSel 254
+COLOR_7=#afafaf
+COLOR_15=#e4e4e4
 
 COLOR_BLACK=$COLOR_0
 COLOR_DARKGRAY=$COLOR_8
