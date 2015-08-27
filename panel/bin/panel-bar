@@ -18,7 +18,7 @@ while read -r line ; do
 			c_title=$(echo ${line:4} | cut -d ':' -f4)
 			c_year=$(echo ${line:4} | cut -d ':' -f5)
 
-			if [ -z "$c_status" ]; then
+			if [[ "$c_status" == 'not_running' ]] || [ -z "$c_status" ]; then
 				now_playing="%{F$COLOR_NOTIFICATION_FG} CMUS is not running. %{F-}"
 			else
 				if [ "$c_status" == "paused" ]; then

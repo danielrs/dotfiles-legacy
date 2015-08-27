@@ -9,7 +9,6 @@ panel &
 bspc config border_width        1
 bspc config window_gap         5
 
-
 bspc config split_ratio         0.52
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
@@ -18,7 +17,6 @@ bspc config focus_by_distance   true
 bspc monitor -d I II III IV V VI VII VIII
 
 # bspc rule -a Gimp desktop=^8 follow=on floating=on
-bspc rule -a Chrome desktop=^2
 bspc rule -a feh floating=on
 # bspc rule -a mplayer2 floating=on
 # bspc rule -a Kupfer.py focus=on
@@ -28,11 +26,11 @@ bspc rule -a feh floating=on
 # Colors
 #
 
-
 bspc config focused_border_color $COLOR_LYELLOW
 bspc config active_border_color $COLOR_WHITE
 bspc config normal_border_color $COLOR_DARKGRAY
 bspc config presel_border_color $COLOR_CYAN
 # locked colors
 # sticky colors
+# private colors
 bspc config urgent_border_color $COLOR_LRED

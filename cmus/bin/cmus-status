@@ -2,13 +2,17 @@
 
 FIFO=$CMUS_FIFO
 getStatus() {
-	local status=$(cmus-remote -Q | grep status | head -n 1 | cut -d ' ' -f2-)
-	local artist=$(cmus-remote -Q | grep artist | head -n 1 | cut -d ' ' -f3-)
-	local album=$(cmus-remote -Q | grep album | head -n 1 | cut -d ' ' -f3-)
-	local title=$(cmus-remote -Q | grep title | head -n 1 | cut -d ' ' -f3-)
-	local year=$(cmus-remote -Q | grep date | head -n 1 | cut -d ' ' -f3-)
+	local status=$(cmus-remote -Q 2>/dev/null | grep status | head -n 1 | cut -d ' ' -f2-)
+	local artist=$(cmus-remote -Q 2>/dev/null | grep artist | head -n 1 | cut -d ' ' -f3-)
+	local album=$(cmus-remote -Q 2>/dev/null | grep album | head -n 1 | cut -d ' ' -f3-)
+	local title=$(cmus-remote -Q 2>/dev/null | grep title | head -n 1 | cut -d ' ' -f3-)
+	local year=$(cmus-remote -Q 2>/dev/null | grep date | head -n 1 | cut -d ' ' -f3-)
 
-	printf 'CMUS%s:%s:%s:%s:%s\n' "$status" "$artist" "$album" "$title" "$year"
+	if [[ "$status" == 'exiting' ]] || [ -z "$status" ]; then
+		printf 'CMUSnot_running\n'
+	else
+		printf 'CMUS%s:%s:%s:%s:%s\n' "$status" "$artist" "$album" "$title" "$year"
+	fi
 }
 
 . subscribable.sh

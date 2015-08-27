@@ -106,9 +106,7 @@ endif
 :call NAltMap('j', ':wincmd j')
 :call NAltMap('h', ':wincmd h')
 :call NAltMap('l', ':wincmd l')
-
-" Remove trailing whitespace before saving buffer
-autocmd BufWritePre * :%s/\s\+$//e
+" Remove trailing whitespace before saving buffer autocmd BufWritePre * :%s/\s\+$//e
 
 " Extra files
 augroup filetype
@@ -128,6 +126,7 @@ au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 " base-16
 " emmet
 " lightline
+" gruvbox
 " neocomplete
 " nerdtree
 " tagbar

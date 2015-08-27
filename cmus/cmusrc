@@ -2,4 +2,6 @@ set status_display_program=cmus-status-callback
 set shuffle=true
 set repeat=true
 set resume=true
+
 colorscheme jellybeans
+set color_win_bg=default
