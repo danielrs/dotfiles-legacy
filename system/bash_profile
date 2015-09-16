@@ -70,3 +70,6 @@ cd ~/.dotfiles/
 . bootstrap-login.sh
 cd ~/
 
+PATH="$PATH:~/.cabal/bin"
+
+export PATH

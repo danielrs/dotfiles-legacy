@@ -117,7 +117,7 @@ super + {minus,equal}
 
 # Reset window gap
 super + shift + {minus,equal}
-	bspc config -w focused window_gap 5
+	bspc config -w focused window_gap 0
 
 #
 # WM independent hotkeys
