@@ -27,6 +27,8 @@ Xcursor.size: 0
 ! URxvt
 !
 
+URxvt*iso14755: false
+
 URxvt*cursorBlink: true
 URxvt*scrollBar: false
 URxvt*internalBorder: 4
