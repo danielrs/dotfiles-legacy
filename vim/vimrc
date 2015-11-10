@@ -120,6 +120,10 @@ augroup filetype
 	" Haskell
 	autocmd Filetype haskell setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 	autocmd BufNewFile,BufRead *.hamlet,*.lucius,*.casius setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+	autocmd BufNewFile,BufRead *.hamlet set filetype=html
+	autocmd BufNewFile,BufRead *.lucius,*.cassius set filetype=css
+	autocmd BufNewFile,BufRead *.julius set filetype=javascript
+
 augroup END
 au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 
