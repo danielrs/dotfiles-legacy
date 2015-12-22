@@ -64,8 +64,8 @@ syntax enable
 :nnoremap <Leader>p "+p
 
 " Indentation
-:set tabstop=4
-:set shiftwidth=4
+:set tabstop=2
+:set shiftwidth=2
 
 " Search
 :set wildmenu
@@ -118,8 +118,8 @@ augroup filetype
 	" jflex
 	autocmd BufNewFile,BufRead *.flex,*.jflex set filetype=jflex
 	" Haskell
-	autocmd Filetype haskell setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-	autocmd BufNewFile,BufRead *.hamlet,*.lucius,*.casius setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+	autocmd Filetype haskell setlocal softtabstop=2 expandtab
+	autocmd BufNewFile,BufRead *.hamlet,*.lucius,*.casius setlocal softtabstop=2 expandtab
 	autocmd BufNewFile,BufRead *.hamlet set filetype=html
 	autocmd BufNewFile,BufRead *.lucius,*.cassius set filetype=css
 	autocmd BufNewFile,BufRead *.julius set filetype=javascript
@@ -130,31 +130,30 @@ au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 """"""""""""""""""
 " Plugins
 """"""""""""""""""
-" base-16
-" emmet
-" lightline
-" gruvbox
-" neocomplete
-" nerdtree
-" tagbar
-" vim2hs
-" vim-colors-solarized
-" vim-commentary
-" vim-cpp-enhanced-highlight
-" vim-indent-guides
-" vim-multiple-cursors
-" vim-surround
-" jellybeans
 
-" Base-16
+" ag.vim
+
+" base16-vim
 " let base16colorspace=256
 " colorscheme base16-eighties
 
-" Emmet
+" emmet-vim
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" Vim Lightline
+" gruvbox
+
+" jellybeans.vim
+set background=dark
+colorscheme jellybeans
+" if has('gui_running')
+" else
+" 	:highlight Normal ctermbg=NONE
+" endif
+" :hi Normal ctermbg=NONE
+set fillchars+=vert:│
+
+" lightline.vim
 " \ 'colorscheme': 'solarized_dark',
 let g:lightline = {
 	\ 'colorscheme': 'jellybeans',
@@ -170,22 +169,33 @@ let g:lightline = {
 	\ }
 set laststatus=2
 
-" Neocomplete
+" neocomplete
 let g:neocomplete#enable_at_startup = 1
 
-" NERDTree
+" nerdtree
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Tagbar
+" tagbar
 " nmap <C-S-space> :TagbarToggle<CR>
 " nmap <C-space> :TagbarToggle<CR>
 map <F8> :TagbarToggle<CR>
 
+" vim-colors-solarized
+
+" colorscheme solarized
+" vim-commentary
+" vim-cpp-enhanced-highlight
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup=1
+
+" vim-javascript
+" vim-surround
+
 " vim2hs
 let g:haskell_conceal = 0
 let g:haskell_conceal_enumeration = 0
-
 let g:haskell_quasi = 0
 let g:haskell_interpolation = 0
 let g:haskell_regex = 0
@@ -195,45 +205,5 @@ let g:haskell_shqq = 0
 let g:haskell_sql = 0
 let g:haskell_json = 0
 let g:haskell_xml = 0
-
 let g:haskell_hsp = 0
-
 let g:haskell_tabular = 0
-
-" Vim Colors Solarized
-set background=dark
-" colorscheme solarized
-
-" Commentary
-" Vim CPP Enhanced Highlight
-
-" Vim Indent Guides
-let g:indent_guides_enable_on_vim_startup=1
-
-" Vim Multiple Cursors
-let g:multi_cursor_next_key='<C-m>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
-
-function! Multiple_cursors_before()
-	if exists(':NeoCompleteLock')==2
-		exe 'NeoCompleteLock'
-	endif
-endfunction
-
-function! Multiple_cursors_after()
-	if exists(':NeoCompleteUnlock')==2
-		exe 'NeoCompleteUnlock'
-	endif
-endfunction
-
-" Vim Surround
-" Jellybeans
-colorscheme jellybeans
-" if has('gui_running')
-" else
-" 	:highlight Normal ctermbg=NONE
-" endif
-" :hi Normal ctermbg=NONE
-set fillchars+=vert:│
