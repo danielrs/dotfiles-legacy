@@ -49,7 +49,6 @@ syntax enable
 
 " Editor GUI
 :set guifont=Consolas:h12
-" :set guifont=Terminus\ 9
 :set number
 :set cursorline
 :set showcmd
@@ -58,14 +57,14 @@ syntax enable
 " Editor
 :set noesckeys " Disable Esc-key escape sequences
 :call NAltMap('n', ':set relativenumber! relativenumber?')
-" Copy all lines to clipboard
 :nnoremap <Leader>y gg"+yG
-" Paste from clipboard
 :nnoremap <Leader>p "+p
 
 " Indentation
 :set tabstop=2
+:set softtabstop=2
 :set shiftwidth=2
+:set expandtab
 
 " Search
 :set wildmenu
@@ -118,8 +117,6 @@ augroup filetype
 	" jflex
 	autocmd BufNewFile,BufRead *.flex,*.jflex set filetype=jflex
 	" Haskell
-	autocmd Filetype haskell setlocal softtabstop=2 expandtab
-	autocmd BufNewFile,BufRead *.hamlet,*.lucius,*.casius setlocal softtabstop=2 expandtab
 	autocmd BufNewFile,BufRead *.hamlet set filetype=html
 	autocmd BufNewFile,BufRead *.lucius,*.cassius set filetype=css
 	autocmd BufNewFile,BufRead *.julius set filetype=javascript
@@ -133,28 +130,16 @@ au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 
 " ag.vim
 
-" base16-vim
-" let base16colorspace=256
-" colorscheme base16-eighties
-
 " emmet-vim
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" gruvbox
-
 " jellybeans.vim
 set background=dark
 colorscheme jellybeans
-" if has('gui_running')
-" else
-" 	:highlight Normal ctermbg=NONE
-" endif
-" :hi Normal ctermbg=NONE
 set fillchars+=vert:│
 
 " lightline.vim
-" \ 'colorscheme': 'solarized_dark',
 let g:lightline = {
 	\ 'colorscheme': 'jellybeans',
 	\ 'active': {
@@ -174,16 +159,13 @@ let g:neocomplete#enable_at_startup = 1
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " tagbar
-" nmap <C-S-space> :TagbarToggle<CR>
-" nmap <C-space> :TagbarToggle<CR>
 map <F8> :TagbarToggle<CR>
 
-" vim-colors-solarized
-
-" colorscheme solarized
 " vim-commentary
 " vim-cpp-enhanced-highlight
 
