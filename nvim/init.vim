@@ -38,7 +38,6 @@ syntax enable
 
 " Search
 :set wildmenu
-:set showmatch
 :set hlsearch
 :set incsearch
 :nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
@@ -116,7 +115,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-surround'
-Plug 'dag/vim2hs'
 call plug#end()
 
 " ag.vim
