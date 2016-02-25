@@ -31,7 +31,7 @@ URxvt*iso14755: false
 
 URxvt*cursorBlink: true
 URxvt*scrollBar: false
-URxvt*internalBorder: 4
+URxvt*internalBorder: 8
 
 URxvt*depth: 32
 URxvt*dynamicColors: on
