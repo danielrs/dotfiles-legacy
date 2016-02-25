@@ -1,0 +1,6 @@
+#! /bin/bash
+
+mkdir --parents ~/.config/nvim/{autoload,syntax}
+ln -sfrv ./init.vim ~/.config/nvim/init.vim
+ln -sfrv ./autoload/plug.vim ~/.config/nvim/autoload/plug.vim
+ln -sfrv ./syntax/jflex.vim ~/.config/nvim/syntax/jflex.vim

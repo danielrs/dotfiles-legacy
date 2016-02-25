@@ -1,42 +1,11 @@
 """"""""""""""""""
-" Pathogen
-""""""""""""""""""
-
-execute pathogen#infect()
-" execute pathogen#helptags()
-Helptags
-
-""""""""""""""""""
-" Useful functions
-""""""""""""""""""
-
-function! NAltMap(key, command)
-	if $TERM == 'rxvt-unicode-256color' && !has('gui_running')
-		execute 'noremap <silent> <Esc>' . a:key . ' ' . a:command . '<CR>'
-	else
-		execute 'noremap <silent> <A-' . a:key '> ' . a:command . '<CR>'
-	endif
-endfunc
-
-""""""""""""""""""
 " Useful variables
 """"""""""""""""""
 
-let vimdir = '$HOME/.vim'
+let vimdir = '$HOME/.config/nvim'
 if has("win32")
 	let vimdir = '$HOME/vimfiles'
 endif
-
-""""""""""""""""""
-" GVim configuration
-""""""""""""""""""
-
-:set guioptions-=m "remove menu
-:set guioptions-=T "remove toolbar
-:set guioptions-=r "remove right scroll bar
-:set guioptions-=L "remove left scroll bar
-":set visualbell
-":set t_vb= "" Disable Bell
 
 """"""""""""""""""
 " Vim configuration
@@ -56,9 +25,10 @@ syntax enable
 
 " Editor
 :set noesckeys " Disable Esc-key escape sequences
-:call NAltMap('n', ':set relativenumber! relativenumber?')
+:nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
 :nnoremap <Leader>y gg"+yG
 :nnoremap <Leader>p "+p
+:set laststatus=2
 
 " Indentation
 :set tabstop=2
@@ -69,8 +39,8 @@ syntax enable
 " Search
 :set wildmenu
 :set showmatch
-:set incsearch
 :set hlsearch
+:set incsearch
 :nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
 
 " Undo
@@ -101,11 +71,11 @@ endif
 :set fileformats=unix,dos
 
 " Window Switching
-:call NAltMap('k', ':wincmd k')
-:call NAltMap('j', ':wincmd j')
-:call NAltMap('h', ':wincmd h')
-:call NAltMap('l', ':wincmd l')
-"
+:nnoremap <silent> <A-h> :wincmd h<CR>
+:nnoremap <silent> <A-j> :wincmd j<CR>
+:nnoremap <silent> <A-k> :wincmd k<CR>
+:nnoremap <silent> <A-l> :wincmd l<CR>
+
 " Remove trailing whitespace before saving buffer
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -128,11 +98,37 @@ au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 " Plugins
 """"""""""""""""""
 
+" to sort plugins use :sort/.*\//
+call plug#begin('~/.config/nvim/plugged')
+Plug 'rking/ag.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'mattn/emmet-vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'nanotech/jellybeans.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'raichoo/purescript-vim'
+Plug 'godlygeek/tabular'
+Plug 'majutsushi/tagbar'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-commentary'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-surround'
+Plug 'dag/vim2hs'
+call plug#end()
+
 " ag.vim
+
+"deoplete.nvim
+let g:deoplete#enable_at_startup = 1
 
 " emmet-vim
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" haskell-vim
 
 " jellybeans.vim
 set background=dark
@@ -152,10 +148,6 @@ let g:lightline = {
 	\	'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
 	\ }
 	\ }
-set laststatus=2
-
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -163,9 +155,13 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" purescript-vim
+" tabular
+
 " tagbar
 map <F8> :TagbarToggle<CR>
 
+" vim-clojure-static
 " vim-commentary
 " vim-cpp-enhanced-highlight
 
@@ -174,18 +170,3 @@ let g:indent_guides_enable_on_vim_startup=1
 
 " vim-javascript
 " vim-surround
-
-" vim2hs
-let g:haskell_conceal = 0
-let g:haskell_conceal_enumeration = 0
-let g:haskell_quasi = 0
-let g:haskell_interpolation = 0
-let g:haskell_regex = 0
-let g:haskell_regex = 0
-let g:haskell_jmacro = 0
-let g:haskell_shqq = 0
-let g:haskell_sql = 0
-let g:haskell_json = 0
-let g:haskell_xml = 0
-let g:haskell_hsp = 0
-let g:haskell_tabular = 0
