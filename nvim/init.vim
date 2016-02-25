@@ -63,7 +63,7 @@ endif
 :set foldmethod=indent
 
 " File settings
-:set encoding=utf8
+" :set encoding=utf8
 :set nobackup
 :set backspace=indent,eol,start
 :set fileformat=unix
