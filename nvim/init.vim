@@ -4,7 +4,7 @@
 
 let vimdir = '$HOME/.config/nvim'
 if has("win32")
-	let vimdir = '$HOME/vimfiles'
+	let vimdir = '$HOME/AppData/Local/nvim/'
 endif
 
 """"""""""""""""""
@@ -21,12 +21,12 @@ syntax enable
 :set number
 :set cursorline
 :set showcmd
-:set scrolloff=4 " Allways n lines visisble when scrolling
+:set scrolloff=4
 
 " Editor
-:set noesckeys " Disable Esc-key escape sequences
+:set noesckeys
 :nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
-:nnoremap <Leader>y gg"+yG
+:nnoremap <Leader>y "+y
 :nnoremap <Leader>p "+p
 :set laststatus=2
 
@@ -38,8 +38,8 @@ syntax enable
 
 " Search
 :set wildmenu
-:set hlsearch
 :set incsearch
+:set hlsearch
 :nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
 
 " Undo
@@ -52,8 +52,8 @@ if has('persistent_undo')
 	endif
 	let &undodir = myundodir
 	:set undofile
-	:set undolevels=1000 " Maximum number of changes that can be undone
-	:set undoreload=10000 " Maximum number of lines to save for undo on a buffer reload
+	:set undolevels=1000
+	:set undoreload=10000
 endif
 
 " Folding
@@ -164,7 +164,7 @@ map <F8> :TagbarToggle<CR>
 " vim-cpp-enhanced-highlight
 
 " vim-indent-guides
-let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_enable_on_vim_startup = 1
 
 " vim-javascript
 " vim-surround
