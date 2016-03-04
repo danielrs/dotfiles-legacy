@@ -139,7 +139,7 @@ super + Escape
 
 # Audio
 XF86AudioMute
-	amixer -q set Master toggle; \
+  pactl set-sink-mute 0 toggle; \
 	volume-status --changed
 
 XF86AudioLowerVolume

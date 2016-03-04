@@ -6,7 +6,7 @@ getStatus() {
 	local amixer=$(amixer get Master | grep "dB\|[0-9]\+%" | sed 's/\(^[a-z0-9 :]\+\[\|\[\|\]\)//gi' | sed 's/%//g' | head -n 1)
 
 	local level=$(echo $amixer | cut -d " " -f1)
-	local status=$(echo $amixer | cut -d " " -f2)
+	local status=$(echo $amixer | cut -d " " -f3)
 
 	printf 'VOL%s:%s\n' "$status" "$level"
 }

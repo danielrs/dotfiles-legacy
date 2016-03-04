@@ -42,9 +42,15 @@ while read -r line ; do
 				elif [[ $vol_level -ge 50 ]]; then
 					vol_icon=$ICON_VOL_HIGH
 				fi
-				volume="%{B$COLOR_BACKGROUND}%{F$COLOR_WARNING_FG} $vol_icon $vol_level%% %{F-}%{B-}"
+				volume="%{B$COLOR_BACKGROUND}%{F$COLOR_WARNING_FG} $vol_icon $vol_level% %{F-}%{B-}"
 			fi
 			;;
+    BAT*)
+      # battery output
+      bat_level=$(echo ${line:3} | cut -d ':' -f1)
+      bat_icon=$ICON_BAT_HIGH
+      battery="%{B$COLOR_BACKGROUND}%{F$COLOR_FOREGROUND} $bat_icon $bat_level% %{F-}%{B-}"
+      ;;
 		S*)
 			# clock output
 			sys_infos="%{F$COLOR_STATUS_FG}%{B$COLOR_STATUS_BG} $ICON_CLOCK ${line:1} %{B-}%{F-}"
@@ -114,8 +120,7 @@ while read -r line ; do
 	esac
 
 	printf \
-		'%%{l}%b%%{c}%b%%{r}%b%b%b\n' \
-		"${wm_infos}" "${title}" "${now_playing}" "${volume}" "${sys_infos}";
-
+		'%%{l}%b%%{c}%b%%{r}%b%b%b%b\n' \
+		"${wm_infos}" "${title}" "${now_playing}" "${volume}" "${battery}" "${sys_infos}";
 
 done

@@ -9,7 +9,7 @@
 # 3. This script calls them when necessary
 
 if [ -z "$FIFO" ] || [ ! $(functionExists getStatus) -eq 0 ]; then
-	echo "FIFO or getStatus not defined!"
+	echo "FIFO and getStatus must be defined!"
 	exit
 fi
 

@@ -1,8 +1,4 @@
 #! /bin/bash
 
-VOLUME_FIFO=/tmp/volume-fifo
-export VOLUME_FIFO
-
 # Export color scheme
-
 . ./colors/jellybeans.sh

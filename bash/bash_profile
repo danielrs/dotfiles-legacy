@@ -56,7 +56,7 @@ functionExists() {
 export -f min max clamp toHex toInt display functionExists
 
 # Export
-EDITOR=vim
+EDITOR=nvim
 XDG_CACHE_HOME=$HOME/.cache
 XDG_CONFIG_HOME=$HOME/.config
 __GL_SHADER_DISK_CACHE_PATH=$HOME/.cache/nv

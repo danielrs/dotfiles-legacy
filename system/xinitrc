@@ -1,6 +1,6 @@
-# Fonts
-xset +fp /usr/share/fonts/local
-xset fp rehash
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+xrandr --dpi 96
 
 xrdb ~/.Xresources
 

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+mkdir --parents ~/.config/fontconfig
+
+ln -sfrv ./fonts.conf ~/.config/fontconfig/fonts.conf

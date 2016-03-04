@@ -1,12 +1,5 @@
 #! /bin/bash
 
-mkdir --parents ~/.config/fontconfig
-
-ln -sfrv ./bash_logout ~/.bash_logout
-ln -sfrv ./bash_profile ~/.bash_profile
-ln -sfrv ./bashrc ~/.bashrc
-ln -sfrv ./fonts.conf ~/.config/fontconfig/fonts.conf
-ln -sfrv ./gtkrc-2.0 ~/.gtkrc-2.0
 ln -sfrv ./redshift.conf ~/.config/redshift.conf
 ln -sfrv ./xinitrc ~/.xinitrc
 ln -sfrv ./Xresources ~/.Xresources
