@@ -1,3 +1,3 @@
 #! /bin/bash
 
-dmenu_run -b -l 4 -fn "Inconsolata:size=11" -nb $COLOR_BG -nf $COLOR_FG -sb $COLOR_WHITE -sf $COLOR_BLACK
+dmenu_run -b -l 4 -fn "xft:Inconsolata:pixelsize=16" -nb $COLOR_BG -nf $COLOR_FG -sb $COLOR_WHITE -sf $COLOR_BLACK
