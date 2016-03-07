@@ -5,36 +5,41 @@
 # --------
 
 # Install pacman packages
-pacman -S acpi\
-          alsa-utils\
-          bc\
-          bspwm\
-          cmus\
-          dmenu\
-          feh\
-          firefox\
-          neovim\
-          numix-themes\
-          python-neovim\
-          nvidia\
-          pulseaudio\
-          refind-efi\
-          sudo\
-          terminus-font\
-          the_silver_searcher\
-          ttf-inconsolata\
-          unrar\
-          unzip\
-          xcursor-vanilla-dmz\
-          xcursor-vanilla-dmz-aa\
-          xorg-server\
-          xorg-xinit\
-          xorg-xrandr\
-          xorg-xrdb\
-          xorg-xset\
-          xorg-xsetroot\
-          xsel\
-          zip
+sudo pacman -S  acpi\
+                alsa-utils\
+                bc\
+                bspwm\
+                cmus\
+                dmenu\
+                feh\
+                firefox\
+                neovim\
+                numix-themes\
+                python-neovim\
+                nvidia\
+                nvidia-libgl\
+                libx264\
+                pulseaudio\
+                refind-efi\
+                sudo\
+                sxhkd\
+                terminus-font\
+                the_silver_searcher\
+                ttf-dejavu\
+                ttf-inconsolata\
+                unrar\
+                unzip\
+                xcursor-vanilla-dmz\
+                xcursor-vanilla-dmz-aa\
+                xf86-input-evdev\
+                xorg-server\
+                xorg-xinit\
+                xorg-xrandr\
+                xorg-xrdb\
+                xorg-xset\
+                xorg-xsetroot\
+                xsel\
+                zip
 
 # Manually install yaourt
 mkdir yaourt-build
@@ -61,5 +66,5 @@ yaourt -S compton-git\
 # SSD Configuration
 # --------
 
-systemctl enable fstrim.timer
-tee -a /etc/sysctl.d/99-sysctl.conf <<< vm.swappiness=10
+sudo systemctl enable fstrim.timer
+sudo tee -a /etc/sysctl.d/99-sysctl.conf <<< vm.swappiness=10

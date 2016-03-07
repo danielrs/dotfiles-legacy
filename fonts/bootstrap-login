@@ -1,6 +1,0 @@
-#! /bin/bash
-
-# Reload font database
-xset +fp /usr/share/fonts/local
-xset fp rehash
-
