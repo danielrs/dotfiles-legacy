@@ -17,6 +17,7 @@ xtitle -sf 'T%s' > "$PANEL_FIFO" &
 
 cmus-status --subscribe > "$PANEL_FIFO" &
 volume-status --subscribe > "$PANEL_FIFO" &
+battery-status > "$PANEL_FIFO" &
 date-status > "$PANEL_FIFO" &
 
 . panel-info
