@@ -13,13 +13,19 @@ sudo pacman -S  acpi\
                 dmenu\
                 feh\
                 firefox\
-                neovim\
-                numix-themes\
-                python-neovim\
-                nvidia\
-                nvidia-libgl\
+                jdk8-openjdk\
                 libx264\
+                mpv\
+                neovim\
+                nodejs\
+                npm\
+                ntfs-3g\
+                numix-themes\
+                nvidia-libgl\
+                nvidia\
+                openssh\
                 pulseaudio\
+                python-neovim\
                 refind-efi\
                 sudo\
                 sxhkd\
@@ -29,8 +35,8 @@ sudo pacman -S  acpi\
                 ttf-inconsolata\
                 unrar\
                 unzip\
-                xcursor-vanilla-dmz\
                 xcursor-vanilla-dmz-aa\
+                xcursor-vanilla-dmz\
                 xf86-input-evdev\
                 xorg-server\
                 xorg-xinit\
@@ -39,6 +45,8 @@ sudo pacman -S  acpi\
                 xorg-xset\
                 xorg-xsetroot\
                 xsel\
+                zathura-pdf-mupdf\
+                zathura\
                 zip
 
 # Manually install yaourt
@@ -57,6 +65,7 @@ rm -rf yaourt-build
 # Install yaourt packages
 yaourt -S compton-git\
           gbdfed\
+          leiningen\
           lemonbar-git\
           rxvt-unicode-patched\
           stlarch_font\
