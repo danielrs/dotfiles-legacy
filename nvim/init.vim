@@ -91,7 +91,7 @@ augroup filetype
 	autocmd BufNewFile,BufRead *.julius set filetype=javascript
 
 augroup END
-au Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
+autocmd Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 
 """"""""""""""""""
 " Plugins
@@ -107,6 +107,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'raichoo/purescript-vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'guns/vim-clojure-static'
@@ -154,6 +155,14 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " purescript-vim
+
+" rainbow_parentheses.vim
+nnoremap <A-p> :RainbowParentheses!!<CR>
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType clojure,lisp,scheme RainbowParentheses
+augroup END
+
 " tabular
 
 " tagbar
