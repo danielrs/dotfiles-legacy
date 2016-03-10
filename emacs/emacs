@@ -1,0 +1,35 @@
+(require 'package)
+
+;; --------
+;; PACKAGES
+;; --------
+
+; required packages
+(setq package-list '(evil magit))
+
+; repositories containing them
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ; Melpa
+                         ("melpa" . "http://melpa.org/packages/")
+                         ; ("melpa-stable" . "http://stable.melpa.org/packages/")
+                         ; Org
+                         ("org" . "http://orgmode.org/elpa/")))
+
+; activate all packages
+(package-initialize)
+
+; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+;; --------
+;; PLUGINS
+;; --------
+
+(require 'evil)
+(evil-mode t)

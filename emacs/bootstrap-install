@@ -1,0 +1,5 @@
+#! /bin/bash
+
+mkdir --parents ~/.emacs.d
+
+ln -sfrv ./emacs ~/.emacs
