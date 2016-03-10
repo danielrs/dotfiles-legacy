@@ -16,6 +16,7 @@ sudo pacman -S  acpi\
                 libx264\
                 mpv\
                 ntfs-3g\
+                mlocate\
                 numix-themes\
                 nvidia-libgl\
                 nvidia\
