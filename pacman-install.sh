@@ -13,24 +13,18 @@ sudo pacman -S  acpi\
                 dmenu\
                 feh\
                 firefox\
-                jdk8-openjdk\
                 libx264\
                 mpv\
-                neovim\
-                nodejs\
-                npm\
                 ntfs-3g\
                 numix-themes\
                 nvidia-libgl\
                 nvidia\
                 openssh\
                 pulseaudio\
-                python-neovim\
                 refind-efi\
                 sudo\
                 sxhkd\
                 terminus-font\
-                the_silver_searcher\
                 ttf-dejavu\
                 ttf-inconsolata\
                 unrar\
@@ -49,6 +43,15 @@ sudo pacman -S  acpi\
                 zathura\
                 zip
 
+# Install pacman development packages
+sudo pacman -S  ctags\
+                jdk8-openjdk\
+                neovim\
+                nodejs\
+                npm\
+                the_silver_searcher\
+                python-neovim\
+
 # Manually install yaourt
 mkdir yaourt-build
 cd yaourt-build
@@ -65,11 +68,13 @@ rm -rf yaourt-build
 # Install yaourt packages
 yaourt -S compton-git\
           gbdfed\
-          leiningen\
           lemonbar-git\
           rxvt-unicode-patched\
           stlarch_font\
           xtitle
+
+# Install yaourt development packages
+yaourt -S leiningen
 
 # --------
 # SSD Configuration

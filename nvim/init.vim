@@ -112,6 +112,7 @@ Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'guns/vim-clojure-static'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fireplace'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
@@ -170,6 +171,7 @@ map <F8> :TagbarToggle<CR>
 
 " vim-clojure-static
 " vim-commentary
+" vim-fireplace
 " vim-cpp-enhanced-highlight
 
 " vim-indent-guides

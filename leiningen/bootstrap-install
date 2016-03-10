@@ -1,0 +1,5 @@
+#! /bin/bash
+
+mkdir --parents ~/.lein
+
+ln -sfrv ./profiles.clj ~/.lein/profiles.clj
