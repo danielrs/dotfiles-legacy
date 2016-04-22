@@ -112,10 +112,12 @@ Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'guns/vim-clojure-static'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fireplace'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-fireplace'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
+Plug 'groenewege/vim-less'
 Plug 'tpope/vim-surround'
 call plug#end()
 
@@ -126,7 +128,7 @@ let g:deoplete#enable_at_startup = 1
 
 " emmet-vim
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,eelixir EmmetInstall
 
 " haskell-vim
 
@@ -173,9 +175,11 @@ map <F8> :TagbarToggle<CR>
 " vim-commentary
 " vim-fireplace
 " vim-cpp-enhanced-highlight
+" vim-elixir
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 
 " vim-javascript
+" vim-less
 " vim-surround

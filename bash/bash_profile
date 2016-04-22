@@ -70,6 +70,6 @@ cd ~/.dotfiles/
 . bootstrap-login.sh
 cd ~/
 
-PATH="$PATH:~/.cabal/bin"
+PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin:~/.cabal/bin"
 
 export PATH
