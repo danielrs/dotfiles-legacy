@@ -9,6 +9,8 @@ alias ls='ls --color=auto'
 alias kus='setxkbmap -layout us'
 alias kintl='setxkbmap -layout us -variant intl'
 alias ghc='ghc -outputdir "out"'
+alias npm-exec='PAHT=$(npm bin):$PATH'
+
 # PS1='[\u@\h \W]\$ '
 
 # Arrow codes

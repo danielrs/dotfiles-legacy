@@ -4,16 +4,18 @@
 # Packages
 # --------
 
-# Install pacman packages
+# Install pacman packages for environment
 sudo pacman -S  acpi\
                 alsa-utils\
                 bc\
                 bspwm\
                 cmus\
+                connman\
                 dmenu\
                 feh\
                 firefox\
                 libx264\
+                maim\
                 mpv\
                 ntfs-3g\
                 mlocate\
@@ -44,14 +46,19 @@ sudo pacman -S  acpi\
                 zathura\
                 zip
 
-# Install pacman development packages
+# Install development packages
 sudo pacman -S  ctags\
-                jdk8-openjdk\
+                dos2unix\
                 neovim\
                 nodejs\
                 npm\
                 the_silver_searcher\
+                postgresql\
                 python-neovim\
+
+# Install Elixir packages
+sudo pacman -S elixir
+               inotify-tools
 
 # Manually install yaourt
 mkdir yaourt-build

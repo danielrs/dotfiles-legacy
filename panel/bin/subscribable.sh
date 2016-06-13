@@ -1,12 +1,11 @@
 #! /bin/bash
 
-# This script provides an API for making scripts that has "status", and reports it to other script
-# subscribed to it.
+# This script provides an interface for making scripts that has "status", and reports it to other script
+# subscribed to it. All of these subscribe functinality is implemented through named pipes.
 
-# Here's how it works:
-# 1. This script assumes the existence of a variable named FIFO
-# 2. This script assumes the existence of a function named getStatus
-# 3. This script calls them when necessary
+# The script needs 2 symbols to be defined to work:
+# 1. FIFO: the location of the named pipe
+# 2. getStatus: a function that returns some output, this output is send to the pipe
 
 if [ -z "$FIFO" ] || [ ! $(functionExists getStatus) -eq 0 ]; then
 	echo "FIFO and getStatus must be defined!"

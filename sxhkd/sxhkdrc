@@ -146,7 +146,7 @@ super + @button{1-3}
 
 # Audio
 XF86AudioMute
-  pactl set-sink-mute 0 toggle; \
+  pactl set-sink-mute $(pactl list short | grep RUNNING | sed 's/\s.*//gi') toggle; \
 	volume-status --changed
 
 XF86AudioLowerVolume
