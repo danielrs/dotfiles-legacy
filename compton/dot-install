@@ -1,4 +1,5 @@
 #! /bin/bash
 
 mkdir --parents ~/.config
+
 ln -sfrv ./compton.conf ~/.config/compton.conf

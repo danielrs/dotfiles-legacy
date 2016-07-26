@@ -1,6 +1,6 @@
 #! /bin/bash
 
-FIFO=$CMUS_FIFO
+FIFO=/tmp/cmus-fifo
 getStatus() {
 	local status=$(cmus-remote -Q 2>/dev/null | grep status | head -n 1 | cut -d ' ' -f2-)
 	local artist=$(cmus-remote -Q 2>/dev/null | grep artist | head -n 1 | cut -d ' ' -f3-)

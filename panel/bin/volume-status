@@ -10,4 +10,4 @@ getStatus() {
 	printf 'VOL%s:%s\n' "$status" "$level"
 }
 
-. subscribable.sh
+source subscribable.sh
