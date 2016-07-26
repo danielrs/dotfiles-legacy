@@ -34,7 +34,7 @@ sudo pacman -S  acpi\
                 unzip\
                 xcursor-vanilla-dmz-aa\
                 xcursor-vanilla-dmz\
-                xf86-input-evdev\
+                xf86-input-libinput\
                 xorg-server\
                 xorg-xinit\
                 xorg-xrandr\

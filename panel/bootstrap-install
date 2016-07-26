@@ -1,0 +1,5 @@
+#! /bin/bash
+
+mkdir --parents ~/.config/panel
+
+ln -sfrv ./panelrc ~/.config/panel/panelrc

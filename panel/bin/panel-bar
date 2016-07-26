@@ -2,7 +2,7 @@
 
 # Example panel for LemonBoy's bar
 
-. ../panelrc
+. ~/.config/panel/panelrc
 
 num_mon=$(bspc query -M | wc -l)
 

@@ -23,7 +23,7 @@ if [ -d /proc/acpi/battery/BAT* ]; then
   battery-status > "$PANEL_FIFO" &
 fi
 
-. ../panelrc
+. ~/.config/panel/panelrc
 
 cat "$PANEL_FIFO" | panel-bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$PANEL_FONT_ICONS" -B "$COLOR_BACKGROUND" -F "$COLOR_FOREGROUND"  &
 
