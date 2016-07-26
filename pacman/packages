@@ -1,0 +1,46 @@
+#!/usr/bin/bash
+
+# This scripts lists the needed packages for the dotfiles to function at their full
+
+# Base packages
+cat <<EOT
+acpi
+alsa-utils
+bc
+bspwm
+cmus
+dmenu
+feh
+maim
+ntfs-3g
+numix-themes
+nvidia
+nvidia-libgl
+refind-efi
+sudo
+sxhkd
+terminus-font
+ttf-inconsolata
+unrar
+unzip
+xcursor-vanilla-dmz
+xcursor-vanilla-dmz-aa
+xf86-input-libinput
+xorg-server
+xorg-xinit
+xorg-xrandr
+xorg-xrdb
+xorg-xset
+xorg-xsetroot
+xsel
+zip
+EOT
+
+# Development packages
+cat <<EOT
+ctags
+dos2unix
+neovim
+the_silver_searcher
+python-neovim
+EOT

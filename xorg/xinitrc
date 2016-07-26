@@ -9,7 +9,7 @@ xsetroot -cursor_name left_ptr &
 
 # Screen
 compton --config ~/.config/compton.conf -b
-feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg &
+feh --bg-scale --randomize ~/Pictures/Wallpapers/feh/* &
 redshift &
 
 # Pulseaudio

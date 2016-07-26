@@ -136,6 +136,8 @@ autocmd FileType html,css,eelixir EmmetInstall
 set background=dark
 colorscheme jellybeans
 set fillchars+=vert:│
+hi Normal ctermbg=none
+hi NonText ctermbg=none
 
 " lightline.vim
 let g:lightline = {

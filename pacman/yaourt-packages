@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+cat <<EOT
+compton-git
+google-chrome
+lemonbar-git
+rxvt-unicode-patched
+stlarch_font
+xtitle
+EOT
