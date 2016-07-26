@@ -4,6 +4,7 @@ cat <<EOT
 compton-git
 google-chrome
 lemonbar-git
+redshift-minimal
 rxvt-unicode-patched
 stlarch_font
 xtitle

@@ -10,8 +10,8 @@ for d in */; do
 		PATH=$PATH:$cwd/$d/bin
 	fi
 	# Run the login commands
-	if [ -x bootstrap-login ]; then
-		. ./bootstrap-login
+	if [ -x dot-login ]; then
+		. ./dot-login
 	fi
 	# Return
 	cd ../

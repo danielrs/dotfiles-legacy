@@ -13,9 +13,9 @@ for d in */; do
 	# Go into directory
 	cd "$d"
 	# Run the install commands
-	if [ -x bootstrap-install ]; then
+	if [ -x dot-install ]; then
 		echo "> ${GREEN}Installing ${YELLOW}$d${NO_COLOR}"
-		./bootstrap-install
+		./dot-install
 	fi
 	# Return
 	cd ../

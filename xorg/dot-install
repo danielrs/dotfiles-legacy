@@ -1,5 +1,4 @@
 #! /bin/bash
 
-ln -sfrv ./redshift.conf ~/.config/redshift.conf
 ln -sfrv ./xinitrc ~/.xinitrc
 ln -sfrv ./Xresources ~/.Xresources

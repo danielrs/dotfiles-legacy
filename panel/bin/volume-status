@@ -1,6 +1,6 @@
 #! /bin/bash
 
-FIFO=$VOLUME_FIFO
+FIFO=/tmp/volume-fifo
 
 getStatus() {
 	local amixer=$(amixer get Master | grep "dB\|[0-9]\+%" | head -n 1)
