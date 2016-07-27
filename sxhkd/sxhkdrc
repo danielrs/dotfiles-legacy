@@ -141,6 +141,18 @@ super + @button{1-3}
 	bspc pointer -u
 
 #
+# gap control
+#
+
+# increase/decrease window gap
+super + {minus,equal}
+  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
+
+# reset window gap
+super + shift + {minus,equal}
+  bspc config -d focused window_gap 0
+
+#
 # Media keys
 #
 

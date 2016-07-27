@@ -6,7 +6,7 @@ for d in */; do
 
 	# If the directory contains any executable add it to path
 	if [ -d bin ]; then
-    PATH=$PATH:$(pwd)/$d/bin
+    PATH=$PATH:$(pwd)/bin
 	fi
 
 	# Run the login commands

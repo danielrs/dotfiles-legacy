@@ -3,13 +3,30 @@
 """"""""""""""""""
 
 let vimdir = '$HOME/.config/nvim'
-if has("win32")
-	let vimdir = '$HOME/AppData/Local/nvim/'
+if !has("nvim") && !has("win32")
+  let vimdir = '$HOME/.vim'
+elseif has("nvim") && has("win32")
+  let vimdir = '$HOME/AppData/Local/nvim'
+elseif !has("nvim") && has("win32")
+  let vimdir = '$HOME/vimfiles'
 endif
+
+""""""""""""""""""
+" GVim configuration
+""""""""""""""""""
+
+:set guioptions-=m "remove menu
+:set guioptions-=T "remove toolbar
+:set guioptions-=r "remove right scroll bar
+:set guioptions-=L "remove left scroll bar
+":set visualbell
+":set t_vb= "" Disable Bell
 
 """"""""""""""""""
 " Vim configuration
 """"""""""""""""""
+
+:set encoding=utf8
 
 " Syntax
 filetype plugin indent on
@@ -21,14 +38,14 @@ syntax enable
 :set number
 :set cursorline
 :set showcmd
-:set scrolloff=4
+:set scrolloff=4 " Always n lines visible when scrolling
 
 " Editor
-:set noesckeys
+:set noesckeys " Disable Esc-key escape sequences
 :nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
+:nnoremap <silent> <Esc>n :set relativenumber! relativenumber?<CR>
 :nnoremap <Leader>y "+y
 :nnoremap <Leader>p "+p
-:set laststatus=2
 
 " Indentation
 :set tabstop=2
@@ -38,6 +55,7 @@ syntax enable
 
 " Search
 :set wildmenu
+:set showmatch
 :set incsearch
 :set hlsearch
 :nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
@@ -52,8 +70,8 @@ if has('persistent_undo')
 	endif
 	let &undodir = myundodir
 	:set undofile
-	:set undolevels=1000
-	:set undoreload=10000
+	:set undolevels=1000 " Maximum number of changes that can be undone
+	:set undoreload=10000 " Maximum number of lines to save for undo on a buffer reload
 endif
 
 " Folding
@@ -63,17 +81,21 @@ endif
 :set foldmethod=indent
 
 " File settings
-" :set encoding=utf8
 :set nobackup
 :set backspace=indent,eol,start
 :set fileformat=unix
 :set fileformats=unix,dos
 
 " Window Switching
-:nnoremap <silent> <A-h> :wincmd h<CR>
-:nnoremap <silent> <A-j> :wincmd j<CR>
-:nnoremap <silent> <A-k> :wincmd k<CR>
-:nnoremap <silent> <A-l> :wincmd l<CR>
+nnoremap <silent> <A-k> :wincmd k<CR>
+nnoremap <silent> <A-j> :wincmd j<CR>
+nnoremap <silent> <A-h> :wincmd h<CR>
+nnoremap <silent> <A-l> :wincmd l<CR>
+
+nnoremap <silent> <Esc>k :wincmd k<CR>
+nnoremap <silent> <Esc>j :wincmd j<CR>
+nnoremap <silent> <Esc>h :wincmd h<CR>
+nnoremap <silent> <Esc>l :wincmd l<CR>
 
 " Remove trailing whitespace before saving buffer
 autocmd BufWritePre * :%s/\s\+$//e
@@ -100,7 +122,6 @@ autocmd Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 " to sort plugins use :sort/.*\//
 call plug#begin('~/.config/nvim/plugged')
 Plug 'rking/ag.vim'
-Plug 'Shougo/deoplete.nvim'
 Plug 'mattn/emmet-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'nanotech/jellybeans.vim'
@@ -119,12 +140,19 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-surround'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim'
+elseif !has('nvim')
+  Plug 'Shougo/neocomplete.vim'
+endif
+
 call plug#end()
 
-" ag.vim
+" Neovim and Vim plugins
+""""""""""""""""""
 
-"deoplete.nvim
-let g:deoplete#enable_at_startup = 1
+" ag.vim
 
 " emmet-vim
 let g:user_emmet_install_global = 0
@@ -152,6 +180,7 @@ let g:lightline = {
 	\	'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
 	\ }
 	\ }
+:set laststatus=2
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -163,6 +192,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " rainbow_parentheses.vim
 nnoremap <A-p> :RainbowParentheses!!<CR>
+nnoremap <Esc>p :RainbowParentheses!!<CR>
 augroup rainbow_lisp
   autocmd!
   autocmd FileType clojure,lisp,scheme RainbowParentheses
@@ -185,3 +215,17 @@ let g:indent_guides_enable_on_vim_startup = 1
 " vim-javascript
 " vim-less
 " vim-surround
+
+" Neovim plugins
+""""""""""""""""""
+
+"deoplete.nvim
+let g:deoplete#enable_at_startup = 1
+
+
+" Vim plugins
+""""""""""""""""""
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+
