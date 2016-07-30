@@ -15,12 +15,14 @@ endif
 " GVim configuration
 """"""""""""""""""
 
-:set guioptions-=m "remove menu
-:set guioptions-=T "remove toolbar
-:set guioptions-=r "remove right scroll bar
-:set guioptions-=L "remove left scroll bar
-":set visualbell
-":set t_vb= "" Disable Bell
+if !has('nvim') && has('gui_running')
+  :set guioptions-=m "remove menu
+  :set guioptions-=T "remove toolbar
+  :set guioptions-=r "remove right scroll bar
+  :set guioptions-=L "remove left scroll bar
+  ":set visualbell
+  ":set t_vb= "" Disable Bell
+endif
 
 """"""""""""""""""
 " Vim configuration
@@ -55,10 +57,13 @@ syntax enable
 
 " Search
 :set wildmenu
-:set showmatch
 :set incsearch
 :set hlsearch
 :nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
+
+if !has('nvim'):
+  :set showmatch
+endif
 
 " Undo
 if has('persistent_undo')
