@@ -61,7 +61,7 @@ syntax enable
 :set hlsearch
 :nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
 
-if !has('nvim'):
+if !has('nvim')
   :set showmatch
 endif
 
