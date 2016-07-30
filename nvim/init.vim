@@ -48,9 +48,9 @@ syntax enable
 :nnoremap <Leader>p "+p
 
 " Indentation
-:set tabstop=2
-:set softtabstop=2
-:set shiftwidth=2
+:set tabstop=4
+:set softtabstop=4
+:set shiftwidth=4
 :set expandtab
 
 " Search
@@ -139,6 +139,7 @@ Plug 'tpope/vim-fireplace'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 Plug 'groenewege/vim-less'
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 
 if has('nvim')
@@ -214,6 +215,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " vim-javascript
 " vim-less
+" vim-sleuth
 " vim-surround
 
 " Neovim plugins
