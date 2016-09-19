@@ -9,7 +9,8 @@ alias ls='ls --color=auto'
 alias kus='setxkbmap -layout us'
 alias kintl='setxkbmap -layout us -variant intl'
 alias ghc='ghc -outputdir "out"'
-alias npm-exec='PAHT=$(npm bin):$PATH'
+alias npm-exec='PATH=$(npm bin):$PATH'
+alias forget='history -c && exit'
 
 # PS1='[\u@\h \W]\$ '
 
