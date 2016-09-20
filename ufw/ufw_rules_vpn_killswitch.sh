@@ -28,5 +28,7 @@ sudo ufw allow out 1198/udp
 # sudo ufw allow in from x.x.x.x to any
 # sudo ufw allow out from any to x.x.x.x
 
-sudo ufw allow in from 209.222.5.231 to any
-sudo ufw allow out from any to 209.222.5.231
+IP=107.191.36.24
+
+sudo ufw allow in from $IP to any
+sudo ufw allow out from any to $IP
