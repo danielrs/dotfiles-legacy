@@ -2,4 +2,4 @@ set noautofocus
 map <A-h> gT
 map <A-l> gt
 
-barposition = "bottom"
+let barposition = "bottom"
