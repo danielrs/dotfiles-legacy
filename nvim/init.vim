@@ -134,6 +134,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'raichoo/purescript-vim'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'guns/vim-clojure-static'
@@ -204,6 +205,7 @@ augroup rainbow_lisp
   autocmd FileType clojure,lisp,scheme RainbowParentheses
 augroup END
 
+" rust.vim
 " tabular
 
 " tagbar

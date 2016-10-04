@@ -13,22 +13,21 @@ sudo ufw default deny incoming
 sudo ufw allow out to 10.10.20.170/24
 sudo ufw allow in to 10.10.20.170/24
 
-# Allow all traffic through VPN
-sudo ufw allow out on tun0 from any to any
-sudo ufw allow in on tun0 from any to any
-
 # Allow VPN to connect
 sudo ufw allow out 1194/udp
 sudo ufw allow out 1198/udp
 
-# Allow US East
+
+# Allow VPN addresses
 # Go to https://www.site24x7.com/find-ip-address-of-web-site.html or use nslookup
 # Find ip of desired server
 # then add rules for each ip:
 # sudo ufw allow in from x.x.x.x to any
 # sudo ufw allow out from any to x.x.x.x
-
-IP=107.191.36.24
-
+IP=104.200.151.10
 sudo ufw allow in from $IP to any
 sudo ufw allow out from any to $IP
+
+# Allow all traffic through VPN
+sudo ufw allow out on tun0 from any to any
+sudo ufw allow in on tun0 from any to any

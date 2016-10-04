@@ -1,3 +1,4 @@
+set output_plugin=alsa
 set status_display_program=cmus-status-callback
 set shuffle=true
 set repeat=true
