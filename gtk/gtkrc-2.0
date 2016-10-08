@@ -15,5 +15,5 @@ gtk-enable-event-sounds=0
 gtk-enable-input-feedback-sounds=1
 gtk-xft-antialias=1
 gtk-xft-hinting=0
-gtk-xft-hintstyle="hintslight"
+gtk-xft-hintstyle="hintnone"
 gtk-xft-rgba="rgb"

@@ -2,10 +2,10 @@
 ! Font
 !
 
-Xft.autohint: 0
+Xft.autohint: false
 Xft.rgba: rgb
 Xft.hinting: false
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintnone
 Xft.antialias: true
 Xft.lcdfilter: lcddefault
 
