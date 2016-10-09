@@ -10,7 +10,7 @@ Xft.antialias: true
 Xft.lcdfilter: lcddefault
 
 ! URxvt.font: xft:Inconsolata\\-g:style=g:pixelsize=13
-URxvt.font: xft:Inconsolata:pixelsize=16
+URxvt.font: xft:Inconsolata:pixelsize=17
 ! URxvt.font: xft:Dejavu Sans Mono:size=9
 ! URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1 */
 ! URxvt*font: -*-dejavu sans mono-medium-r-normal-*-11-*-*-*-m-*-iso10646-1
