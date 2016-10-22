@@ -2,7 +2,7 @@
 # See: https://ngzhian.wordpress.com/2013/01/11/what-i-learned-about-fonts/
 # for information about font
 
-. ~/.colors/jellybeans
+. ~/.colors/colorscheme
 
 #
 # Panel base
