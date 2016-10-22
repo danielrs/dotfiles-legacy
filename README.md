@@ -14,11 +14,11 @@ Configuration files and scripts, check each **dotfile** to see what's included i
 
 The root folder contains the **dotfiles**. The root folder contains two scripts:
 
-1. **bootstrap-install.sh**
+1. **dot-install.sh**
 
 	Iterates over each **dotfile** and executes its installation script (if any)
 
-2. **bootstrap-login.sh**
+2. **dot-login.sh**
 
 	Executed at each login. Iterates over each **dotfile** and executes its login script (if any)
 
@@ -26,11 +26,11 @@ The root folder contains the **dotfiles**. The root folder contains two scripts:
 
 Each **dotfile** can *optionally* contain the following files/folders:
 
-1. **bootstrap-install**
+1. **dot-install**
 
 	Should install the **dotfile**
 
-2. **bootstrap-login**
+2. **dot-login**
 
 	Executes any commands that the **dotfile** may need (setting environment variables, etc)
 
@@ -50,7 +50,7 @@ Clone (or download) the repository, `cd` into it, and run the install scripts:
 $ cd ~/
 $ git clone https://github.com/DanielRS/dotfiles.git .dotfiles
 $ cd .dotfiles
-$ ./bootstrap-install.sh
+$ ./dot-install.sh
 ```
 
 After that log out and log back in.
