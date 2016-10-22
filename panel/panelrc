@@ -4,7 +4,7 @@
 
 # Panel base
 PANEL_FIFO=/tmp/panel-fifo
-PANEL_HEIGHT=32
+PANEL_HEIGHT=28
 PANEL_ALPHA=0.75
 PANEL_FONT_FAMILY="-*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1"
 # PANEL_FONT_FAMILY="-*-dejavu sans mono-medium-r-normal-*-11-*-*-*-m-*-iso10646-1"

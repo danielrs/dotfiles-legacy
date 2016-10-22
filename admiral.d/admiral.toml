@@ -1,7 +1,7 @@
 [admiral]
-items = ["left", "workspaces",
+items = ["left", "padding", "workspaces",
          "center", "title",
-         "right", "cmus", "volume", "clock"]
+         "right", "cmus", "volume", "clock", "padding"]
 
 [workspaces]
 path = "./scripts/workspaces.sh"
@@ -29,4 +29,8 @@ static = true
 
 [right]
 path = "echo '%{r}'"
+static = true
+
+[padding]
+path = "echo '  '"
 static = true
