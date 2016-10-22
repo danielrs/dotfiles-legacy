@@ -2,7 +2,12 @@
 # See: https://ngzhian.wordpress.com/2013/01/11/what-i-learned-about-fonts/
 # for information about font
 
+. ~/.colors/jellybeans
+
+#
 # Panel base
+#
+
 PANEL_FIFO=/tmp/panel-fifo
 PANEL_HEIGHT=28
 PANEL_ALPHA=0.75
@@ -13,6 +18,7 @@ PANEL_FONT_ICONS="-*-stlarch-medium-r-*-*-11-*-*-*-*-*-*-*"
 #
 # Colors
 #
+
 COLOR_BACKGROUND_ALPHA=$(toHex $(clamp $(toInt $(bc <<< $PANEL_ALPHA*255)) 0 255))
 COLOR_BACKGROUND=$(echo "$COLOR_BG" | sed "s/#/#$COLOR_BACKGROUND_ALPHA/g")
 COLOR_FOREGROUND="$COLOR_FG"

@@ -1,0 +1,5 @@
+#! /bin/bash
+
+mkdir --parents ~/.config/pianobar
+
+ln -sfrv ./config ~/.config/pianobar/config

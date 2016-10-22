@@ -67,7 +67,7 @@ export EDITOR XDG_CACHE_HOME XDG_CONFIG_HOME __GL_SHADER_DISK_CACHE_PATH
 # Scripts may set PATH and Environment variables
 #
 cd ~/.dotfiles/
-. dot-login
+. dotpkg login
 cd ~/
 
 PATH="$PATH:~/.cabal/bin"

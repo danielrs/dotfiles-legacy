@@ -1,0 +1,51 @@
+#! /bin/bash
+# See: https://ngzhian.wordpress.com/2013/01/11/what-i-learned-about-fonts/
+# for information about font
+
+# Colors
+GREEN=$'\e[00;32m'
+YELLOW=$'\e[01;33m'
+NO_COLOR=$'\e[01;0m'
+
+install() {
+	for d in */; do
+		# Go into directory
+		cd "$d"
+
+		# Run the install commands
+		if [ -x dotpkg ]; then
+			echo "> ${GREEN}Installing ${YELLOW}$d${NO_COLOR}"
+			./dotpkg
+		fi
+
+		# Return
+		cd ../
+	done
+}
+
+login() {
+	for d in */; do
+		# Go into directory
+		cd "$d"
+
+		# If the directory contains any executable add it to path
+		if [ -d bin ]; then
+			PATH=$PATH:$(pwd)/bin
+		fi
+
+		# Return
+		cd ../
+	done
+}
+
+case $1 in
+	install)
+		install
+		;;
+	login)
+		login
+		;;
+	*)
+		echo $"Usage: $0 {install|login}"
+		exit 1
+esac

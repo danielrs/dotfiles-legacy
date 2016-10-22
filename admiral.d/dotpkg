@@ -3,4 +3,4 @@
 mkdir --parents ~/.config/admiral.d
 
 ln -sfrv ./admiral.toml ~/.config/admiral.d/admiral.toml
-ln -sfrv ./scripts ~/.config/admiral.d/scripts
+ln -sfrv ./scripts ~/.config/admiral.d/

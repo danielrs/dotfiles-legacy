@@ -1,3 +1,5 @@
 #! /bin/bash
 
-dmenu_run -b -l 4 -fn "xft:Inconsolata:pixelsize=16" -nb $COLOR_BG -nf $COLOR_FG -sb $COLOR_WHITE -sf $COLOR_BLACK
+. ~/.colors/jellybeans
+
+dmenu_run -b -l 4 -fn "xft:Inconsolata:pixelsize=16" -nb $COLOR_BG -nf $COLOR_FG -sb $COLOR_YELLOW -sf $COLOR_BLACK

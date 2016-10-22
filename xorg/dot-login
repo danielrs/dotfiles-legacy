@@ -1,4 +1,0 @@
-#! /bin/bash
-
-# Export color scheme
-. ./colors/jellybeans.sh

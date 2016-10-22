@@ -1,0 +1,3 @@
+#! /bin/bash
+
+ln -sfrv ./scripts ~/.colors
