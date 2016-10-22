@@ -54,6 +54,15 @@ while read -r line; do
 						# focused urgent desktop
 						echo -n "%{F$COLOR_FOCUSED_URGENT_FG}%{B$COLOR_FOCUSED_URGENT_BG}%{U$COLOR_FOREGROUND} ${name} %{B-}%{F-}"
 						;;
+
+					L*)
+						# layout
+						layout='\uE009 Tiled'
+						if [[ $name == M* ]]; then
+							layout='\uE001 Monocle'
+						fi
+						printf '%b' "%{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG}  $layout  %{B-}%{F-}"
+						;;
 				esac
 				shift
 			done
