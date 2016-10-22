@@ -1,10 +1,11 @@
 #!/usr/bin/bash
 
 cat <<EOT
+admiral-git
 compton-git
-google-chrome
 lemonbar-git
 lostfiles
+private-internet-access-vpn
 redshift-minimal
 rxvt-unicode-patched
 stlarch_font

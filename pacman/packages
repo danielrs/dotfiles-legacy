@@ -21,6 +21,7 @@ refind-efi
 sudo
 sxhkd
 terminus-font
+ttf-dejavu
 ttf-inconsolata
 unrar
 unzip
@@ -44,4 +45,5 @@ dos2unix
 neovim
 the_silver_searcher
 python-neovim
+vim
 EOT
