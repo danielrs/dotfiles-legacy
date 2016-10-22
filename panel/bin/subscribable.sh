@@ -5,16 +5,16 @@
 
 # The script needs 2 symbols to be defined to work:
 # 1. FIFO: the location of the named pipe
-# 2. getStatus: a function that returns some output, this output is send to the pipe
+# 2. get_status: a function that returns some output, this output is send to the pipe
 
-if [ -z "$FIFO" ] || [ ! $(functionExists getStatus) -eq 0 ]; then
-	echo "FIFO and getStatus must be defined!"
+if [ -z "$FIFO" ] || [ ! $(functionExists get_status) -eq 0 ]; then
+	echo "FIFO and get_status must be defined!"
 	exit
 fi
 
-statusChanged() {
+status_changed() {
 	if [ -p "$FIFO" ]; then
-		getStatus > "$FIFO"
+		get_status > "$FIFO"
 	fi
 }
 
@@ -28,7 +28,7 @@ subscribe() {
 	mkfifo "$FIFO"
 
 	# Trigger a status change
-	statusChanged &
+	status_changed &
 
 	# Reading loop
 	local MAX_TRIES=3
@@ -50,10 +50,10 @@ subscribe() {
 if [ ! -z "$1" ]; then
 	case $1 in
 		-c)
-			statusChanged
+			status_changed
 			;;
 		--changed)
-			statusChanged
+			status_changed
 			;;
 		-s)
 			subscribe
@@ -66,5 +66,5 @@ if [ ! -z "$1" ]; then
 			;;
 	esac
 else
-	getStatus
+	get_status
 fi

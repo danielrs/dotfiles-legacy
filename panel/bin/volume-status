@@ -2,7 +2,7 @@
 
 FIFO=/tmp/volume-fifo
 
-getStatus() {
+get_status() {
 	local amixer=$(amixer get Master | grep "dB\|[0-9]\+%" | head -n 1)
   local level=$(echo $amixer | grep -o '\[[0-9]\+%\]' | sed 's/%\|\[\|\]//g')
   local status=$(echo $amixer | grep -o '\[on\]\|\[off\]' | sed 's/\[\|\]//g')

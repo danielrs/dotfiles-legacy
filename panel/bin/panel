@@ -9,22 +9,6 @@ fi
 
 trap 'trap - TERM; kill 0' TERM INT QUIT EXIT
 
-[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
-mkfifo "$PANEL_FIFO"
-
 bspc config top_padding $PANEL_HEIGHT
 
-bspc subscribe all > "$PANEL_FIFO" &
-xtitle -sf 'T%s' > "$PANEL_FIFO" &
-
-cmus-status --subscribe > "$PANEL_FIFO" &
-volume-status --subscribe > "$PANEL_FIFO" &
-date-status > "$PANEL_FIFO" &
-
-if [ -d /proc/acpi/battery/BAT* ]; then
-  battery-status > "$PANEL_FIFO" &
-fi
-
-cat "$PANEL_FIFO" | panel-bar | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$PANEL_FONT_ICONS" -B "$COLOR_BACKGROUND" -F "$COLOR_FOREGROUND"  &
-
-wait
+admiral | lemonbar -g x$PANEL_HEIGHT -f "$PANEL_FONT_FAMILY" -f "$PANEL_FONT_ICONS" -B "$COLOR_BACKGROUND" -F "$COLOR_FOREGROUND"

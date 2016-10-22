@@ -1,7 +1,7 @@
 #! /bin/bash
 
 FIFO=/tmp/cmus-fifo
-getStatus() {
+get_status() {
 	local status=$(cmus-remote -Q 2>/dev/null | grep status | head -n 1 | cut -d ' ' -f2-)
 	local artist=$(cmus-remote -Q 2>/dev/null | grep artist | head -n 1 | cut -d ' ' -f3-)
 	local album=$(cmus-remote -Q 2>/dev/null | grep album | head -n 1 | cut -d ' ' -f3-)

@@ -1,0 +1,32 @@
+[admiral]
+items = ["left", "workspaces",
+         "center", "title",
+         "right", "cmus", "volume", "clock"]
+
+[workspaces]
+path = "./scripts/workspaces.sh"
+
+[title]
+path = "./scripts/title.sh"
+
+[cmus]
+path = "./scripts/cmus.sh"
+
+[volume]
+path = "./scripts/volume.sh"
+
+[clock]
+path = "./scripts/clock.sh"
+reload = 1
+
+[left]
+path = "echo '%{l}'"
+static = true
+
+[center]
+path = "echo '%{c}'"
+static = true
+
+[right]
+path = "echo '%{r}'"
+static = true
