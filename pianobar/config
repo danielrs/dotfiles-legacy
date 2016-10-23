@@ -1,2 +1,2 @@
 # Misc
-event_command = pianobar-status-callback
+event_command = ~/.config/pianobar/eventcmd

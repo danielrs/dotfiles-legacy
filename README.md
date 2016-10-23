@@ -12,29 +12,24 @@ Configuration files and scripts, check each **dotfile** to see what's included i
 
 ### How are the folders structured?
 
-The root folder contains the **dotfiles**. The root folder contains two scripts:
+The root folder contains the **dotfiles** and the script `dotpkg` for installing the dotfiles:
 
-1. **dot-install.sh**
+`dotpkg install`
 
-	Iterates over each **dotfile** and executes its installation script (if any)
+Iterates over each **dotfile** and executes its installation script (if any).
 
-2. **dot-login.sh**
+`dotpkg login`
 
-	Executed at each login. Iterates over each **dotfile** and executes its login script (if any)
+Executed at each login. Iterates over each **dotfile** and adds the  `bin` folder (if present) to the `PATH`.
 
 #### dotfile
 
-Each **dotfile** can *optionally* contain the following files/folders:
+Each **dotfile** can *optionally* contain another `dotpkg` script, and a `bin` folder:
 
-1. **dot-install**
+1. **dotpkg**
+	A script for performaning any required preparations before installation. This script is also response for creating the appropiate symlinks.
 
-	Should install the **dotfile**
-
-2. **dot-login**
-
-	Executes any commands that the **dotfile** may need (setting environment variables, etc)
-
-3. **bin/**
+2. **bin/**
 
 	A folder that can contain scripts and executables that are added to environment PATH *if* present
 
@@ -50,7 +45,7 @@ Clone (or download) the repository, `cd` into it, and run the install scripts:
 $ cd ~/
 $ git clone https://github.com/DanielRS/dotfiles.git .dotfiles
 $ cd .dotfiles
-$ ./dot-install.sh
+$ ./dotpkg install
 ```
 
 After that log out and log back in.
