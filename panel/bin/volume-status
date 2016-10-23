@@ -3,11 +3,10 @@
 FIFO=/tmp/volume-fifo
 
 get_status() {
-	local amixer=$(amixer get Master | grep "dB\|[0-9]\+%" | head -n 1)
-  local level=$(echo $amixer | grep -o '\[[0-9]\+%\]' | sed 's/%\|\[\|\]//g')
-  local status=$(echo $amixer | grep -o '\[on\]\|\[off\]' | sed 's/\[\|\]//g')
-
-	printf 'VOL%s:%s\n' "$status" "$level"
+  local pulse=$(pulseaudio-ctl full-status)
+  local level=$(echo $pulse | cut -d ' ' -f1)
+  local is_muted=$(echo $pulse | cut -d ' ' -f2)
+  printf 'VOL%s:%s\n' "$level" "$is_muted"
 }
 
 source subscribable.sh

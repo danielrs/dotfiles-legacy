@@ -1,22 +1,26 @@
 [admiral]
-items = ["left", "padding", "workspaces",
+items = ["left", "arch", "workspaces",
          "center", "title",
-         "right", "cmus", "volume", "clock", "padding"]
+         "right", "cmus", "volume", "clock"]
+
+[arch]
+path = "./scripts/arch"
+static = true
 
 [workspaces]
-path = "./scripts/workspaces.sh"
+path = "./scripts/workspaces"
 
 [title]
-path = "./scripts/title.sh"
+path = "./scripts/title"
 
 [cmus]
-path = "./scripts/cmus.sh"
+path = "./scripts/cmus"
 
 [volume]
-path = "./scripts/volume.sh"
+path = "./scripts/volume"
 
 [clock]
-path = "./scripts/clock.sh"
+path = "./scripts/clock"
 reload = 1
 
 [left]
@@ -29,8 +33,4 @@ static = true
 
 [right]
 path = "echo '%{r}'"
-static = true
-
-[padding]
-path = "echo '  '"
 static = true

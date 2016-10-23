@@ -4,8 +4,8 @@ source ~/.config/panel/panelrc
 
 while read -r line; do
 
-	volume_status=$(echo ${line:3} | cut -d ':' -f1)
-	volume_level=$(echo ${line:3} | cut -d ':' -f2)
+	volume_level=$(echo ${line:3} | cut -d ':' -f1)
+	volume_muted=$(echo ${line:3} | cut -d ':' -f2)
 
 	if [[ $volume_level -le 0 ]]; then
 		volume_icon='\uE04F'
@@ -15,7 +15,7 @@ while read -r line; do
 		volume_icon='\uE050'
 	fi
 
-	if [ "$volume_status" == 'off' ]; then
+	if [ "$volume_muted" == 'yes' ]; then
 		volume_icon='\uE04F'
 		volume_color=${COLOR_URGENT_FG}
 	else

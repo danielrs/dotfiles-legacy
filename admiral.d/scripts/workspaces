@@ -56,7 +56,7 @@ while read -r line; do
 						;;
 
 					L*)
-						# layout
+						# layout mode
 						layout='\uE009 Tiled'
 						if [[ $name == M* ]]; then
 							layout='\uE001 Monocle'

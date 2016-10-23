@@ -63,7 +63,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node
-super + {_,shift + }c
+super + {_,shift + }n
 	bspc node -f {next,prev}
 
 # focus the next/previous desktop
@@ -171,18 +171,17 @@ super + shift + {Up, Down}
 
 # Audio
 XF86AudioMute
-  pactl set-sink-mute $(pactl list short | grep RUNNING | sed 's/\s.*//gi') toggle; \
+	pulseaudio-ctl mute; \
 	volume-status --changed
 
 XF86AudioLowerVolume
-	amixer set Master 2%- unmute; \
+	pulseaudio-ctl down 2; \
 	volume-status --changed
 
 
 XF86AudioRaiseVolume
-	amixer set Master 2%+ unmute; \
+	pulseaudio-ctl up 2; \
 	volume-status --changed
-
 
 {XF86AudioPlay, super + F11}
 	cmus-remote --pause
