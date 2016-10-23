@@ -12,26 +12,26 @@ Configuration files and scripts, check each **dotfile** to see what's included i
 
 ### How are the folders structured?
 
-The root folder contains the **dotfiles** and the script `dotpkg` for installing the dotfiles:
+The root folder contains the **dotfiles** and the script `dotpkg` for installing the dotfiles. The command:
 
 `dotpkg install`
 
-Iterates over each **dotfile** and executes its installation script (if any).
+Iterates over each **dotfile** and executes its installation script (if any). And the command:
 
 `dotpkg login`
 
-Executed at each login. Iterates over each **dotfile** and adds the  `bin` folder (if present) to the `PATH`.
+Executes after each login; it iterates over each **dotfile** and adds the  `bin` folder (if present) to the `PATH`.
 
 #### dotfile
 
 Each **dotfile** can *optionally* contain another `dotpkg` script, and a `bin` folder:
 
 1. **dotpkg**
-	A script for performaning any required preparations before installation. This script is also response for creating the appropiate symlinks.
+	A script for performaning any required preparations before installation. This script is also responsible for creating the appropiate symlinks.
 
 2. **bin/**
 
-	A folder that can contain scripts and executables that are added to environment PATH *if* present
+	A folder that can contain scripts and executables that are added to environment PATH by `dotpkg login`.
 
 The structure of other files is not predefined.
 
