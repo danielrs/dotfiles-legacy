@@ -5,6 +5,7 @@
 # Base packages
 cat <<EOT
 acpi
+adobe-source-code-pro-fonts
 alsa-utils
 bc
 bspwm
