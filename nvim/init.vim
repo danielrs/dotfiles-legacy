@@ -170,6 +170,7 @@ autocmd FileType html,css,eelixir EmmetInstall
 " jellybeans.vim
 set background=dark
 colorscheme jellybeans
+let g:jellybeans_use_term_italics = 1
 set fillchars+=vert:│
 hi Normal ctermbg=none
 hi NonText ctermbg=none
