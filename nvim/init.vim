@@ -16,6 +16,8 @@ endif
 """"""""""""""""""
 
 if !has('nvim') && has('gui_running')
+  ":set guifont=Consolas:h12
+  :set guifont=Source\ Code\ Pro\ 12
   :set guioptions-=m "remove menu
   :set guioptions-=T "remove toolbar
   :set guioptions-=r "remove right scroll bar
@@ -35,8 +37,7 @@ filetype plugin indent on
 syntax on
 syntax enable
 
-" Editor GUI
-:set guifont=Consolas:h12
+" Editor UI
 :set number
 :set cursorline
 :set showcmd
@@ -168,9 +169,9 @@ autocmd FileType html,css,eelixir EmmetInstall
 " haskell-vim
 
 " jellybeans.vim
+let g:jellybeans_use_term_italics = 1
 set background=dark
 colorscheme jellybeans
-let g:jellybeans_use_term_italics = 1
 set fillchars+=vert:│
 hi Normal ctermbg=none
 hi NonText ctermbg=none
@@ -231,7 +232,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 "deoplete.nvim
 let g:deoplete#enable_at_startup = 1
-
 
 " Vim plugins
 """"""""""""""""""
