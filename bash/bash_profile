@@ -71,5 +71,6 @@ cd ~/.dotfiles/
 cd ~/
 
 PATH="$PATH:~/.cabal/bin"
+PATH="$PATH:~/.cargo/bin"
 
 export PATH
