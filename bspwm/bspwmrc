@@ -8,7 +8,7 @@
 
 panel &
 
-bspc config border_width       1
+bspc config border_width       2
 bspc config window_gap         8
 
 bspc config split_ratio         0.52
@@ -26,13 +26,18 @@ bspc rule -a feh state=floating
 # bspc rule -a Screenkey manage=off
 
 #
+# Mouse
+#
+
+bspc config click_to_focus true
+
+#
 # Colors
 #
 
 bspc config focused_border_color $COLOR_LYELLOW
 bspc config active_border_color $COLOR_WHITE
 bspc config normal_border_color $COLOR_DARKGRAY
-bspc config presel_border_color $COLOR_CYAN
 # locked colors
 # sticky colors
 # private colors
