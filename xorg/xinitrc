@@ -16,5 +16,5 @@ redshift &
 pulseaudio --start
 
 # WM
-sxhkd -f 100 &
+sxhkd &
 exec bspwm
