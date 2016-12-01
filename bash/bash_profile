@@ -72,5 +72,6 @@ cd ~/
 
 PATH="$PATH:~/.cabal/bin"
 PATH="$PATH:~/.cargo/bin"
+PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
 export PATH
