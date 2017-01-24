@@ -75,4 +75,7 @@ PATH="$PATH:~/.cargo/bin"
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
 export PATH
+
+# This options are specific to java apps
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
 export _JAVA_AWT_WM_NONREPARENTING=1
