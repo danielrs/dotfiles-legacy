@@ -11,6 +11,8 @@ alias kintl='setxkbmap -layout us -variant intl'
 alias ghc='ghc -outputdir "out"'
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias forget='history -c && exit'
+alias histoff='set +o history'
+alias histon='set -o history'
 
 # PS1='[\u@\h \W]\$ '
 

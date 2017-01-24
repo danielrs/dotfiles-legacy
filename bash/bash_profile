@@ -75,3 +75,4 @@ PATH="$PATH:~/.cargo/bin"
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 
 export PATH
+export _JAVA_AWT_WM_NONREPARENTING=1
