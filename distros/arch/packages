@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # This scripts lists the needed packages for the dotfiles to function at their full
 

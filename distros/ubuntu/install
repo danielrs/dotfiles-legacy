@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Install ubuntu-desktop with no recommends
+sudo apt-get install --no-install-recommends ubuntu-desktop
+
+# Install other packages
+sudo apt-get install $(./packages)

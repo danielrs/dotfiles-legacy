@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#! /bin/bash
 
 battery() {
   echo $(acpi --battery | cut -d, -f2) | sed 's/%//g'

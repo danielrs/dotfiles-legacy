@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# This scripts lists the needed packages for the dotfiles to function at their full
+
+# ubuntu-desktop recommends
+cat <<EOT
+unity-lens-applications
+unity-lens-files
+unity-lens-music
+unity-lens-photos
+unity-lens-video
+eog
+evince
+file-roller
+firefox
+gedit
+gnome-calculator
+gnome-font-viewer
+gnome-power-manager
+gnome-system-monitor
+gnome-terminal
+laptop-detect
+plymouth-theme-ubuntu-logo
+transmission-gtk
+ttf-ubuntu-font-family
+xdg-utils
+EOT
+
+# Other packages
+cat <<EOT
+indicator-session
+redshift
+EOT
+
+# Development packages
+cat <<EOT
+build-essential
+ctags
+git
+rxvt-unicode-256color
+silversearcher-ag
+fonts-inconsolata
+vim
+EOT
