@@ -1,0 +1,7 @@
+#
+# ~/.bash_aliases
+#
+
+alias ghc='ghc -outputdir "out"'
+alias npm-exec='PATH=$(npm bin):$PATH'
+alias forget='history -c && exit'
