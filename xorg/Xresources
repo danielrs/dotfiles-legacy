@@ -31,6 +31,7 @@ Xft.lcdfilter: lcddefault
 !URxvt.font: xft:Inconsolata:medium:pixelsize=17
 !URxvt.boldFont: xft:Inconsolata:bold:pixelsize=17:style=bold
 !URxvt.italicFont: xft:Inconsolata:italic:pixelsize=17:style=italic
+!URxvt.letterSpace: -1
 
 ! Source Code Pro
 URxvt.font:         xft:Source Code Pro:semibold:pixelsize=16
