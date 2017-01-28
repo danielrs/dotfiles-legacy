@@ -14,3 +14,9 @@ And don't forget to:
 ### Java
 
 While OpenJDK is good for Java development, some frameworks still work better with Oracle JDK.
+
+## Enable SSD Optimizations
+
+Set the swappiness and enable TRIM. Check the link for more information:
+
+https://www.leaseweb.com/labs/2013/07/5-crucial-optimizations-for-ssd-usage-in-ubuntu-linux/

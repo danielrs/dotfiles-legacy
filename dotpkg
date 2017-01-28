@@ -36,6 +36,8 @@ login() {
 		# Return
 		cd ../
 	done
+
+	export PATH
 }
 
 case $1 in
