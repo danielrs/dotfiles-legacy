@@ -30,6 +30,7 @@ EOT
 cat <<EOT
 indicator-session
 redshift
+network-manager-openvpn-gnome
 EOT
 
 # Development packages

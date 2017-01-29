@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#!/bin/bash
 
 # Sources
 # https://www.reddit.com/r/VPN/comments/2vxrey/is_there_a_way_to_set_up_ubuntu_so_that_it_will/comog21
