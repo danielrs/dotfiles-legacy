@@ -1,5 +1,8 @@
 "*":
   core:
     telemetryConsent: "no"
+  editor:
+    fontFamily: "Source Code Pro, Inconsolata, Dejavu Sans Mono, monospace"
+    tabLength: 4
   "tree-view":
     hideVcsIgnoredFiles: true
