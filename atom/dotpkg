@@ -1,0 +1,12 @@
+#! /bin/bash
+
+mkdir $HOME/.atom
+
+ln -sfrv ./config.cson $HOME/.atom/config.cson
+ln -sfrv ./init.coffee $HOME/.atom/init.coffee
+ln -sfrv ./keymap.cson $HOME/.atom/keymap.cson
+ln -sfrv ./snippets.cson $HOME/.atom/snippets.cson
+ln -sfrv ./styles.less $HOME/.atom/styles.less
+
+echo "Installing atom packages..."
+apm install `cat packages.list`

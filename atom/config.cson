@@ -1,0 +1,5 @@
+"*":
+  core:
+    telemetryConsent: "no"
+  "tree-view":
+    hideVcsIgnoredFiles: true
