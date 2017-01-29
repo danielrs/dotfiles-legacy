@@ -1,5 +1,6 @@
 "*":
   core:
+    autoHideMenuBar: true
     telemetryConsent: "no"
   editor:
     fontFamily: "Source Code Pro, Inconsolata, Dejavu Sans Mono, monospace"
