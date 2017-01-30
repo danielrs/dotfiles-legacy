@@ -128,9 +128,9 @@ autocmd Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 " to sort plugins use :sort/.*\//
 call plug#begin('~/.config/nvim/plugged')
 Plug 'rking/ag.vim'
+Plug 'chriskempson/base16-vim'
 Plug 'mattn/emmet-vim'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'nanotech/jellybeans.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'raichoo/purescript-vim'
@@ -162,23 +162,24 @@ call plug#end()
 
 " ag.vim
 
+" base16-vim
+set background=dark
+set fillchars+=vert:│
+hi Normal ctermbg=none
+hi NonText ctermbg=none
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 " emmet-vim
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,eelixir EmmetInstall
 
 " haskell-vim
 
-" jellybeans.vim
-let g:jellybeans_use_term_italics = 1
-set background=dark
-colorscheme jellybeans
-set fillchars+=vert:│
-hi Normal ctermbg=none
-hi NonText ctermbg=none
-
 " lightline.vim
 let g:lightline = {
-	\ 'colorscheme': 'jellybeans',
 	\ 'active': {
 	\ 	'left': [['mode', 'paste'], ['fugitive', 'filename', 'modified']]
 	\ },
