@@ -143,7 +143,6 @@ Plug 'tpope/vim-commentary'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'elixir-lang/vim-elixir'
 Plug 'tpope/vim-fireplace'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-sleuth'
@@ -219,9 +218,6 @@ map <F8> :TagbarToggle<CR>
 " vim-fireplace
 " vim-cpp-enhanced-highlight
 " vim-elixir
-
-" vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
 
 " vim-javascript
 " vim-less

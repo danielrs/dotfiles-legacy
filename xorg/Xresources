@@ -32,9 +32,9 @@ Xft.lcdfilter: lcddefault
 !URxvt.letterSpace: -1
 
 ! Source Code Pro
-URxvt.font:         xft:Source Code Pro:medium:pixelsize=16
-URxvt.boldFont:     xft:Source Code Pro:bold:pixelsize=16
-URxvt.italicFont:   xft:Source Code Pro:italic:pixelsize=16
+URxvt.font:         xft:Source Code Pro:medium:pixelsize=15
+URxvt.boldFont:     xft:Source Code Pro:bold:pixelsize=15
+URxvt.italicFont:   xft:Source Code Pro:italic:pixelsize=15
 URxvt.letterSpace: -1
 
 ! --------
@@ -48,31 +48,6 @@ URxvt.letterSpace: -1
 ! --------
 ! Color-scheme
 ! --------
+! Loaded from base16-xresources
 
-! Check bash profile for colorscheme details
-URxvt*background: [95]#151515
-URxvt*foreground: #e8e8d3
-! black darkgray
-URxvt*color0: #3a3a3a
-URxvt*color8: #6c6c6c
-! red lightred
-URxvt*color1: #ff5f5f
-URxvt*color9: #d75f5f
-! green lightgreen
-URxvt*color2: #87d75f
-URxvt*color10: #87af5f
-! yellow lightyellow
-URxvt*color3: #ffd787
-URxvt*color11: #d7d787
-! blue lightblue
-URxvt*color4: #87afff
-URxvt*color12: #87afd7
-! magenta lightmagenta
-URxvt*color5: #d7afff
-URxvt*color13: #d7afd7
-! cyan lightcyan
-URxvt*color6: #5fd7ff
-URxvt*color14: #5fd7d7
-! gray white
-URxvt*color7: #afafaf
-URxvt*color15: #e4e4e4
+#include ".config/base16-xresources/xresources/base16-onedark-256.Xresources"
