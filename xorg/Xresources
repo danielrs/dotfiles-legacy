@@ -50,4 +50,5 @@ URxvt.letterSpace: -1
 ! --------
 ! Loaded from base16-xresources
 
+#define background_opacity 95
 #include ".config/base16-xresources/xresources/base16-onedark-256.Xresources"

@@ -170,6 +170,9 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+" disables opaque background
+hi Normal ctermbg=none
+hi NonText ctermbg=none
 
 " emmet-vim
 let g:user_emmet_install_global = 0
