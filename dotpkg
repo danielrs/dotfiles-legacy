@@ -30,7 +30,7 @@ login() {
 
 		# If the directory contains any executable add it to path
 		if [ -d bin ]; then
-			PATH="$PATH:$(pwd)/bin"
+			PATH="$(pwd)/bin:$PATH"
 		fi
 
 		# Return

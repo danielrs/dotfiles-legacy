@@ -9,9 +9,11 @@ cd ~/.dotfiles/
 . dotpkg login
 cd ~/
 
-PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
-PATH="(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH="$HOME/.cabal/bin:$PATH"
+if which ruby >/dev/null && which gem >/dev/null; then
+	PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+fi
 
 export PATH
 
@@ -26,7 +28,7 @@ export __GL_SHADER_DISK_CACHE_PATH="$HOME/.cache/nv"
 
 
 # Java apps font redering and corrent behaviour in tiling wms.
-#export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 #export _JAVA_AWT_WM_NONREPARENTING=1
 
 #
