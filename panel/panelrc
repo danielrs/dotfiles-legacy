@@ -19,7 +19,7 @@ PANEL_FONT_ICONS="-*-stlarch-medium-r-*-*-11-*-*-*-*-*-*-*"
 # Colors
 #
 
-COLOR_BACKGROUND_ALPHA=$(toHex $(clamp $(toInt $(bc <<< $PANEL_ALPHA*255)) 0 255))
+COLOR_BACKGROUND_ALPHA=$(printf '%x' $(bc <<< $PANEL_ALPHA*255 | tr -d '\n'))
 COLOR_BACKGROUND=$(echo "$COLOR_BG" | sed "s/#/#$COLOR_BACKGROUND_ALPHA/g")
 COLOR_FOREGROUND="$COLOR_FG"
 

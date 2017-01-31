@@ -2,9 +2,22 @@
 
 source ~/.config/panel/panelrc
 
+printe() {
+	local len=32
+	# Checks for user-set length.
+	if [ "$2" -eq "$2" ] 2>/dev/null; then
+		len=$2;
+	elif [ ! -z "$2" ]; then
+		echo 'length argument ($2) is not a number. Using default length (32).'
+	fi
+	# Prints truncated string.
+	echo $1 | \
+		awk -v len=$len '{ if (length($0) > len) print substr($0, 1, len-3) "..."; else print $0; }'
+}
+
 while read -r line; do
 
-	now_playing="%{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG} \u266B $(display "${line:4}") %{B-}%{F-}"
+	now_playing="%{F$COLOR_LAYOUT_FG}%{B$COLOR_LAYOUT_BG} \u266B $(printe "${line:4}") %{B-}%{F-}"
 	status=$(echo ${line:4} | cut -d ':' -f1)
 	artist=$(echo ${line:4} | cut -d ':' -f2)
 	album=$(echo ${line:4} | cut -d ':' -f3)
@@ -17,7 +30,7 @@ while read -r line; do
 		if [ "$status" == "paused" ]; then
 			now_playing="%{F$COLOR_NOTIFICATION_FG} $ICON_MUSIC_PAUSED Paused %{F-}"
 		else
-			now_playing="%{F$COLOR_NOTIFICATION_FG} $ICON_MUSIC_PLAYING $(display "$artist - $title") %{F-}"
+			now_playing="%{F$COLOR_NOTIFICATION_FG} $ICON_MUSIC_PLAYING $(printe "$artist - $title") %{F-}"
 		fi
 	fi
 

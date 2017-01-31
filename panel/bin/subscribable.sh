@@ -7,7 +7,7 @@
 # 1. FIFO: the location of the named pipe
 # 2. get_status: a function that returns some output, this output is send to the pipe
 
-if [ -z "$FIFO" ] || [ ! $(functionExists get_status) -eq 0 ]; then
+if [ -z "$FIFO" ] || [ $(declare -F get_status > /dev/null; echo $?) -ne 0]; then
 	echo "FIFO and get_status must be defined!"
 	exit
 fi
