@@ -32,6 +32,7 @@ cat <<EOT
 indicator-session
 redshift
 network-manager-openvpn-gnome
+unrar
 EOT
 
 # Development packages
