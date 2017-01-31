@@ -30,14 +30,12 @@ login() {
 
 		# If the directory contains any executable add it to path
 		if [ -d bin ]; then
-			PATH=$PATH:$(pwd)/bin
+			PATH="$PATH:$(pwd)/bin"
 		fi
 
 		# Return
 		cd ../
 	done
-
-	export PATH
 }
 
 case $1 in
