@@ -2,6 +2,10 @@
 # See: https://ngzhian.wordpress.com/2013/01/11/what-i-learned-about-fonts/
 # for information about font
 
+# Directories.
+ORIGINAL_DIR=$(pwd)
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)"
+
 # Colors
 GREEN=$'\e[00;32m'
 YELLOW=$'\e[01;33m'
@@ -38,6 +42,7 @@ env() {
 	done
 }
 
+cd "$DIR"
 case $1 in
 	install)
 		install
@@ -47,5 +52,5 @@ case $1 in
 		;;
 	*)
 		echo $"Usage: $0 {install|env}"
-		exit 1
 esac
+cd "$ORIGINAL_DIR"

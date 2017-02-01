@@ -3,7 +3,7 @@
 # for information about font
 
 mkdir --parents ~/.vimperator
-rm -rf ~/.vimperator/colors
+rm -v ~/.vimperator/colors
 
 ln -sfrv ./vimperatorrc ~/.vimperatorrc
 ln -sfrv ./colors ~/.vimperator/colors

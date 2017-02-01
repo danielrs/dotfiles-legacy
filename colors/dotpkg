@@ -1,3 +1,4 @@
 #! /bin/bash
 
-ln -sfrv ./scripts ~/.colors
+rm -v ~/.config/colors
+ln -sfrv ./colors ~/.config/colors
