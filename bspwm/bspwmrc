@@ -1,6 +1,6 @@
 #! /bin/sh
 
-. ~/.colors/colorscheme
+. ~/.config/colors/colorscheme.sh
 
 ##################
 # BSPWM configuration
