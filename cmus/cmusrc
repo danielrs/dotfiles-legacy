@@ -1,5 +1,5 @@
 set output_plugin=alsa
-set status_display_program=cmus-status-callback
+set status_display_program=~/.dotfiles/cmus/scripts/cmus-status-callback.sh
 set shuffle=true
 set repeat=true
 set resume=true

@@ -9,4 +9,4 @@ get_status() {
   printf 'VOL%s:%s\n' "$level" "$is_muted"
 }
 
-source subscribable.sh
+. ~/.dotfiles/panel/scripts/subscribable.sh

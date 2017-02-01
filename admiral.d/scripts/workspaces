@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.config/panel/panelrc
+. ~/.config/panel/panelrc
 
 if ! type bspc &> /dev/null; then
 	echo "bspc not found"

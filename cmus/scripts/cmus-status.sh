@@ -15,4 +15,4 @@ get_status() {
 	fi
 }
 
-. subscribable.sh
+. ~/.dotfiles/panel/scripts/subscribable.sh

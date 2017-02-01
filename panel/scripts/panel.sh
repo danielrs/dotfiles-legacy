@@ -1,6 +1,6 @@
 #! /bin/bash
 
-source ~/.config/panel/panelrc
+. ~/.config/panel/panelrc
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
 	printf '%s\n' "The panel is already running." >&2

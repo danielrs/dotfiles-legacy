@@ -156,16 +156,16 @@ super + shift + {Up, Down}
 # Audio
 XF86AudioMute
 	pulseaudio-ctl mute; \
-	volume-status --changed
+	~/.dotfiles/panel/scripts/volume-status.sh --changed
 
 XF86AudioLowerVolume
 	pulseaudio-ctl down 2; \
-	volume-status --changed
+	~/.dotfiles/panel/scripts/volume-status.sh --changed
 
 
 XF86AudioRaiseVolume
 	pulseaudio-ctl up 2; \
-	volume-status --changed
+	~/.dotfiles/panel/scripts/volume-status.sh --changed
 
 {XF86AudioPlay, super + F11}
 	cmus-remote --pause

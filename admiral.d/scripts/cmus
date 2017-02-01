@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.config/panel/panelrc
+. ~/.config/panel/panelrc
 
 printe() {
 	local len=32
@@ -36,4 +36,4 @@ while read -r line; do
 
 	printf '%b\n' "${now_playing}"
 
-done < <(cmus-status --subscribe)
+done < <(~/.dotfiles/cmus/scripts/cmus-status.sh --subscribe)
