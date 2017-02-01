@@ -6,7 +6,7 @@
 # PATH
 #
 cd ~/.dotfiles/
-. dotpkg login
+. dotpkg env
 cd ~/
 
 PATH="$HOME/.cargo/bin:$PATH"

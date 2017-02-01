@@ -23,7 +23,7 @@ install() {
 	done
 }
 
-login() {
+env() {
 	for d in */; do
 		# Go into directory
 		cd "$d"
@@ -42,10 +42,10 @@ case $1 in
 	install)
 		install
 		;;
-	login)
-		login
+	env)
+		env
 		;;
 	*)
-		echo $"Usage: $0 {install|login}"
+		echo $"Usage: $0 {install|env}"
 		exit 1
 esac

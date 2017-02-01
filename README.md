@@ -18,9 +18,9 @@ The root folder contains the **dotfiles** and the script `dotpkg` for installing
 
 Iterates over each **dotfile** and executes its installation script (if any). And the command:
 
-`dotpkg login`
+`dotpkg env`
 
-Executes after each login; it iterates over each **dotfile** and adds the  `bin` folder (if present) to the `PATH`.
+It iterates over each **dotfile** and adds the  `bin` folder (if present) to the `PATH` environment variable.
 
 #### dotfile
 
@@ -31,7 +31,7 @@ Each **dotfile** can *optionally* contain another `dotpkg` script, and a `bin` f
 
 2. **bin/**
 
-	A folder that can contain scripts and executables that are added to environment PATH by `dotpkg login`.
+	A folder that can contain scripts and executables that are added to environment PATH by `dotpkg env`.
 
 The structure of other files is not predefined.
 
