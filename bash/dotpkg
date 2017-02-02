@@ -1,7 +1,0 @@
-#! /bin/bash
-
-ln -sfrv ./profile ~/.profile
-ln -sfrv ./bash_aliases ~/.bash_aliases
-ln -sfrv ./bash_logout ~/.bash_logout
-ln -sfrv ./bash_profile ~/.bash_profile
-ln -sfrv ./bashrc ~/.bashrc

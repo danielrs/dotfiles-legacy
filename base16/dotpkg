@@ -1,9 +1,0 @@
-#! /bin/bash
-
-echo "Installing shell..."
-rm -rf "$HOME/.config/base16-shell"
-git clone https://github.com/DanielRS/base16-shell.git ~/.config/base16-shell
-
-echo "Installing Xresources..."
-rm -rf "$HOME/.config/base16-xresources"
-git clone https://github.com/DanielRS/base16-xresources.git ~/.config/base16-xresources

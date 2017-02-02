@@ -1,5 +1,0 @@
-#! /bin/bash
-
-mkdir --parents ~/.config
-
-ln -sfrv ./redshift.conf ~/.config/redshift.conf

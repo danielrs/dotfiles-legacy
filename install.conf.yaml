@@ -1,0 +1,93 @@
+- defaults:
+    link:
+        create: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    # admiral
+    #~/.config/admiral.d: admiral.d
+
+    # atom
+    ~/.atom/config.cson: atom/config.cson
+    ~/.atom/init.coffee: atom/init.coffee
+    ~/.atom/keymap.cson: atom/keymap.cson
+    ~/.atom/snippets.cson: atom/snippets.cson
+    ~/.atom/styles.less: atom/styles.less
+
+    # base16
+    ~/.config/base16-shell: base16-shell
+    ~/.config/base16-xresources: base16-xresources
+
+    # bash
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.bash_logout: bash/bash_logout
+    ~/.bash_profile: bash/bash_logout
+    ~/.bashrc: bash/bashrc
+    ~/.profile: bash/profile
+
+    # bspwm
+    #~/.config/bspwm: bspwm
+
+    # cmus
+    # colors
+
+    # colors
+    #~/.config/colors: colors
+
+    # compton
+    #~/.config/compton.conf: compton/compton.conf
+
+    # dmenu
+
+    # cvim
+    ~/.cvimrc: cvim/cvimrc
+
+    # emacs
+
+    # fonts
+    ~/.config/fontconfig/fonts.conf: fonts/fonts.conf
+
+    # git
+    ~/.gitconfig: git/gitconfig
+
+    # leiningen
+    #~/.lein/profiles.clj: lein/profiles.clj
+
+    # nvim and vim
+    ~/.config/nvim/autoload: nvim/autoload
+    ~/.config/nvim/syntax: nvim/syntax
+    ~/.config/nvim/init.vim: nvim/init.vim
+    ~/.vim/autoload: nvim/autoload
+    ~/.vim/syntax: nvim/syntax
+    ~/.vim/vimrc: nvim/init.vim
+
+    # panel
+    #~/.config/panel: panel
+
+    # pianobar
+    #~/.config/pianobar: pianobar
+
+    # redshift
+    ~/.config/redshift.conf: redshift/redshift.conf
+
+    # sxhkd
+    #~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
+
+    # vimperator
+    ~/.vimperator: vimperator
+
+    # xorg
+    #~/.xinitrc: xorg/xinitrc
+    ~/.Xresources: xorg/Xresources
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+    -
+        command: cd atom; apm install `cat packages.list`
+        description: Installing atom packages
+        stdout: true
+        stderr: true
+
+    - [cd nvim; ./update-plug.sh, Updating plug.vim]

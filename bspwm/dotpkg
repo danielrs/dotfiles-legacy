@@ -1,4 +1,0 @@
-#! /bin/bash
-
-mkdir --parents ~/.config/bspwm
-ln -sfrv ./bspwmrc ~/.config/bspwm/bspwmrc

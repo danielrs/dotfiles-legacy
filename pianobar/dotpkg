@@ -1,6 +1,0 @@
-#! /bin/bash
-
-mkdir --parents ~/.config/pianobar
-
-ln -sfrv ./config ~/.config/pianobar/config
-ln -sfrv ./eventcmd ~/.config/pianobar/eventcmd

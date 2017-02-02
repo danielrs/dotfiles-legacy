@@ -1,4 +1,0 @@
-#! /bin/bash
-
-ln -sfrv ./xinitrc ~/.xinitrc
-ln -sfrv ./Xresources ~/.Xresources

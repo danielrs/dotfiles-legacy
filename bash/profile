@@ -5,10 +5,6 @@
 #
 # PATH
 #
-cd ~/.dotfiles/
-. dotpkg env
-cd ~/
-
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"
 if which ruby >/dev/null && which gem >/dev/null; then

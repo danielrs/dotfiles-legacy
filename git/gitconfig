@@ -1,7 +1,7 @@
 [user]
-	name = Daniel Rivas
-	email = ers.daniel+dev@gmail.com
+    name = Daniel Rivas
+    email = ers.daniel+dev@gmail.com
 [core]
-	autocrlf = input
+    autocrlf = input
 [push]
     default = simple

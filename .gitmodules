@@ -1,0 +1,9 @@
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+[submodule "base16-shell"]
+	path = base16-shell
+	url = https://github.com/danielrs/base16-shell
+[submodule "base16-xresources"]
+	path = base16-xresources
+	url = https://github.com/danielrs/base16-xresources

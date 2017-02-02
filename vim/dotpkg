@@ -1,8 +1,0 @@
-#! /bin/bash
-# This uses the same dotfiles as neovim -- which was written to be backwards compatible with vim
-
-mkdir --parents ~/.vim/{autoload,syntax}
-
-ln -sfrv ../nvim/init.vim ~/.vim/vimrc
-ln -sfrv ../nvim/autoload/plug.vim ~/.vim/autoload/plug.vim
-ln -sfrv ../nvim/syntax/jflex.vim ~/.vim/syntax/jflex.vim

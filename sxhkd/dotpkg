@@ -1,5 +1,0 @@
-#! /bin/bash
-
-mkdir --parents ~/.config/sxhkd
-
-ln -sfrv ./sxhkdrc ~/.config/sxhkd/sxhkdrc
