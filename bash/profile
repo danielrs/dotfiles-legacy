@@ -26,3 +26,7 @@ export __GL_SHADER_DISK_CACHE_PATH="$HOME/.cache/nv"
 # Java apps font redering and corrent behaviour in tiling wms.
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 #export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Other tools
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
