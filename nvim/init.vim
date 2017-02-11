@@ -144,9 +144,11 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'elixir-lang/vim-elixir'
 Plug 'tpope/vim-fireplace'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
+
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim'
@@ -224,6 +226,10 @@ map <F8> :TagbarToggle<CR>
 " vim-elixir
 
 " vim-javascript
+
+" vim-jsx
+let g:jsx_ext_required = 0
+
 " vim-less
 " vim-sleuth
 " vim-surround
