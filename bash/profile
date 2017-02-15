@@ -16,6 +16,7 @@ export PATH
 #
 # Exports
 #
+export UID # some distros don't auto-export it. Needed for docker-compose
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 export __GL_SHADER_DISK_CACHE_PATH="$HOME/.cache/nv"
