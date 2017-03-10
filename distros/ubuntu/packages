@@ -12,7 +12,7 @@ unity-lens-video
 eog
 evince
 file-roller
-firefox
+chromium-browser
 gedit
 gnome-calculator
 gnome-font-viewer
@@ -43,5 +43,5 @@ git
 rxvt-unicode-256color
 silversearcher-ag
 fonts-inconsolata
-vim
+vim-nox
 EOT

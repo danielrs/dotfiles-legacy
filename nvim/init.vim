@@ -128,7 +128,7 @@ autocmd Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 " to sort plugins use :sort/.*\//
 call plug#begin('~/.config/nvim/plugged')
 Plug 'rking/ag.vim'
-Plug 'danielrs/base16-vim'
+Plug 'chriskempson/base16-vim'
 Plug 'mattn/emmet-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'itchyny/lightline.vim'
