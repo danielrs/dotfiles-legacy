@@ -44,4 +44,5 @@ rxvt-unicode-256color
 silversearcher-ag
 fonts-inconsolata
 vim-nox
+python3-venv
 EOT
