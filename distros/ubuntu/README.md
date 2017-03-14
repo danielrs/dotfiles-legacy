@@ -73,3 +73,6 @@ https://www.leaseweb.com/labs/2013/07/5-crucial-optimizations-for-ssd-usage-in-u
 ### VPN
 
 Use network manager to set OpenVPN profiles. It is compatible with the kernel killswitch provided by the ufw script in these dotfiles.
+
+Check here:
+https://www.privateinternetaccess.com/forum/discussion/18003/openvpn-step-by-step-setups-for-various-debian-based-linux-oss-with-videos-ubuntu-mint-debian
