@@ -5,13 +5,15 @@
 # https://www.privateinternetaccess.com/forum/index.php?p=/discussion/3188/kill-switch-for-ubuntu#Item_1
 # https://www.privateinternetaccess.com/forum/discussion/3188/kill-switch-for-ubuntu
 
+IP=10.254.1.16
+
 # Deny all traffic by default
 sudo ufw default deny outgoing
 sudo ufw default deny incoming
 
 # Communicate in local network
-sudo ufw allow out to 10.10.20.170/24
-sudo ufw allow in to 10.10.20.170/24
+sudo ufw allow out to $IP/24
+sudo ufw allow in to $IP/24
 
 # Allow VPN to connect
 sudo ufw allow out 1194/udp
@@ -24,9 +26,9 @@ sudo ufw allow out 1198/udp
 # then add rules for each ip:
 # sudo ufw allow in from x.x.x.x to any
 # sudo ufw allow out from any to x.x.x.x
-IP=104.200.151.10
-sudo ufw allow in from $IP to any
-sudo ufw allow out from any to $IP
+PIA_IP=104.200.151.10
+sudo ufw allow in from $PIA_IP to any
+sudo ufw allow out from any to $PIA_IP
 
 # Allow all traffic through VPN
 sudo ufw allow out on tun0 from any to any

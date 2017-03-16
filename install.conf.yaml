@@ -51,6 +51,9 @@
     # git
     ~/.gitconfig: git/gitconfig
 
+    # ideavim
+    ~/.ideavimrc: ideavim/ideavimrc
+
     # leiningen
     #~/.lein/profiles.clj: lein/profiles.clj
 
