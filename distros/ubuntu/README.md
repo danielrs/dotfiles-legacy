@@ -76,6 +76,19 @@ Change docker storage folder:
 
 http://stackoverflow.com/questions/24309526/how-to-change-the-docker-image-installation-directory
 
+#### KVM (Android SDK Avd)
+
+```
+sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+```
+
+And add user to the kvm and libvirtd groups:
+
+```
+sudo usermod -a -G kvm [USER_NAME]
+sudo usermod -a -G libvirtd [USER_NAME]
+```
+
 ### Restore public SSH keys from private keys
 
 Copy the private key to the `~/.ssh` repo and set the permissions to `400`. Then use
