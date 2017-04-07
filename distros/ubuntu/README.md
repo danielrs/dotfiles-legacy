@@ -6,8 +6,17 @@ Run the install script:
 
 ## Post-install
 
-* Install your graphics driver.
+* Install Graphics Driver
 * Configure Redshift so it autostarts (startup apps, etc).
+
+### Uninstall and Disable Grub
+
+If you are using a different bootloader (such as rEFInd). Uninstall and disable grub for future updates:
+
+```
+sudo apt-get purge --autoremove grub*
+sudo apt-mark hold grub*
+```
 
 ### 3rd party packages
 
@@ -19,7 +28,7 @@ Not available in ubuntu by default:
 
 ### Development tools installation
 
-### nvm
+#### nvm
 
 https://github.com/creationix/nvm
 
@@ -77,6 +86,8 @@ Change docker storage folder:
 http://stackoverflow.com/questions/24309526/how-to-change-the-docker-image-installation-directory
 
 #### KVM (Android SDK Avd)
+
+Detailed instructions [here](https://help.ubuntu.com/community/KVM/Installation).
 
 ```
 sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
