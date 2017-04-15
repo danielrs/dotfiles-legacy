@@ -49,6 +49,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
+#### SDKMAN!
+
+http://sdkman.io/install.html
+
+Install to custom location:
+
+```
+export SDKMAN_DIR="$HOME/.sdkman" && (
+  curl -s "https://get.sdkman.io" | bash
+)
+```
+
 #### Rust
 
 https://www.rustup.rs/
