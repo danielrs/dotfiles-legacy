@@ -12,6 +12,8 @@ export __GL_SHADER_DISK_CACHE_PATH="$HOME/.cache/nv"
 #export XDG_CACHE_HOME=$HOME/.cache
 #export XDG_CONFIG_HOME=$HOME/.config
 export ANDROID_HOME="$HOME/.android-sdk"
+export GOROOT="$HOME/.golang"
+export GOPATH="$HOME/Development/go"
 
 # Java apps font redering and corrent behaviour in tiling wms.
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
@@ -20,6 +22,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 #
 # PATH
 #
+PATH="$GOROOT/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"

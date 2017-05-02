@@ -61,6 +61,18 @@ export SDKMAN_DIR="$HOME/.sdkman" && (
 )
 ```
 
+#### Go
+
+https://golang.org/doc/install
+
+If it was installed to a custom location, add `GOROOT` to the environment
+variables along with the `bin` folder:
+
+```
+export GOROOT="$HOME/.golang"
+export PATH="$GOROOT/bin:$PATH"
+```
+
 #### Rust
 
 https://www.rustup.rs/

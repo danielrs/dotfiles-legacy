@@ -143,12 +143,12 @@ Plug 'tpope/vim-commentary'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'elixir-lang/vim-elixir'
 Plug 'tpope/vim-fireplace'
+Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
-
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim'
@@ -222,6 +222,7 @@ map <F8> :TagbarToggle<CR>
 " vim-clojure-static
 " vim-commentary
 " vim-fireplace
+" vim-go
 " vim-cpp-enhanced-highlight
 " vim-elixir
 
