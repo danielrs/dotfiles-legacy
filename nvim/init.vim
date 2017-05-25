@@ -133,7 +133,6 @@ Plug 'mattn/emmet-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'raichoo/purescript-vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
@@ -202,8 +201,6 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" purescript-vim
 
 " rainbow_parentheses.vim
 nnoremap <A-p> :RainbowParentheses!!<CR>

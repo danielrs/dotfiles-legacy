@@ -15,7 +15,7 @@ If you are using a different bootloader (such as rEFInd). Uninstall and disable 
 
 ```
 sudo apt-get purge --autoremove grub*
-sudo apt-mark hold grub*
+sudo apt-mark hold grub* grub*:i386
 ```
 
 ### 3rd party packages
