@@ -211,6 +211,8 @@ augroup rainbow_lisp
 augroup END
 
 " rust.vim
+let g:rustfmt_autosave = 1
+
 " tabular
 
 " tagbar
