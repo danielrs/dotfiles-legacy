@@ -23,9 +23,9 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 # PATH
 #
 PATH="$GOROOT/bin:$PATH"
-PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 if which ruby >/dev/null && which gem >/dev/null; then
 	PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 fi
