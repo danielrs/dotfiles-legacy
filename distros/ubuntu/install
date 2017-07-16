@@ -1,7 +1,4 @@
 #!/bin/bash
 
-# Install ubuntu-desktop with no recommends
-sudo apt-get install --no-install-recommends ubuntu-desktop
-
-# Install rest of packages
-sudo apt-get install $(./packages)
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+sudo apt-get install $($DIR/packages)

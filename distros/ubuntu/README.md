@@ -11,22 +11,31 @@ Run the install script:
 
 ### Uninstall and Disable Grub
 
-If you are using a different bootloader (such as rEFInd). Uninstall and disable grub for future updates:
+If you are using a different bootloader (such as rEFInd). You can uninstall grub:
 
 ```
-sudo apt-get purge --autoremove grub*
+sudo apt-get purge --auto-remove grub*
+```
+
+Aditionally, some updates are gonna try to install it again during some
+dist-upgrades, make sure to disable grub temporarily by using:
+
+```
 sudo apt-mark hold grub* grub*:i386
 ```
 
-### 3rd party packages
-
-Not available in ubuntu by default:
-
-* Oracle Java: https://launchpad.net/~webupd8team/+archive/ubuntu/java
-* Atom: https://launchpad.net/~webupd8team/+archive/ubuntu/atom
-* Google Chrome: https://www.google.com/chrome/browser/desktop/
-
 ### Development tools installation
+
+#### JDK
+
+Install the default one (OpenJDK):
+
+```
+sudo apt-get install default-jdk
+```
+
+Or Oracle JDK:
+https://launchpad.net/~webupd8team/+archive/ubuntu/java
 
 #### nvm
 

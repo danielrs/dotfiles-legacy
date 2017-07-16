@@ -1,44 +1,55 @@
 #!/bin/bash
+# This script contains the list of packages used during installation.
 
-# This scripts lists the needed packages for the dotfiles to function at their full
+# ----------------
+# Minimal Gnome
+# ----------------
 
-# ubuntu-desktop recommends
 cat <<EOT
-unity-lens-applications
-unity-lens-files
-unity-lens-music
-unity-lens-photos
-unity-lens-video
-eog
-evince
+gnome-shell
+gnome-core
+EOT
+
+# Most hand-picked from the group 'gnome'
+cat <<EOT
+desktop-base
+network-manager-gnome
 file-roller
-chromium-browser
 gedit
-gnome-calculator
-gnome-font-viewer
-gnome-power-manager
-gnome-screenshot
-gnome-system-monitor
-gnome-terminal
-laptop-detect
-plymouth-theme-ubuntu-logo
+gnome-clocks
+gnome-color-manager
+gnome-nettool
+gnome-sound-recorder
+gnome-tweak-tool
+nautilus-sendto
 transmission-gtk
-ttf-ubuntu-font-family
-xdg-utils
+xdg-user-dirs-gtk
+gstreamer1.0-libav
+gstreamer1.0-plugins-ugly
 EOT
 
-# Other packages
+# Relevant to DE
 cat <<EOT
-indicator-session
-redshift
 network-manager-openvpn-gnome
-unrar
+dmz-cursor-theme
 EOT
 
-# Development packages
+# ----------------
+# Other apps
+# ----------------
+
+cat <<EOT
+curl
+chromium-browser
+EOT
+
+# ----------------
+# Development
+# ----------------
+
 cat <<EOT
 build-essential
-ctags
+exuberant-ctags
 git
 rxvt-unicode-256color
 silversearcher-ag

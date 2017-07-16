@@ -83,6 +83,7 @@
     # xorg
     #~/.xinitrc: xorg/xinitrc
     ~/.Xresources: xorg/Xresources
+    ~/.xprofile: xorg/xprofile
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

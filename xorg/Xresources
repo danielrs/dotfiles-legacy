@@ -26,16 +26,16 @@ Xft.lcdfilter: lcddefault
 !URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1 */
 
 ! Inconsolata
-!URxvt.font: xft:Inconsolata:medium:pixelsize=17
-!URxvt.boldFont: xft:Inconsolata:bold:pixelsize=17:style=bold
-!URxvt.italicFont: xft:Inconsolata:italic:pixelsize=17:style=italic
-!URxvt.letterSpace: -1
+URxvt.font: xft:Inconsolata:medium:pixelsize=17
+URxvt.boldFont: xft:Inconsolata:bold:pixelsize=17:style=bold
+URxvt.italicFont: xft:Inconsolata:italic:pixelsize=17:style=italic
+URxvt.letterSpace: -1
 
 ! Source Code Pro
-URxvt.font:         xft:Source Code Pro:medium:pixelsize=15
-URxvt.boldFont:     xft:Source Code Pro:bold:pixelsize=15
-URxvt.italicFont:   xft:Source Code Pro:italic:pixelsize=15
-URxvt.letterSpace: -1
+!URxvt.font:         xft:Source Code Pro:medium:pixelsize=15
+!URxvt.boldFont:     xft:Source Code Pro:bold:pixelsize=15
+!URxvt.italicFont:   xft:Source Code Pro:italic:pixelsize=15
+!URxvt.letterSpace: -1
 
 ! --------
 ! Cursor

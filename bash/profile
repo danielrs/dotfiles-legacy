@@ -2,9 +2,10 @@
 # ~/.profile
 #
 
-#
+# ----------------
 # Exports
-#
+##----------------
+
 export UID # some distros don't auto-export it. Needed for docker-compose
 export VISUAL="vim"
 export EDITOR="$VISUAL"
@@ -16,12 +17,13 @@ export GOROOT="$HOME/.golang"
 export GOPATH="$HOME/Development/go"
 
 # Java apps font redering and corrent behaviour in tiling wms.
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dsun.java2d.xrender=true -Dswing.aatext=true'
 #export _JAVA_AWT_WM_NONREPARENTING=1
 
-#
+##----------------
 # PATH
-#
+##----------------
+
 PATH="$GOROOT/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"
@@ -33,11 +35,11 @@ fi
 
 export PATH
 
-#
+##----------------
 # MISC
-#
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+##----------------
 
-export SDKMAN_DIR="/home/danielrs/.sdkman"
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && . "$SDKMAN_DIR/bin/sdkman-init.sh"
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+#export SDKMAN_DIR="/home/danielrs/.sdkman"
+#[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && . "$SDKMAN_DIR/bin/sdkman-init.sh"
