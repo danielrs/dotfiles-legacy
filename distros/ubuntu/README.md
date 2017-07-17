@@ -154,3 +154,15 @@ Use network manager to set OpenVPN profiles. It is compatible with the kernel ki
 
 Check here:
 https://www.privateinternetaccess.com/forum/discussion/18003/openvpn-step-by-step-setups-for-various-debian-based-linux-oss-with-videos-ubuntu-mint-debian
+
+### Troubleshooting
+
+#### URxvt
+
+The default .desktop entry can be changed to get a better behaviour from urxvt.
+Edit the file `/usr/share/applications/rxvt-unicode.desktop` and make the
+following changes:
+
+* Change the `Icon` value to `utilities-terminal` for a better icon.
+* Create the new key-value pair `StartupWMClass=urxvt`. this will enable DEs
+to associate any urxvt instance with the desktop file.
