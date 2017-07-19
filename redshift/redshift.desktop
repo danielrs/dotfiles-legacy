@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Redshift
+NoDisplay=true
+TryExec=/usr/bin/redshift
+Exec=redshift
+Terminal=false
+X-GNOME-Autostart-enabled=true

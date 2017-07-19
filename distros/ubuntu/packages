@@ -12,7 +12,6 @@ EOT
 
 # Most hand-picked from the group 'gnome'
 cat <<EOT
-desktop-base
 network-manager-gnome
 file-roller
 gedit

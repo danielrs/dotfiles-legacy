@@ -73,6 +73,7 @@
 
     # redshift
     ~/.config/redshift.conf: redshift/redshift.conf
+    ~/.config/autostart/redshift.desktop: redshift/redshift.desktop
 
     # sxhkd
     #~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
