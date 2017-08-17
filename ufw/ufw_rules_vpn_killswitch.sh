@@ -27,7 +27,7 @@ sudo ufw allow out 1198/udp
 # then add rules for each ip:
 # sudo ufw allow in from x.x.x.x to any
 # sudo ufw allow out from any to x.x.x.x
-PIA_IP=104.200.151.10
+PIA_PI=162.216.46.124
 sudo ufw allow in from $PIA_IP to any
 sudo ufw allow out from any to $PIA_IP
 
