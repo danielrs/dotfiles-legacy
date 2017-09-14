@@ -118,6 +118,10 @@ Change docker storage folder:
 
 http://stackoverflow.com/questions/24309526/how-to-change-the-docker-image-installation-directory
 
+Or for systemd:
+
+https://docs.docker.com/engine/admin/systemd/
+
 #### KVM (Android SDK Avd)
 
 Detailed instructions [here](https://help.ubuntu.com/community/KVM/Installation).
