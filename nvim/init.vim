@@ -44,7 +44,7 @@ syntax enable
 :set scrolloff=4 " Always n lines visible when scrolling
 
 " Editor
-:set noesckeys " Disable Esc-key escape sequences
+":set noesckeys " Disable Esc-key escape sequences
 :nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
 :nnoremap <silent> <Esc>n :set relativenumber! relativenumber?<CR>
 :nnoremap <Leader>y "+y
@@ -148,9 +148,10 @@ Plug 'mxw/vim-jsx'
 Plug 'groenewege/vim-less'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
+Plug 'lervag/vimtex'
 
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 elseif !has('nvim')
   Plug 'Shougo/neocomplete.vim'
 endif
