@@ -44,7 +44,7 @@ syntax enable
 :set scrolloff=4 " Always n lines visible when scrolling
 
 " Editor
-":set noesckeys " Disable Esc-key escape sequences
+:set noesckeys " Disable Esc-key escape sequences
 :nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
 :nnoremap <silent> <Esc>n :set relativenumber! relativenumber?<CR>
 :nnoremap <Leader>y "+y
@@ -247,3 +247,4 @@ let g:deoplete#enable_at_startup = 1
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 
+" vimtex
