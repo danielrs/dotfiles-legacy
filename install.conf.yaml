@@ -58,12 +58,12 @@
     #~/.lein/profiles.clj: lein/profiles.clj
 
     # nvim and vim
-    ~/.config/nvim/autoload: nvim/autoload
-    ~/.config/nvim/syntax: nvim/syntax
-    ~/.config/nvim/init.vim: nvim/init.vim
-    ~/.vim/autoload: nvim/autoload
-    ~/.vim/syntax: nvim/syntax
-    ~/.vim/vimrc: nvim/init.vim
+    ~/.config/nvim/autoload: vim/autoload
+    ~/.config/nvim/syntax: vim/syntax
+    ~/.config/nvim/init.vim: vim/vimrc
+    ~/.vim/autoload: vim/autoload
+    ~/.vim/syntax: vim/syntax
+    ~/.vim/vimrc: vim/vimrc
 
     # panel
     #~/.config/panel: panel

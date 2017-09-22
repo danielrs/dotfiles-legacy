@@ -1,5 +1,5 @@
 """"""""""""""""""
-" Useful variables
+" Setting up vimdir 
 """"""""""""""""""
 
 let vimdir = '$HOME/.config/nvim'
