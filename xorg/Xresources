@@ -26,9 +26,9 @@ Xft.lcdfilter: lcddefault
 !URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1 */
 
 ! Inconsolata
-URxvt.font: xft:Inconsolata:medium:size=13
-URxvt.boldFont: xft:Inconsolata:bold:size=13:style=bold
-URxvt.italicFont: xft:Inconsolata:italic:size=13:style=italic
+URxvt.font: xft:Inconsolata:medium:size=12
+URxvt.boldFont: xft:Inconsolata:bold:size=12:style=bold
+URxvt.italicFont: xft:Inconsolata:italic:size=12:style=italic
 !URxvt.letterSpace: -1
 
 ! Source Code Pro
