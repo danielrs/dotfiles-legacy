@@ -21,6 +21,7 @@ Xft.hinting: false
 Xft.hintstyle: hintnone
 Xft.antialias: true
 Xft.lcdfilter: lcddefault
+Xft.dpi: 180
 
 !! Bitmap
 !URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1 */
