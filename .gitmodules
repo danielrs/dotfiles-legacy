@@ -7,3 +7,6 @@
 [submodule "base16-xresources"]
 	path = base16-xresources
 	url = https://github.com/chriskempson/base16-xresources
+[submodule "base16-gnome-terminal"]
+	path = base16-gnome-terminal
+	url = https://github.com/aaron-williamson/base16-gnome-terminal

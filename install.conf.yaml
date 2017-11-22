@@ -18,6 +18,7 @@
     # base16
     ~/.config/base16-shell: base16-shell
     ~/.config/base16-xresources: base16-xresources
+    ~/.config/base16-gnome-terminal: base16-gnome-terminal
 
     # bash
     ~/.bash_aliases: bash/bash_aliases
@@ -46,7 +47,7 @@
     # emacs
 
     # fonts
-    ~/.config/fontconfig/fonts.conf: fonts/fonts.conf
+    #~/.config/fontconfig/fonts.conf: fonts/fonts.conf
 
     # git
     ~/.gitconfig: git/gitconfig
@@ -72,8 +73,8 @@
     #~/.config/pianobar: pianobar
 
     # redshift
-    ~/.config/redshift.conf: redshift/redshift.conf
-    ~/.config/autostart/redshift.desktop: redshift/redshift.desktop
+    #~/.config/redshift.conf: redshift/redshift.conf
+    #~/.config/autostart/redshift.desktop: redshift/redshift.desktop
 
     # sxhkd
     #~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
