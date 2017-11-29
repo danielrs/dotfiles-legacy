@@ -72,6 +72,9 @@
     # pianobar
     #~/.config/pianobar: pianobar
 
+    # R
+    ~/.Rprofile: r/Rprofile
+
     # redshift
     #~/.config/redshift.conf: redshift/redshift.conf
     #~/.config/autostart/redshift.desktop: redshift/redshift.desktop

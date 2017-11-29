@@ -1,0 +1,19 @@
+#!/bin/bash
+# This script list the extra packages needed (by me) after installing Fedora 27.
+
+# general
+cat <<EOT
+vim-enhanced
+transmission-gtk
+texlive-scheme-basic
+texlive-siunitx
+latexmk
+the_silver_searcher
+EOT
+
+# needed for R
+cat <<EOT
+libcurl-devel
+openssl-curl
+R
+EOT

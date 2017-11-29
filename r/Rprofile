@@ -1,0 +1,5 @@
+# Sets working directory
+setwd("~/Development/R")
+
+# Sets library location
+Sys.setenv(R_LIBS_USER = "~/.Rlibs")
