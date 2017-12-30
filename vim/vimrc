@@ -1,5 +1,5 @@
 """"""""""""""""""
-" Setting up vimdir 
+" Setting up vimdir
 """"""""""""""""""
 
 let vimdir = '$HOME/.config/nvim'
@@ -44,7 +44,9 @@ syntax enable
 :set scrolloff=4 " Always n lines visible when scrolling
 
 " Editor
-:set noesckeys " Disable Esc-key escape sequences
+if !has('nvim')
+  :set noesckeys " Disable Esc-key escape sequences
+endif
 :nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
 :nnoremap <silent> <Esc>n :set relativenumber! relativenumber?<CR>
 :nnoremap <Leader>y "+y
@@ -152,7 +154,7 @@ Plug 'lervag/vimtex'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-elseif !has('nvim')
+else
   Plug 'Shougo/neocomplete.vim'
 endif
 
@@ -234,6 +236,7 @@ let g:jsx_ext_required = 0
 " vim-less
 " vim-sleuth
 " vim-surround
+" vimtex
 
 " Neovim plugins
 """"""""""""""""""
@@ -244,7 +247,5 @@ let g:deoplete#enable_at_startup = 1
 " Vim plugins
 """"""""""""""""""
 
-" neocomplete
+"neocomplete.vim
 let g:neocomplete#enable_at_startup = 1
-
-" vimtex

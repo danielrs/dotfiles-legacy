@@ -2,4 +2,6 @@
 setwd("~/Development/R")
 
 # Sets library location
-Sys.setenv(R_LIBS_USER = "~/.Rlibs")
+libsUser <- "~/.Rlibs"
+Sys.setenv(R_LIBS_USER = libsUser)
+.libPaths(libsUser)
