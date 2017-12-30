@@ -1,5 +1,6 @@
 #!/bin/bash
 # This script list the extra packages needed (by me) after installing Fedora 27.
+# https://ask.fedoraproject.org/en/question/9111/sticky-what-plugins-do-i-need-to-install-to-watch-movies-and-listen-to-music/
 
 # general
 cat <<EOT
