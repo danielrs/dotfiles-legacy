@@ -4,12 +4,11 @@
 
 # ----------------
 # Exports
-##----------------
+# ----------------
 
 export UID # some distros don't auto-export it. Needed for docker-compose
 export VISUAL="vim"
 export EDITOR="$VISUAL"
-export __GL_SHADER_DISK_CACHE_PATH="$HOME/.cache/nv"
 #export XDG_CACHE_HOME=$HOME/.cache
 #export XDG_CONFIG_HOME=$HOME/.config
 export ANDROID_HOME="$HOME/.android-sdk"
@@ -28,9 +27,9 @@ PATH="$GOROOT/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
-if which ruby >/dev/null && which gem >/dev/null; then
-	PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-fi
+# if which ruby >/dev/null && which gem >/dev/null; then
+# 	PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+# fi
 #PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 export PATH

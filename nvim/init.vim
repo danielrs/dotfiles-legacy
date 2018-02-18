@@ -38,6 +38,7 @@ syntax on
 syntax enable
 
 " Editor UI
+:set guicursor=
 :set number
 :set cursorline
 :set showcmd
@@ -139,11 +140,9 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
-Plug 'guns/vim-clojure-static'
 Plug 'tpope/vim-commentary'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'elixir-lang/vim-elixir'
-Plug 'tpope/vim-fireplace'
 Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -154,6 +153,7 @@ Plug 'lervag/vimtex'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'zchee/deoplete-go'
 else
   Plug 'Shougo/neocomplete.vim'
 endif
@@ -244,6 +244,10 @@ let g:jsx_ext_required = 0
 "deoplete.nvim
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+"deoplete-go
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 " Vim plugins
 """"""""""""""""""
