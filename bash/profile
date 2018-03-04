@@ -7,10 +7,8 @@
 # ----------------
 
 export UID # some distros don't auto-export it. Needed for docker-compose
-export VISUAL="vim"
+export VISUAL="nvim"
 export EDITOR="$VISUAL"
-#export XDG_CACHE_HOME=$HOME/.cache
-#export XDG_CONFIG_HOME=$HOME/.config
 export ANDROID_HOME="$HOME/.android-sdk"
 export GOROOT="$HOME/.golang"
 export GOPATH="$HOME/Development/go"
@@ -19,14 +17,14 @@ export GOPATH="$HOME/Development/go"
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dsun.java2d.xrender=true -Dswing.aatext=true'
 #export _JAVA_AWT_WM_NONREPARENTING=1
 
-##----------------
+# ----------------
 # PATH
-##----------------
+# ----------------
 
-PATH="$GOROOT/bin:$PATH"
-PATH="$HOME/.cargo/bin:$PATH"
-PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.cabal/bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
+PATH="$GOROOT/bin:$PATH"
 # if which ruby >/dev/null && which gem >/dev/null; then
 # 	PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # fi
@@ -34,9 +32,9 @@ PATH="$HOME/.local/bin:$PATH"
 
 export PATH
 
-##----------------
+# ----------------
 # MISC
-##----------------
+# ----------------
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"

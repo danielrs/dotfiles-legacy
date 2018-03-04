@@ -1,6 +1,6 @@
-""""""""""""""""""
+" ----------------
 " Setting up vimdir
-""""""""""""""""""
+" ----------------
 
 let vimdir = '$HOME/.config/nvim'
 if !has("nvim") && !has("win32")
@@ -11,26 +11,26 @@ elseif !has("nvim") && has("win32")
   let vimdir = '$HOME/vimfiles'
 endif
 
-""""""""""""""""""
+" ----------------
 " GVim configuration
-""""""""""""""""""
+" ----------------
 
 if !has('nvim') && has('gui_running')
-  ":set guifont=Consolas:h12
-  :set guifont=Source\ Code\ Pro\ 12
-  :set guioptions-=m "remove menu
-  :set guioptions-=T "remove toolbar
-  :set guioptions-=r "remove right scroll bar
-  :set guioptions-=L "remove left scroll bar
-  ":set visualbell
-  ":set t_vb= "" Disable Bell
+  "set guifont=Consolas:h12
+  set guifont=Source\ Code\ Pro\ 12
+  set guioptions-=m "remove menu
+  set guioptions-=T "remove toolbar
+  set guioptions-=r "remove right scroll bar
+  set guioptions-=L "remove left scroll bar
+  "set visualbell
+  "set t_vb= "" Disable Bell
 endif
 
-""""""""""""""""""
+" ----------------
 " Vim configuration
-""""""""""""""""""
+" ----------------
 
-:set encoding=utf8
+set encoding=utf8
 
 " Syntax
 filetype plugin indent on
@@ -38,35 +38,35 @@ syntax on
 syntax enable
 
 " Editor UI
-:set guicursor=
-:set number
-:set cursorline
-:set showcmd
-:set scrolloff=4 " Always n lines visible when scrolling
+set guicursor=
+set number
+set cursorline
+set showcmd
+set scrolloff=4 " Always n lines visible when scrolling
 
 " Editor
 if !has('nvim')
-  :set noesckeys " Disable Esc-key escape sequences
+  set noesckeys " Disable Esc-key escape sequences
 endif
-:nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
-:nnoremap <silent> <Esc>n :set relativenumber! relativenumber?<CR>
-:nnoremap <Leader>y "+y
-:nnoremap <Leader>p "+p
+nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
+nnoremap <silent> <Esc>n :set relativenumber! relativenumber?<CR>
+nnoremap <Leader>y "+y
+nnoremap <Leader>p "+p
 
 " Indentation
-:set tabstop=4
-:set softtabstop=4
-:set shiftwidth=4
-:set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 " Search
-:set wildmenu
-:set incsearch
-:set hlsearch
-:nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
+set wildmenu
+set incsearch
+set hlsearch
+nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
 
 if !has('nvim')
-  :set showmatch
+  set showmatch
 endif
 
 " Undo
@@ -78,22 +78,22 @@ if has('persistent_undo')
 		call system('mkdir ' . myundodir)
 	endif
 	let &undodir = myundodir
-	:set undofile
-	:set undolevels=1000 " Maximum number of changes that can be undone
-	:set undoreload=10000 " Maximum number of lines to save for undo on a buffer reload
+	set undofile
+	set undolevels=1000 " Maximum number of changes that can be undone
+	set undoreload=10000 " Maximum number of lines to save for undo on a buffer reload
 endif
 
 " Folding
-:set foldenable
-:set foldlevelstart=10
-:set foldnestmax=10
-:set foldmethod=indent
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=indent
 
 " File settings
-:set nobackup
-:set backspace=indent,eol,start
-:set fileformat=unix
-:set fileformats=unix,dos
+set nobackup
+set backspace=indent,eol,start
+set fileformat=unix
+set fileformats=unix,dos
 
 " Window Switching
 nnoremap <silent> <A-k> :wincmd k<CR>
@@ -124,9 +124,9 @@ augroup filetype
 augroup END
 autocmd Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 
-""""""""""""""""""
+" ----------------
 " Plugins
-""""""""""""""""""
+" ----------------
 
 " to sort plugins use :sort/.*\//
 call plug#begin('~/.config/nvim/plugged')
@@ -152,8 +152,8 @@ Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'zchee/deoplete-go'
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Shougo/neocomplete.vim'
 endif
@@ -161,15 +161,13 @@ endif
 call plug#end()
 
 " Neovim and Vim plugins
-""""""""""""""""""
+" ----------------
 
 " ag.vim
 
 " base16-vim
 set background=dark
 set fillchars+=vert:│
-hi Normal ctermbg=none
-hi NonText ctermbg=none
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
@@ -197,7 +195,7 @@ let g:lightline = {
 	\	'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
 	\ }
 	\ }
-:set laststatus=2
+set laststatus=2
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -221,13 +219,10 @@ let g:rustfmt_autosave = 1
 " tagbar
 map <F8> :TagbarToggle<CR>
 
-" vim-clojure-static
 " vim-commentary
-" vim-fireplace
-" vim-go
 " vim-cpp-enhanced-highlight
 " vim-elixir
-
+" vim-go
 " vim-javascript
 
 " vim-jsx
@@ -239,18 +234,18 @@ let g:jsx_ext_required = 0
 " vimtex
 
 " Neovim plugins
-""""""""""""""""""
-
-"deoplete.nvim
-let g:deoplete#enable_at_startup = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" ----------------
 
 "deoplete-go
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
+"deoplete.nvim
+let g:deoplete#enable_at_startup = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
 " Vim plugins
-""""""""""""""""""
+" ----------------
 
 "neocomplete.vim
 let g:neocomplete#enable_at_startup = 1
