@@ -28,7 +28,7 @@
     ~/.profile: bash/profile
 
     # bspwm
-    #~/.config/bspwm: bspwm
+    ~/.config/bspwm: bspwm
 
     # cmus
     # colors
@@ -37,7 +37,7 @@
     #~/.config/colors: colors
 
     # compton
-    #~/.config/compton.conf: compton/compton.conf
+    ~/.config/compton.conf: compton/compton.conf
 
     # dmenu
 
@@ -73,6 +73,9 @@
     # pianobar
     #~/.config/pianobar: pianobar
 
+    # polybar
+    ~/.config/polybar/config: polybar/config
+
     # R
     ~/.Rprofile: r/Rprofile
 
@@ -81,13 +84,13 @@
     #~/.config/autostart/redshift.desktop: redshift/redshift.desktop
 
     # sxhkd
-    #~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
+    ~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
 
     # vimperator
     ~/.vimperator: vimperator
 
     # xorg
-    #~/.xinitrc: xorg/xinitrc
+    ~/.xinitrc: xorg/xinitrc
     ~/.Xresources: xorg/Xresources
     ~/.xprofile: xorg/xprofile
 

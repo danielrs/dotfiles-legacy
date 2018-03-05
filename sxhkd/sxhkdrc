@@ -7,8 +7,8 @@ super + Return
 	urxvt
 
 # program launcher
-super + space
-	dmenu_jelly
+super + @space
+	rofi -combi-modi window,drun,ssh -theme solarized -font "inconsolata 24" -show combi
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -20,7 +20,7 @@ super + Escape
 
 # quit bspwm normally
 super + alt + Escape
-	pkill -x panel; pkill -x admiral; bspc quit
+	bspc quit
 
 # close and kill
 super + {_,shift + }w
@@ -62,17 +62,17 @@ super + {_,shift + }{h,j,k,l}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous node
-super + {_,shift + }n
-	bspc node -f {next,prev}
+# focus the next/previous node in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local
 
-# focus the next/previous desktop
+# focus the next/previous desktop in the current monitor
 super + bracket{left,right}
-	bspc desktop -f {prev,next}
+	bspc desktop -f {prev,next}.local
 
-# move to next desktop
+# move to the next/previous desktop in the current monitor
 super + shift + bracket{left,right}
-  bspc node -d {prev,next}
+	bspc node -d {prev,next}.local
 
 # focus the last node/desktop
 super + {grave,Tab}
@@ -109,76 +109,39 @@ super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
-# resize tiled/floating
+# move/resize
 #
 
-# expand the tiled space in the given direction
+# expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
-	bspc node -z {left -20 0, bottom 0 20, top 0 -20, right 20 0}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# contract the tiled space in the given direction
+# contract a window by moving one of its side inward
 super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0, top 0 20, bottom 0 -20, left 20 0}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + alt + {Left,Down,Up,Right}
+super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 #
-# gap control
+# media keys
 #
 
-# increase/decrease window gap
-super + {minus,equal}
-  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 4 ))
-
-# reset window gap
-super + shift + {minus,equal}
-  bspc config -d focused window_gap 8
-
-#
-# flipping and rotation
-#
-
-super + {Left, Right}
-  bspc node @/ -R {-90, 90}
-
-super + shift + {Left, Right}
-  bspc node @/ -F vertical
-
-super + shift + {Up, Down}
-  bspc node @/ -F horizontal
-
-#
-# Media keys
-#
-
-# Audio
 XF86AudioMute
-	pulseaudio-ctl mute; \
-	~/.dotfiles/panel/scripts/volume-status.sh --changed
+	amixer -q set Master toggle
 
 XF86AudioLowerVolume
-	pulseaudio-ctl down 2; \
-	~/.dotfiles/panel/scripts/volume-status.sh --changed
-
+	amixer -q set Master 5%-
 
 XF86AudioRaiseVolume
-	pulseaudio-ctl up 2; \
-	~/.dotfiles/panel/scripts/volume-status.sh --changed
+	amixer -q set Master 5%+ on
 
-{XF86AudioPlay, super + F11}
-	cmus-remote --pause
+XF86MonBrightnessDown
+	xbacklight -dec 10
 
-{XF86AudioPrev, super + F10}
-	cmus-remote --prev
-
-{XF86AudioNext, super + F12}
-	cmus-remote --next
-
-# Other
-XF86TouchpadToggle
-  synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
+XF86MonBrightnessUp
+	xbacklight -inc 10
 
 XF86Sleep
 	pm-suspend

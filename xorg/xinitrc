@@ -17,4 +17,6 @@ pulseaudio --start
 
 # WM
 sxhkd &
+[[ $(hostname) == "adaline" ]] && polybar adaline &
+[[ $(hostname) == "ada" ]] && polybar ada &
 exec bspwm

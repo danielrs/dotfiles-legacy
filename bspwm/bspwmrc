@@ -1,12 +1,12 @@
 #! /bin/sh
 
-. ~/.config/colors/colorscheme.sh
+# . ~/.config/colors/colorscheme.sh
 
 ##################
 # BSPWM configuration
 ##################
 
-panel &
+# panel &
 
 bspc config border_width       2
 bspc config window_gap         8
@@ -35,10 +35,10 @@ bspc config click_to_focus true
 # Colors
 #
 
-bspc config focused_border_color $COLOR_LYELLOW
-bspc config active_border_color $COLOR_WHITE
-bspc config normal_border_color $COLOR_DARKGRAY
+# bspc config focused_border_color $COLOR_LYELLOW
+# bspc config active_border_color $COLOR_WHITE
+# bspc config normal_border_color $COLOR_DARKGRAY
 # locked colors
 # sticky colors
 # private colors
-bspc config urgent_border_color $COLOR_LRED
+# bspc config urgent_border_color $COLOR_LRED

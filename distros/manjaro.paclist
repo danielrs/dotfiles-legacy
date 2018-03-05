@@ -1,0 +1,45 @@
+#!/bin/bash
+# This script list the extra packages needed (by me) after installing Fedora 27.
+# https://ask.fedoraproject.org/en/question/9111/sticky-what-plugins-do-i-need-to-install-to-watch-movies-and-listen-to-music/
+
+# base
+cat <<EOT
+alsa-utils
+bspwm
+compton
+jsoncpp
+libmpdclient
+networkmanager
+p7zip
+rofi
+sxhkd
+ttf-dejavu
+ttf-inconsolata
+unrar
+unzip
+wireless_tools
+xorg-server
+xorg-xbacklight
+xorg-xev
+xorg-xinit
+xorg-xrdb
+xsel
+EOT
+
+# general
+cat <<EOT
+chromium
+feh
+gucharmap
+mpv
+transmission-gtk
+zathura
+EOT
+
+# dev
+cat <<EOT
+neovim
+python-neovim
+rxvt-unicode
+the_silver_searcher
+EOT
