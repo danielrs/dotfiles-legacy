@@ -18,11 +18,13 @@ ttf-inconsolata
 unrar
 unzip
 wireless_tools
+xcursor-vanilla-dmz-aa
 xorg-server
 xorg-xbacklight
 xorg-xev
 xorg-xinit
 xorg-xrdb
+xorg-xsetroot
 xsel
 EOT
 

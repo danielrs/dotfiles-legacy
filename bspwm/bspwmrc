@@ -1,40 +1,34 @@
 #! /bin/sh
 
+# reads colorscheme.
 # . ~/.config/colors/colorscheme.sh
 
-##################
-# BSPWM configuration
-##################
+# starts apps tied to bspwm.
+sxhkd &
+[[ $(hostname) == "adaline" ]] && polybar adaline &
+[[ $(hostname) == "ada" ]] && polybar ada &
 
-# panel &
-
-bspc config border_width       2
-bspc config window_gap         8
-
-bspc config split_ratio         0.52
-bspc config borderless_monocle  true
-bspc config gapless_monocle     true
-bspc config focus_by_distance   true
-bspc config history_aware_focus true
-
+# bspwm configuration.
 bspc monitor -d One Two Three Four Five Six Seven Eight
 
-# bspc rule -a Gimp desktop=^8 follow=on floating=on
-bspc rule -a feh state=floating
-# bspc rule -a mplayer2 floating=on
-# bspc rule -a Kupfer.py focus=on
-# bspc rule -a Screenkey manage=off
+bspc config border_width         2
+bspc config window_gap          8
 
-#
-# Mouse
-#
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
 
 bspc config click_to_focus true
 
-#
-# Colors
-#
+# rules.
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a feh state=floating
 
+# colors.
 # bspc config focused_border_color $COLOR_LYELLOW
 # bspc config active_border_color $COLOR_WHITE
 # bspc config normal_border_color $COLOR_DARKGRAY

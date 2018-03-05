@@ -19,8 +19,8 @@ screenchange-reload = true
 ;compositing-border = over
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 [colors]
 ;background = ${xrdb:color0:#222}
@@ -36,7 +36,6 @@ alert = #bd2c40
 [bar/base]
 width = 100%
 height = 27
-radius = 3.0
 fixed-center = true
 
 padding-left = 0
@@ -51,9 +50,6 @@ foreground = ${colors.foreground}
 
 line-size = 3
 line-color = #f00
-
-border-size = 4
-border-color = #00000000
 
 ;font
 dpi = ${xrdb:Xft.dpi:-1}
@@ -74,13 +70,16 @@ tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+;wm
+wm-restack = bspwm
+
 [bar/adaline]
 inherit = bar/base
 height = 27
 
 [bar/ada]
 inherit = bar/base
-height = 42
+height = 48
 
 ;----------------
 ; Modules

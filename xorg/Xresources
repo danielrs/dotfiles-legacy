@@ -46,9 +46,7 @@ URxvt.italicFont: xft:Inconsolata:italic:size=12:style=italic
 ! Cursor
 ! --------
 
-!Xcursor.theme: Vanilla-DMZ-AA
-!Xcursor.theme_core: true
-!Xcursor.size: 0
+Xcursor.theme: Vanilla-DMZ-AA
 
 ! --------
 ! Color-scheme
