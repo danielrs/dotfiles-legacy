@@ -10,6 +10,7 @@ compton
 jsoncpp
 libmpdclient
 networkmanager
+networkmanager-openvpn
 p7zip
 rofi
 sxhkd
@@ -19,10 +20,12 @@ unrar
 unzip
 wireless_tools
 xcursor-vanilla-dmz-aa
+xdg-user-dirs
 xorg-server
 xorg-xbacklight
 xorg-xev
 xorg-xinit
+xorg-xinput
 xorg-xrdb
 xorg-xsetroot
 xsel

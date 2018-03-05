@@ -15,5 +15,8 @@ redshift &
 # Pulseaudio
 pulseaudio --start
 
+# Touchpad
+sh ~/.dotfiles/xorg/bin/touchpad-setup.sh
+
 # WM
 exec bspwm
