@@ -1,5 +1,0 @@
-#!/bin/bash
-
-. ~/.config/panel/panelrc
-
-printf '%b\n' "%{F$COLOR_NOTIFICATION_FG}  \uE0A1 Arch  %{F-}"

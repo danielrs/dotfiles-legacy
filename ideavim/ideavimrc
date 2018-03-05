@@ -1,2 +1,2 @@
-:noremap <A-l> :action NextTab<CR>
-:noremap <A-r> :action PrevTab<CR>
+noremap <A-l> :action NextTab<CR>
+noremap <A-r> :action PrevTab<CR>
