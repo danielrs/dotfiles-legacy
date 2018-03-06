@@ -15,7 +15,7 @@ export GOPATH="$HOME/Development/go"
 
 # Java apps font redering and corrent behaviour in tiling wms.
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dsun.java2d.xrender=true -Dswing.aatext=true'
-#export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # ----------------
 # PATH

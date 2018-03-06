@@ -86,13 +86,13 @@
     # sxhkd
     ~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
 
-    # vimperator
-    ~/.vimperator: vimperator
-
     # xorg
     ~/.xinitrc: xorg/xinitrc
     ~/.Xresources: xorg/Xresources
     ~/.xprofile: xorg/xprofile
+
+    # zathura
+    ~/.config/zathura/zathurarc: zathura/zathurarc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

@@ -11,6 +11,7 @@ jsoncpp
 libmpdclient
 networkmanager
 networkmanager-openvpn
+openssh
 p7zip
 rofi
 sxhkd
@@ -39,6 +40,7 @@ gucharmap
 mpv
 transmission-gtk
 zathura
+zathura-pdf-mupdf
 EOT
 
 # dev
