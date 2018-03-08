@@ -145,3 +145,10 @@ XF86MonBrightnessUp
 
 XF86Sleep
 	pm-suspend
+
+#
+# misc
+#
+
+ctrl + alt + l
+	i3lock -c 222222

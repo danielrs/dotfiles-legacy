@@ -37,6 +37,8 @@ cat <<EOT
 chromium
 feh
 gucharmap
+i3lock
+maim
 mpv
 transmission-gtk
 zathura

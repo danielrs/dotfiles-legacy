@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+export WIFI_INTERFACE=$(nmcli dev status | grep wifi | head -n 1 | awk '{print $1}')
+export ETHERNET_INTERFACE=$(nmcli dev status | grep ethernet | head -n 1 | awk '{print $1}')
