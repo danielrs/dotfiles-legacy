@@ -31,7 +31,6 @@
     ~/.config/bspwm: bspwm
 
     # cmus
-    # colors
 
     # colors
     #~/.config/colors: colors
@@ -39,12 +38,8 @@
     # compton
     ~/.config/compton.conf: compton/compton.conf
 
-    # dmenu
-
     # cvim
     ~/.cvimrc: cvim/cvimrc
-
-    # emacs
 
     # fonts
     #~/.config/fontconfig/fonts.conf: fonts/fonts.conf
@@ -55,9 +50,6 @@
     # ideavim
     ~/.ideavimrc: ideavim/ideavimrc
 
-    # leiningen
-    #~/.lein/profiles.clj: lein/profiles.clj
-
     # nvim and vim
     ~/.config/nvim/autoload: nvim/autoload
     ~/.config/nvim/syntax: nvim/syntax
@@ -67,17 +59,8 @@
     ~/.vim/syntax: nvim/syntax
     ~/.vim/vimrc: nvim/init.vim
 
-    # panel
-    #~/.config/panel: panel
-
-    # pianobar
-    #~/.config/pianobar: pianobar
-
     # polybar
     ~/.config/polybar/config: polybar/config
-
-    # R
-    ~/.Rprofile: r/Rprofile
 
     # redshift
     #~/.config/redshift.conf: redshift/redshift.conf
