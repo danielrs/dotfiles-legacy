@@ -54,12 +54,11 @@ line-color = #f00
 ;font
 dpi = ${xrdb:Xft.dpi:-1}
 font-0 = fixed:pixelsize=10;4
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;3
-font-2 = siji:pixelsize=10;4
-font-3 = Material Icons:pixelsize=12;6
+font-1 = Ionicons:pixelsize=12;6
+font-2 = Material Icons:pixelsize=12;7
 
 ;modules
-modules-left = bspwm i3
+modules-left = brand bspwm i3
 modules-center = xwindow
 modules-right = xbacklight volume xkeyboard wlan battery date powermenu
 
@@ -85,6 +84,16 @@ height = 48
 ;----------------
 ; Modules
 ;----------------
+
+[module/brand]
+type = custom/script
+exec = hostname
+
+format =  <label>
+format-background = #1ba542
+format-padding = 2
+
+interval = 90
 
 [module/xwindow]
 type = internal/xwindow
@@ -241,11 +250,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 ramp-signal-foreground = #ff
 
 [module/eth]
@@ -330,14 +339,17 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
 ramp-capacity-foreground = #ff
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.primary}
 animation-charging-framerate = 750
 
@@ -368,9 +380,9 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.alert}
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.alert}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
@@ -382,10 +394,10 @@ menu-0-1-exec = menu-open-2
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1-exec = reboot
 
 menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 

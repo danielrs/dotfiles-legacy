@@ -7,6 +7,7 @@ cat <<EOT
 alsa-utils
 bspwm
 compton
+i3lock
 jsoncpp
 libmpdclient
 networkmanager
@@ -17,6 +18,8 @@ rofi
 sxhkd
 ttf-dejavu
 ttf-inconsolata
+ttf-ionicons
+ttf-material-icons
 unrar
 unzip
 wireless_tools
@@ -37,7 +40,6 @@ cat <<EOT
 chromium
 feh
 gucharmap
-i3lock
 maim
 mpv
 transmission-gtk
