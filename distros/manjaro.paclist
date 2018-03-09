@@ -14,6 +14,7 @@ networkmanager
 networkmanager-openvpn
 openssh
 p7zip
+polybar
 rofi
 sxhkd
 ttf-dejavu
@@ -42,6 +43,7 @@ feh
 gucharmap
 maim
 mpv
+nm-connection-editor
 transmission-gtk
 zathura
 zathura-pdf-mupdf
