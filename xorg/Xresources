@@ -22,11 +22,6 @@ Xft.hintstyle: hintnone
 Xft.antialias: true
 Xft.lcdfilter: lcddefault
 
-! Laptop settings
-#ifdef SRVR_ada
-Xft.dpi: 180
-#endif
-
 !! Bitmap
 !URxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-c-*-*-1 */
 
@@ -47,6 +42,15 @@ URxvt.italicFont: xft:Inconsolata:italic:size=12:style=italic
 ! --------
 
 Xcursor.theme: Vanilla-DMZ-AA
+
+! --------
+! Laptop settings
+! --------
+!
+#ifdef SRVR_ada
+Xft.dpi: 180
+Xcursor.size: 48
+#endif
 
 ! --------
 ! Color-scheme

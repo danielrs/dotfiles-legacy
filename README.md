@@ -5,4 +5,3 @@ These are my **personal** dotfiles, they *may* or *may not* work for you. I'm us
 ### What's included?
 
 Configuration files and scripts, check each **dotfile** to see what's included.
-
