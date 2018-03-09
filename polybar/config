@@ -47,15 +47,10 @@ module-margin-right = 2
 ;colors
 background = ${colors.background}
 foreground = ${colors.foreground}
-
-line-size = 3
 line-color = #f00
 
 ;font
 dpi = ${xrdb:Xft.dpi:-1}
-font-0 = fixed:pixelsize=10;4
-font-1 = Ionicons:pixelsize=12;6
-font-2 = Material Icons:pixelsize=12;7
 
 ;modules
 modules-left = brand bspwm i3
@@ -75,11 +70,19 @@ wm-restack = bspwm
 
 [bar/adaline]
 inherit = bar/base
-height = 27
+height = 32
+line-size = 2
+font-0 = fixed:pixelsize=10;2
+font-1 = Ionicons:pixelsize=12;2
+font-2 = Material Icons:pixelsize=12;3
 
 [bar/ada]
 inherit = bar/base
 height = 48
+line-size = 3
+font-0 = fixed:pixelsize=10;4
+font-1 = Ionicons:pixelsize=12;6
+font-2 = Material Icons:pixelsize=12;7
 
 ;----------------
 ; Modules
