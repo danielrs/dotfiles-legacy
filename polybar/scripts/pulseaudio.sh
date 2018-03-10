@@ -12,7 +12,7 @@ print_format() {
     # Sets icon.
     local icon=
     if [ "$muted" = "true" ]; then
-	icon=
+	icon=%{F#666866}%{F-}
     elif [ "$volume" -le 33 ]; then
 	icon=
     elif [ "$volume" -le 66 ]; then
