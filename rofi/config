@@ -3,7 +3,3 @@ rofi.theme:       solarized
 rofi.font:        Inconsolata 11
 rofi.modi:        combi
 rofi.dpi: 1
-
-#ifdef SRVR_ada
-rofi.font: Inconsolata 9
-#endif
