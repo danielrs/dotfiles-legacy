@@ -80,6 +80,7 @@ wm-restack = bspwm
 
 [bar/adaline]
 inherit = bar/base
+hostname = adaline
 height = 32
 line-size = 2
 font-0 = fixed:pixelsize=11;2
@@ -88,6 +89,7 @@ font-2 = Material Icons:pixelsize=13;4
 
 [bar/ada]
 inherit = bar/base
+hostname = ada
 height = 54
 line-size = 3
 font-0 = fixed:pixelsize=11;4
@@ -99,14 +101,11 @@ font-2 = Material Icons:pixelsize=13;7
 ;----------------
 
 [module/brand]
-type = custom/script
-exec = hostname
-
-format =  <label>
-format-background = #1ba542
-format-padding = 2
-
-interval = 90
+type = custom/text
+content = ${root.hostname}
+content-prefix = " "
+content-background = #1ba542
+content-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
