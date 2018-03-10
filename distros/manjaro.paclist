@@ -5,6 +5,8 @@
 # base
 cat <<EOT
 alsa-utils
+bluez
+bluez-utils
 bspwm
 compton
 i3lock
@@ -14,7 +16,11 @@ networkmanager
 networkmanager-openvpn
 openssh
 p7zip
+pamixer
 polybar
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
 rofi
 sxhkd
 ttf-dejavu

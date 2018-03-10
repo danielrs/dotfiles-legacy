@@ -61,6 +61,7 @@
 
     # polybar
     ~/.config/polybar/config: polybar/config
+    ~/.config/polybar/scripts: polybar/scripts
 
     # redshift
     #~/.config/redshift.conf: redshift/redshift.conf

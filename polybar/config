@@ -23,15 +23,25 @@ margin-top = 0
 margin-bottom = 0
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #d8222222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+; loosely based on: https://github.com/chriskempson/tomorrow-theme
+background = #d81d1f21
+background-alt = #373b41
+
+foreground = #c5c8c6
+foreground-alt = #666866
+
+primary = ${self.yellow}
+secondary = ${self.red}
+alert = ${self.red}
+
+red = #cc6666
+orange = #de935f
+yellow = #f0c674
+green = #b5bd68
+aqua = #8abeb7
+blue = #81a2be
+purple = #b294bb
+
 
 [bar/base]
 width = 100%
@@ -55,7 +65,7 @@ dpi = ${xrdb:Xft.dpi:-1}
 ;modules
 modules-left = brand bspwm i3
 modules-center = xwindow
-modules-right = xbacklight volume xkeyboard wlan battery date powermenu
+modules-right = xbacklight pulseaudio xkeyboard wlan vpn battery date powermenu
 
 ;tray
 tray-position = right
@@ -107,7 +117,6 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 format-prefix = " "
-format-prefix-foreground = #ff
 
 label-layout = %layout%
 
@@ -212,7 +221,7 @@ bar-indicator-foreground = #ff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #9f78e1
+bar-fill-foreground = ${colors.purple}
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
@@ -244,7 +253,7 @@ interface = ${env:WIFI_INTERFACE:wlp0s20u3u2}
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = ${colors.purple}
 label-connected = %essid%
 
 format-disconnected =
@@ -258,14 +267,13 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = #ff
 
 [module/eth]
 type = internal/network
 interface = eno1
 interval = 3.0
 
-format-connected-underline = #55aa55
+format-connected-underline = ${colors.blue}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -275,6 +283,14 @@ format-disconnected =
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/vpn]
+type = custom/script
+exec = echo VPN
+exec-if = pgrep -x openvpn
+interval = 5
+format-prefix = " "
+format-underline = ${colors.aqua}
 
 [module/date]
 type = internal/date
@@ -287,7 +303,6 @@ time = %a %H:%M
 time-alt = %H:%M
 
 format-prefix = 
-format-prefix-foreground = #ff
 
 label = %date% %time%
 
@@ -297,7 +312,6 @@ type = internal/volume
 format-volume = <ramp-volume> <bar-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}
-
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -329,6 +343,13 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 bar-muted-foreground-0 = #ff0000
 
+[module/pulseaudio]
+type = custom/script
+script = sh ~/.config/polybar/scripts/pulseaudio.sh
+exec = ${self.script}
+tail = true
+click-right = exec pavucontrol &
+
 [module/battery]
 type = internal/battery
 battery = BAT0
@@ -342,13 +363,10 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 
-
-
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
-ramp-capacity-foreground = #ff
 
 animation-charging-0 = 
 animation-charging-1 = 

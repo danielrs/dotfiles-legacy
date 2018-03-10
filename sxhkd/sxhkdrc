@@ -129,13 +129,13 @@ super + {Left,Down,Up,Right}
 #
 
 XF86AudioMute
-	amixer -q set Master toggle
+	pamixer -t
 
 XF86AudioLowerVolume
-	amixer -q set Master 5%-
+	pamixer -d 5
 
 XF86AudioRaiseVolume
-	amixer -q set Master 5%+ on
+	pamixer -u; pamixer -i 5
 
 XF86MonBrightnessDown
 	xbacklight -dec 10
