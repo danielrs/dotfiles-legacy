@@ -23,7 +23,7 @@ margin-top = 0
 margin-bottom = 0
 
 [colors]
-; loosely based on: https://github.com/chriskempson/tomorrow-theme
+;loosely based on: https://github.com/chriskempson/tomorrow-theme
 background = #d81d1f21
 background-alt = #373b41
 
