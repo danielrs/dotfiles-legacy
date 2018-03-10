@@ -1,5 +1,9 @@
 rofi.combi-modi:  window,drun,ssh
 rofi.theme:       solarized
-rofi.font:        Inconsolata 14
+rofi.font:        Inconsolata 11
 rofi.modi:        combi
-rofi.dpi:         0
+rofi.dpi: 1
+
+#ifdef SRVR_ada
+rofi.font: Inconsolata 9
+#endif
