@@ -72,17 +72,17 @@ wm-restack = bspwm
 inherit = bar/base
 height = 32
 line-size = 2
-font-0 = fixed:pixelsize=10;2
-font-1 = Ionicons:pixelsize=12;2
-font-2 = Material Icons:pixelsize=12;3
+font-0 = fixed:pixelsize=11;2
+font-1 = Ionicons:pixelsize=13;2
+font-2 = Material Icons:pixelsize=13;3
 
 [bar/ada]
 inherit = bar/base
-height = 48
+height = 52
 line-size = 3
-font-0 = fixed:pixelsize=10;4
-font-1 = Ionicons:pixelsize=12;6
-font-2 = Material Icons:pixelsize=12;7
+font-0 = fixed:pixelsize=11;4
+font-1 = Ionicons:pixelsize=13;6
+font-2 = Material Icons:pixelsize=13;7
 
 ;----------------
 ; Modules
