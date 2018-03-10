@@ -1,0 +1,5 @@
+rofi.combi-modi:  window,drun,ssh
+rofi.theme:       solarized
+rofi.font:        Inconsolata 14
+rofi.modi:        combi
+rofi.dpi:         0

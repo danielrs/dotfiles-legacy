@@ -66,6 +66,9 @@
     #~/.config/redshift.conf: redshift/redshift.conf
     #~/.config/autostart/redshift.desktop: redshift/redshift.desktop
 
+    # rofi
+    ~/.config/rofi/config: rofi/config
+
     # sxhkd
     ~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
 
