@@ -281,10 +281,10 @@ type = internal/date
 interval = 5
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = " %B %d, "
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = %a %H:%M
+time-alt = %H:%M
 
 format-prefix = 
 format-prefix-foreground = #ff
