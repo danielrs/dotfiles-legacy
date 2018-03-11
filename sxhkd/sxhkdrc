@@ -141,13 +141,13 @@ super + shift + {minus,equal}
 #
 
 XF86AudioMute
-	pamixer -t
+	sh ~/.config/polybar/scripts/pulseaudio.sh --mute
 
 XF86AudioLowerVolume
-	pamixer -d 5
+	sh ~/.config/polybar/scripts/pulseaudio.sh --down
 
 XF86AudioRaiseVolume
-	pamixer -u; pamixer -i 5
+	sh ~/.config/polybar/scripts/pulseaudio.sh --up
 
 XF86MonBrightnessDown
 	xbacklight -dec 10
