@@ -74,6 +74,8 @@ update_sink() {
 	    sink=$(print_best_sink)
 	    updated=true
 	fi
+    elif [ ! -z "$sink" -a "$sink" -ne $(cat "$SINK_FILE") ]; then
+	updated=true
     fi
 
     if [ "$updated" = true ]; then
@@ -111,7 +113,7 @@ volume_mute() {
 }
 
 # print_format shows the status for the current sink.
-sink=$(update_sink)
+sink=$([ -f "$SINK_FILE" ] && cat "$SINK_FILE" || update_sink)
 print_format() {
     # Checks that the current sink exists.
     if pactl list short sinks | awk '{print $1}' | grep -q "^$sink$"; then
