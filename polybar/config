@@ -93,7 +93,7 @@ hostname = ada
 height = 56
 line-size = 3
 font-0 = fixed:pixelsize=11;4
-font-1 = Ionicons:pixelsize=13;6
+font-1 = Ionicons:pixelsize=13;5
 font-2 = Material Icons:pixelsize=13;7
 
 ;----------------
@@ -139,25 +139,26 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 ws-icon-0 = One;
-ws-icon-1 = Two;
+; ws-icon-1 = Two;
+ws-icon-1 = Two;
 ws-icon-2 = Three;
 ws-icon-3 = Four;
 ws-icon-4 = Five;
 ws-icon-5 = Six;
 
-label-focused = %name%
+label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
-label-occupied = %name%
+label-occupied = %icon%
 label-occupied-padding = 2
 
-label-urgent = %name%!
+label-urgent = %icon%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %name%
+label-empty = %icon%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 

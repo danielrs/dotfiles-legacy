@@ -125,6 +125,18 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 #
+# window gap
+#
+
+# decrease/increse window gap
+super + {minus,equal}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 4))
+
+# reset window gap
+super + shift + {minus,equal}
+	bspc config -d focused window_gap 8
+
+#
 # media keys
 #
 
