@@ -3,9 +3,9 @@
 # to stdout with an adequate format for use with
 # the custom/script polybar module.
 
-#
+# ----------------
 # Functions for getting the status of pulseaudio sinks.
-#
+# ----------------
 
 # Prints the default sink name.
 print_default_sink_name() {
@@ -37,9 +37,9 @@ print_running_sink_id() {
     pactl list short sinks | grep RUNNING | head -n 1 | awk '{print $1}'
 }
 
-#
+# ----------------
 # Functions for getting and updating the best sink.
-#
+# ----------------
 
 # Prints the best sink from the list of sinks, ordering is;
 # default and running > running > default.
@@ -84,9 +84,9 @@ update_sink() {
     fi
 }
 
-#
+# ----------------
 # Script actions.
-#
+# ----------------
 
 volume_down() {
     if [ -f "$SINK_FILE" ]; then
@@ -123,9 +123,9 @@ print_format() {
 	local icon=
 	if [ "$muted" = "true" ]; then
 	    icon=%{F#666866}%{F-}
-	elif [ "$volume" -le 33 ]; then
+	elif [ "$volume" -lt 30 ]; then
 	    icon=
-	elif [ "$volume" -le 66 ]; then
+	elif [ "$volume" -lt 60 ]; then
 	    icon=
 	else
 	    icon=
