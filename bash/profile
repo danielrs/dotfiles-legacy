@@ -36,6 +36,12 @@ export PATH
 # MISC
 # ----------------
 
+# Sets up DPI size for GTK apps.
+if [[ $(hostname) == "ada" ]]; then
+    export GDK_SCALE=2
+    export GDK_DPI_SCALE=0.5
+fi
+
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 #export SDKMAN_DIR="/home/danielrs/.sdkman"
