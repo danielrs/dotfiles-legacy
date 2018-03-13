@@ -70,7 +70,7 @@ update_sink() {
 	if echo "$1" | grep -q "'\(new\|remove\)' on sink"; then
 	    sink=$(print_best_sink)
 	    updated=true
-	elif echo "$event" | grep -q "on source-output"; then
+	elif echo "$event" | grep -q "on \(sink-input\|source-output\)"; then
 	    sink=$(print_best_sink)
 	    updated=true
 	fi
