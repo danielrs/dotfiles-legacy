@@ -184,7 +184,7 @@ autocmd FileType html,css,eelixir EmmetInstall
 
 " lightline.vim
 let g:lightline = {
-	\ 'colorscheme': 'Dracula',
+	\ 'colorscheme': 'jellybeans',
 	\ 'active': {
 	\ 	'left': [['mode', 'paste'], ['fugitive', 'filename', 'modified']]
 	\ },
