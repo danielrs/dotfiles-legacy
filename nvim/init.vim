@@ -182,6 +182,7 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css,eelixir EmmetInstall
 
 " haskell-vim
+" html5.vim
 
 " lightline.vim
 let g:lightline = {
