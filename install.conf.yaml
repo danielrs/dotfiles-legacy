@@ -82,6 +82,8 @@
     ~/.config/zathura/zathurarc: zathura/zathurarc
 
 - shell:
+    - [sh feh/download-wallpapers.sh, Downloading feh wallpapers]
+
     - [git submodule update --init --recursive, Installing submodules]
 
     -
