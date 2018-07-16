@@ -13,7 +13,7 @@ feh --bg-scale --randomize ~/Pictures/Wallpapers/feh/* &
 redshift &
 
 # Pulseaudio
-pulseaudio --start
+#pulseaudio --start
 
 # Touchpad
 . ~/.dotfiles/xorg/bin/touchpad-setup

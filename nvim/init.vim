@@ -58,6 +58,8 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set shiftround
+set autoindent
 
 " Search
 set wildmenu
@@ -148,6 +150,7 @@ Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'groenewege/vim-less'
+Plug 'hynek/vim-python-pep8-indent'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
@@ -231,6 +234,7 @@ map <F8> :TagbarToggle<CR>
 let g:jsx_ext_required = 0
 
 " vim-less
+" vim-python-pep8-indent'
 " vim-sleuth
 " vim-surround
 " vimtex
