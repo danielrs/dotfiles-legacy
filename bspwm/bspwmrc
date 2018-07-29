@@ -7,6 +7,7 @@
 sxhkd &
 [[ $(hostname) == "adaline" ]] && polybar adaline &
 [[ $(hostname) == "ada" ]] && polybar ada &
+dunst &
 
 # bspwm configuration.
 bspc monitor -d One Two Three Four Five Six
