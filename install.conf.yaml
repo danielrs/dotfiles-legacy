@@ -41,6 +41,9 @@
     # cvim
     ~/.cvimrc: cvim/cvimrc
 
+    # dunst
+    ~/.config/dunst/dunstrc: dunst/dunstrc
+
     # fonts
     #~/.config/fontconfig/fonts.conf: fonts/fonts.conf
 
