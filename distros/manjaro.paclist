@@ -46,6 +46,7 @@ EOT
 cat <<EOT
 atool
 chromium
+dunst
 feh
 gucharmap
 maim
