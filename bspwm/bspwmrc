@@ -10,7 +10,9 @@ sxhkd &
 dunst &
 
 # bspwm configuration.
-bspc monitor -d One Two Three Four Five Six
+for monitor in $(bspc query -M); do
+    bspc monitor $monitor -d One Two Three Four Five Six
+done
 
 bspc config border_width         2
 bspc config window_gap          8
