@@ -156,6 +156,7 @@ Plug 'lervag/vimtex'
 
 if has('nvim')
   Plug 'zchee/deoplete-go'
+  Plug 'zchee/deoplete-jedi'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Shougo/neocomplete.vim'
