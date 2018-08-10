@@ -36,11 +36,11 @@ export PATH
 # MISC
 # ----------------
 
-# Sets up DPI size for GTK apps.
-if [[ $(hostname) == "ada" ]]; then
-    export GDK_SCALE=2
-    export GDK_DPI_SCALE=0.5
-fi
+# # Sets up DPI size for GTK apps.
+# if [[ $(hostname) == "ada" ]]; then
+#     export GDK_SCALE=2
+#     export GDK_DPI_SCALE=0.5
+# fi
 
 export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 

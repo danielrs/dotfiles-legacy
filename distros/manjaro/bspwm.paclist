@@ -1,0 +1,91 @@
+#!/bin/bash
+# This script list the extra packages needed (by me) after installing
+# Manjaro in a BSPWM setup.
+
+# base
+cat <<EOT
+openssh
+p7zip
+unrar
+unzip
+EOT
+
+# xorg
+cat <<EOT
+xcursor-vanilla-dmz-aa
+xdg-user-dirs
+xorg-server
+xorg-xbacklight
+xorg-xinit
+xorg-xinput
+xorg-xsetroot
+xsel
+EOT
+
+# audio
+cat <<EOT
+alsa-utils
+pamixer
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+EOT
+
+# networking
+cat <<EOT
+bluez
+bluez-utils
+networkmanager
+networkmanager-openvpn
+EOT
+
+# fonts
+cat <<EOT
+ttf-dejavu
+ttf-inconsolata
+ttf-ionicons
+ttf-material-icons
+EOT
+
+# wm/de
+cat <<EOT
+bspwm
+compton
+dunst
+feh
+i3lock
+rofi
+sxhkd
+EOT
+
+# polybar
+cat <<EOT
+jsoncpp
+libmpdclient
+polybar
+wireless_tools
+xcb-util-cursor
+EOT
+
+# apps
+cat <<EOT
+atool
+chromium
+gucharmap
+maim
+nm-connection-editor
+ranger
+transmission-gtk
+udevil
+zathura
+zathura-pdf-mupdf
+EOT
+
+# dev
+cat <<EOT
+git
+neovim
+python-neovim
+rxvt-unicode
+the_silver_searcher
+EOT
