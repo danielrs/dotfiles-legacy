@@ -246,6 +246,9 @@ let g:jsx_ext_required = 0
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
+"deoplete-jedi
+let g:deoplete#sources#jedi#extra_path = [getcwd()]
+
 "deoplete.nvim
 let g:deoplete#enable_at_startup = 1
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
