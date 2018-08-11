@@ -8,13 +8,6 @@
     # admiral
     #~/.config/admiral.d: admiral.d
 
-    # atom
-    ~/.atom/config.cson: atom/config.cson
-    ~/.atom/init.coffee: atom/init.coffee
-    ~/.atom/keymap.cson: atom/keymap.cson
-    ~/.atom/snippets.cson: atom/snippets.cson
-    ~/.atom/styles.less: atom/styles.less
-
     # base16
     ~/.config/base16-shell: base16-shell
     ~/.config/base16-xresources: base16-xresources
@@ -88,11 +81,5 @@
     - [sh feh/download-wallpapers.sh, Downloading feh wallpapers]
 
     - [git submodule update --init --recursive, Installing submodules]
-
-    -
-        command: cd atom; apm install `cat packages.list`
-        description: Installing atom packages
-        stdout: true
-        stderr: true
 
     - [cd nvim; ./update-plug.sh, Updating plug.vim]

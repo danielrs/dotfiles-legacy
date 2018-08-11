@@ -46,10 +46,14 @@ Xcursor.theme: Vanilla-DMZ-AA
 ! --------
 ! Laptop settings
 ! --------
-!
+
+! 13 inches FHD
 #ifdef SRVR_ada
-Xft.dpi: 180
-Xcursor.size: 48
+Xft.dpi: 120
+Xcursor.size: 36
+URxvt.font: xft:Inconsolata:medium:size=12
+URxvt.boldFont: xft:Inconsolata:bold:size=12:style=bold
+URxvt.italicFont: xft:Inconsolata:italic:size=12:style=italic
 #endif
 
 ! --------
