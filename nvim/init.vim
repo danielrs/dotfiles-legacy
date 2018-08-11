@@ -156,6 +156,7 @@ Plug 'lervag/vimtex'
 
 if has('nvim')
   Plug 'zchee/deoplete-go'
+  Plug 'zchee/deoplete-jedi'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Shougo/neocomplete.vim'
@@ -244,6 +245,9 @@ let g:jsx_ext_required = 0
 "deoplete-go
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+
+"deoplete-jedi
+let g:deoplete#sources#jedi#extra_path = [getcwd()]
 
 "deoplete.nvim
 let g:deoplete#enable_at_startup = 1
