@@ -15,3 +15,17 @@ sudo systemctl enable NetworkManager
 sudo systemctl enable ntpd
 sudo systemctl enable tlp
 ```
+
+## Installing docker
+
+It is sometimes helpful to change the docker directory to somewhere else
+(like to a drive with more space). Change the following line at
+`/etc/docker/daemon.json`:
+
+```
+{
+    //...
+    "graph": "/mnt/docker",
+    //...
+}
+```
