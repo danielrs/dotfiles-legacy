@@ -3,7 +3,7 @@
 INSTALL_DIR="$HOME/Pictures/Wallpapers/feh/"
 
 BASE_URL="https://wallpapers.wallhaven.cc/wallpapers/full/"
-declare -a wallpapers=("wallhaven-655368.jpg" "wallhaven-666578.jpg")
+declare -a wallpapers=("wallhaven-655368.jpg")
 
 mkdir -p "${INSTALL_DIR}"
 for id in "${wallpapers[@]}"; do

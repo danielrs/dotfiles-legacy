@@ -344,11 +344,15 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 bar-muted-foreground-0 = #ff0000
 
 [module/pulseaudio]
-type = custom/script
-script = sh ~/.config/polybar/scripts/pulseaudio.sh
-exec = ${self.script}
-tail = true
-click-right = exec pavucontrol &
+type = internal/pulseaudio
+format-volume = <ramp-volume> <label-volume>
+
+label-muted =  muted
+label-muted-foreground = #666866
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 [module/battery]
 type = internal/battery
