@@ -179,4 +179,4 @@ XF86Sleep
 #
 
 ctrl + alt + l
-	i3lock -c 222222
+	sh ~/.dotfiles/i3lock/lock.sh
