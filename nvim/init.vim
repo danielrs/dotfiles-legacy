@@ -22,8 +22,6 @@ if !has('nvim') && has('gui_running')
   set guioptions-=T "remove toolbar
   set guioptions-=r "remove right scroll bar
   set guioptions-=L "remove left scroll bar
-  "set visualbell
-  "set t_vb= "" Disable Bell
 endif
 
 " ----------------
@@ -32,28 +30,32 @@ endif
 
 set encoding=utf8
 
-" Syntax
+" syntax
 filetype plugin indent on
 syntax on
 syntax enable
 
-" Editor UI
+" editor UI
 set guicursor=
 set number
 set cursorline
 set showcmd
 set scrolloff=4 " Always n lines visible when scrolling
 
-" Editor
+" nvim/vim mismatch of esc keys
 if !has('nvim')
   set noesckeys " Disable Esc-key escape sequences
 endif
+
+" relative numbers
 nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
 nnoremap <silent> <Esc>n :set relativenumber! relativenumber?<CR>
+
+" copy and paste from system clipboard
 nnoremap <Leader>y "+y
 nnoremap <Leader>p "+p
 
-" Indentation
+" indentation
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -61,43 +63,44 @@ set expandtab
 set shiftround
 set autoindent
 
-" Search
+" search
 set wildmenu
 set incsearch
 set hlsearch
 nnoremap <silent> <space> :set hlsearch! hlsearch?<CR>
+set showmatch
 
-if !has('nvim')
-  set showmatch
-endif
-
-" Undo
+" undo
 if has('persistent_undo')
-	let myundodir = expand(vimdir . '/undodir')
-	" Create dirs
-	if empty(glob(myundodir))
-		call system('mkdir ' . vimdir)
-		call system('mkdir ' . myundodir)
-	endif
-	let &undodir = myundodir
-	set undofile
-	set undolevels=1000 " Maximum number of changes that can be undone
-	set undoreload=10000 " Maximum number of lines to save for undo on a buffer reload
+  let myundodir = expand(vimdir . '/undodir')
+  " create undo dirs
+  if empty(glob(myundodir))
+	  call system('mkdir ' . vimdir)
+	  call system('mkdir ' . myundodir)
+  endif
+  let &undodir = myundodir
+  set undofile
+  set undolevels=1000 " max number of changes that can be undone
+  set undoreload=10000 " mx number of changes to save on buffer reload
 endif
 
-" Folding
+" folding
 set foldenable
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=indent
 
-" File settings
-set nobackup
+" file settings
 set backspace=indent,eol,start
 set fileformat=unix
 set fileformats=unix,dos
 
-" Window Switching
+" no backups (most stuff is using version control anyways)
+set nobackup
+set nowb
+set noswapfile
+
+" window Switching
 nnoremap <silent> <A-k> :wincmd k<CR>
 nnoremap <silent> <A-j> :wincmd j<CR>
 nnoremap <silent> <A-h> :wincmd h<CR>
@@ -108,21 +111,20 @@ nnoremap <silent> <Esc>j :wincmd j<CR>
 nnoremap <silent> <Esc>h :wincmd h<CR>
 nnoremap <silent> <Esc>l :wincmd l<CR>
 
-" Remove trailing whitespace before saving buffer
+" remove trailing whitespace before saving buffer
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Extra files
+" extra files
 augroup filetype
-	autocmd!
-	" GLSL
-	autocmd BufNewFile,BufRead *.vert,*.frag,*.tesc,*.tese,*.geom,*.comp set filetype=c
-	" jflex
-	autocmd BufNewFile,BufRead *.flex,*.jflex set filetype=jflex
-	" Haskell
-	autocmd BufNewFile,BufRead *.hamlet set filetype=html
-	autocmd BufNewFile,BufRead *.lucius,*.cassius set filetype=css
-	autocmd BufNewFile,BufRead *.julius set filetype=javascript
-
+  autocmd!
+  " GLSL
+  autocmd BufNewFile,BufRead *.vert,*.frag,*.tesc,*.tese,*.geom,*.comp set filetype=c
+  " jflex
+  autocmd BufNewFile,BufRead *.flex,*.jflex set filetype=jflex
+  " Haskell
+  autocmd BufNewFile,BufRead *.hamlet set filetype=html
+  autocmd BufNewFile,BufRead *.lucius,*.cassius set filetype=css
+  autocmd BufNewFile,BufRead *.julius set filetype=javascript
 augroup END
 autocmd Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 
@@ -190,15 +192,6 @@ autocmd FileType html,css,eelixir EmmetInstall
 " lightline.vim
 let g:lightline = {
 	\ 'colorscheme': 'jellybeans',
-	\ 'active': {
-	\ 	'left': [['mode', 'paste'], ['fugitive', 'filename', 'modified']]
-	\ },
-	\ 'component' : {
-	\	'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-	\ },
-	\ 'component_visible_condition': {
-	\	'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-	\ }
 	\ }
 set laststatus=2
 
@@ -247,7 +240,7 @@ let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 "deoplete-jedi
-let g:deoplete#sources#jedi#extra_path = [getcwd()]
+let g:deoplete#sources#jedi#extra_path = [getcwd()] "current dir venv
 
 "deoplete.nvim
 let g:deoplete#enable_at_startup = 1
