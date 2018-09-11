@@ -9,7 +9,6 @@
 export UID # some distros don't auto-export it. Needed for docker-compose
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
-export TERM="xterm"
 export ANDROID_HOME="$HOME/.android-sdk"
 export GOROOT="$HOME/.golang"
 export GOPATH="$HOME/Development/go"
