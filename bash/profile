@@ -25,7 +25,7 @@ PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
 PATH="$GOROOT/bin:$PATH"
-PATH="$HOME/.python/bin:$PATH" # local python instead of global
+PATH="$HOME/.miniconda3/bin:$PATH"
 # if which ruby >/dev/null && which gem >/dev/null; then
 # 	PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # fi
