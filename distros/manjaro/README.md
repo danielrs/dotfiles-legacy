@@ -4,6 +4,10 @@
 sudo mhwd -a pci free 0300
 ```
 
+# Disable computer bell
+
+Some computers produce annoying sounds using the built-in bell, disable it by adding `blacklist pcspkr` to `/etc/modprobe.d/blacklist.conf'.
+
 ## Services to enable
 
 Some services need to be enabled after installing the packages:
