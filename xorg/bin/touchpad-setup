@@ -7,7 +7,7 @@ init() {
 
     if [ -x "$xinput" -a -x "$gawk" ]; then
 	local touchpadId=$($xinput list |
-	    grep Touchpad |
+	    grep --ignore-case touchpad |
 	    $gawk 'match($0, /id=([0-9]+)/, a) {print a[1]}')
 
 	if [ ! -z "$touchpadId" ]; then
