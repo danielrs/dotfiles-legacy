@@ -1,25 +1,30 @@
+# load .Xresources
 xrdb ~/.Xresources
 
-# Reload font database
+# disable bell
+xset -b
+
+# reload font database
 xset +fp /usr/share/fonts/local
+xset +fp /usr/share/fonts/TTF
 xset fp rehash
 
-# Cursor
+# cursor
 xsetroot -cursor_name left_ptr &
 
-# Screen
+# screen
 compton --config ~/.config/compton.conf -b
 feh --bg-scale --randomize ~/Pictures/Wallpapers/feh/* &
 redshift &
 
-# Pulseaudio
+# pulseaudio
 #pulseaudio --start
 
 # Touchpad
 . ~/.dotfiles/xorg/bin/touchpad-setup
 
-# Exports interfaces
+# exports network interfaces
 . ~/.dotfiles/xorg/bin/export-interfaces
 
-# WM
+# window manager
 exec bspwm
