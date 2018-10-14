@@ -140,7 +140,7 @@ type = internal/bspwm
 
 ws-icon-0 = One;
 ; ws-icon-1 = Two;
-ws-icon-1 = Two;
+ws-icon-1 = Two;
 ws-icon-2 = Three;
 ws-icon-3 = Four;
 ws-icon-4 = Five;
