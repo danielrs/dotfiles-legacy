@@ -14,7 +14,12 @@ alias tput='/usr/bin/tput'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-export PS1="\[\033[38;5;12m\][\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;12m\]@\[$(tput sgr0)\]\[\033[38;5;7m\]\h\[$(tput sgr0)\] \[\033[38;5;7m\]\w\[$(tput sgr0)\]\[\033[38;5;12m\]]\[$(tput sgr0)\] \[\033[38;5;10m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+# Colorize prompt
+BLUE=$(tput setaf 4)
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr0)
+
+export PS1="\[$BLUE\][\[$RESET\]\[$GREEN\]\u\[$RESET\]\[$BLUE\]@\[$RESET\]\h \w\[$BLUE\]]\[$RESET\] \[$GREEN\]$\[$RESET\] "
 
 [ -e "/etc/DIR_COLORS" ] && DIR_COLORS="/etc/DIR_COLORS"
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
