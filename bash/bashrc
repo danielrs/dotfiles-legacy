@@ -41,3 +41,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 # Loads virtual environment
 [ -n "$VIRTUAL_ENV" ] && [ -s $VIRTUAL_ENV/bin/activate ] && source "$VIRTUAL_ENV/bin/activate"
+
+# Changes terminal alias
+TERM=xterm-256color
