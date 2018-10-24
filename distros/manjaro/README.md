@@ -35,6 +35,7 @@ It is sometimes helpful to change the docker directory to somewhere else
 ```
 
 ### Minikube + KVM
+Check: http://blog.programmableproduction.com/2018/03/08/Archlinux-Setup-Minikube-using-KVM/
 
 
 ```
