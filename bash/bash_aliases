@@ -3,5 +3,6 @@
 #
 
 alias ghc='ghc -outputdir "out"'
-alias npm-exec='PATH=$(npm bin):$PATH'
+alias npmexec='PATH=$(npm bin):$PATH'
 alias forget='history -c && exit'
+alias yay='yay --color=auto'
