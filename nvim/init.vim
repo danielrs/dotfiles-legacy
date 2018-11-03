@@ -223,9 +223,6 @@ map <F8> :TagbarToggle<CR>
 " vim-go
 " vim-javascript
 
-" vim-jsx
-let g:jsx_ext_required = 0
-
 " vim-less
 " vim-python-pep8-indent'
 " vim-sleuth
@@ -236,7 +233,7 @@ let g:jsx_ext_required = 0
 " ----------------
 
 "deoplete-go
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 "deoplete-jedi
