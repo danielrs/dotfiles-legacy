@@ -1,0 +1,9 @@
+Host github github.com
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa
+    User remoteusername
+
+Host bitbucket bitbucket.org
+    HostName bitbucket.org
+    IdentityFIle ~/.ssh/saber_id_rsa
+    User remoteusername

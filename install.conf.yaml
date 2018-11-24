@@ -66,6 +66,9 @@
     # rofi
     ~/.config/rofi/config: rofi/config
 
+    # ssh
+    ~/.ssh/config: ssh/config
+
     # sxhkd
     ~/.config/sxhkd/sxhkdrc: sxhkd/sxhkdrc
 
