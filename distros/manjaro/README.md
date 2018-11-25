@@ -29,7 +29,8 @@ It is sometimes helpful to change the docker directory to somewhere else
 ```
 {
     //...
-    "graph": "/mnt/docker",
+    "data-root": "/mnt/docker",
+    "insecure-registries": ["hostname:port", ...],
     //...
 }
 ```
