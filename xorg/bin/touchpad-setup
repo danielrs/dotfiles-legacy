@@ -1,5 +1,5 @@
 #!/bin/bash
-# This scripts enables touchpad tap and natural scrolling properties of libinput using
+# Enables touchpad tap and natural scrolling properties for libinput using
 # xinput.
 init() {
     local xinput="$(command -v xinput)"
