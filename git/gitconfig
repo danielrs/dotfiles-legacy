@@ -5,3 +5,5 @@
     autocrlf = input
 [push]
     default = simple
+[includeIf "gitdir:~/Development/private/"]
+    path = ~/Development/private/.gitconfig_include
