@@ -21,6 +21,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # PATH
 # ----------------
 
+PATH="$HOME/.nimble/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/.cabal/bin:$PATH"
 PATH="$HOME/.cargo/bin:$PATH"
